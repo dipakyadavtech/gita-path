@@ -1,0 +1,12 @@
+[
+  {"id":"ep10","season":1,"episode":10,"title":"The game of dice","minutes":4,"verseId":null,"kidsSafe":false},
+  {"id":"ep11","season":1,"episode":11,"title":"Thirteen years of exile","minutes":4,"verseId":null,"kidsSafe":false},
+  {"id":"ep12","season":1,"episode":12,"title":"Arjuna lays down his bow","minutes":3,"verseId":"2.47","kidsSafe":true,
+   "summary":"The moment that leads to the Gita. Ends with verse 2.47.",
+   "scenes":[["0:00","The armies gather"],["1:10","Arjuna's doubt"],["2:20","Krishna begins to speak"]]},
+  {"id":"ep13","season":1,"episode":13,"title":"Krishna begins to teach","minutes":3,"verseId":"2.14","kidsSafe":true},
+  {"id":"ep14","season":1,"episode":14,"title":"The three paths","minutes":4,"verseId":"2.48","kidsSafe":true},
+  {"id":"k1","season":0,"episode":1,"title":"Bal Krishna and the butter pot","minutes":4,"verseId":"4.7","kidsSafe":true,"kids":true},
+  {"id":"k2","season":0,"episode":2,"title":"Govardhan, the umbrella hill","minutes":5,"verseId":"4.7","kidsSafe":true,"kids":true},
+  {"id":"k3","season":0,"episode":3,"title":"Kaliya and the river","minutes":4,"verseId":"6.5","kidsSafe":true,"kids":true}
+]
