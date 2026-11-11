@@ -1,0 +1,24 @@
+{
+  "name": "gita-path-cms",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Gita Path content studio (Strapi 5). Editors write here; publishing syncs to the API.",
+  "scripts": {
+    "setup": "node scripts/setup-env.js",
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@strapi/plugin-users-permissions": "5.61.1",
+    "@strapi/strapi": "5.61.1",
+    "pg": "^8.13.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.0",
+    "styled-components": "^6.1.0"
+  },
+  "engines": { "node": ">=22 <=26" },
+  "strapi": { "uuid": "gita-path-cms" }
+}

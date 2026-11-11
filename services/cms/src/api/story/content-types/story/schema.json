@@ -1,0 +1,74 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stories",
+  "info": {
+    "singularName": "story",
+    "pluralName": "stories",
+    "displayName": "Story",
+    "description": "Animated Mahabharata episode."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "story_id": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "season": {
+      "type": "integer",
+      "required": true
+    },
+    "episode": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "minutes": {
+      "type": "integer",
+      "required": true
+    },
+    "verse_id": {
+      "type": "string"
+    },
+    "kids_safe": {
+      "type": "boolean",
+      "default": false
+    },
+    "kids": {
+      "type": "boolean",
+      "default": false
+    },
+    "summary": {
+      "type": "text"
+    },
+    "scenes": {
+      "type": "json"
+    },
+    "video_url": {
+      "type": "string"
+    },
+    "review_status": {
+      "type": "enumeration",
+      "enum": [
+        "draft",
+        "in_review",
+        "changes_requested",
+        "approved"
+      ],
+      "default": "draft",
+      "required": true
+    },
+    "reviewer": {
+      "type": "string"
+    },
+    "review_note": {
+      "type": "text"
+    }
+  }
+}

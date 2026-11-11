@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "topic_tracks",
+  "info": {
+    "singularName": "topic-track",
+    "pluralName": "topic-tracks",
+    "displayName": "Topic track",
+    "description": "A themed list of verses (e.g. Calming anger) shown on Today and Ask."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "topic_id": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "verses": {
+      "type": "json",
+      "required": true
+    },
+    "moods": {
+      "type": "json"
+    },
+    "review_status": {
+      "type": "enumeration",
+      "enum": [
+        "draft",
+        "in_review",
+        "changes_requested",
+        "approved"
+      ],
+      "default": "draft",
+      "required": true
+    },
+    "reviewer": {
+      "type": "string"
+    },
+    "review_note": {
+      "type": "text"
+    }
+  }
+}

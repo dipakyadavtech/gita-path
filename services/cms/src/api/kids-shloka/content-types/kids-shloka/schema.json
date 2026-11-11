@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kids_shlokas",
+  "info": {
+    "singularName": "kids-shloka",
+    "pluralName": "kids-shlokas",
+    "displayName": "Kids shloka",
+    "description": "A short shloka for Kids mode, with a simple meaning and a character story."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "verse_id": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "lines": {
+      "type": "json",
+      "required": true
+    },
+    "simple_meaning": {
+      "type": "text",
+      "required": true
+    },
+    "character": {
+      "type": "enumeration",
+      "enum": [
+        "moru",
+        "gopal",
+        "chintu"
+      ],
+      "default": "moru"
+    },
+    "age_band": {
+      "type": "enumeration",
+      "enum": [
+        "ages_3_5",
+        "ages_6_8",
+        "ages_9_12"
+      ],
+      "default": "ages_6_8"
+    },
+    "video_url": {
+      "type": "string"
+    },
+    "review_status": {
+      "type": "enumeration",
+      "enum": [
+        "draft",
+        "in_review",
+        "changes_requested",
+        "approved"
+      ],
+      "default": "draft",
+      "required": true
+    },
+    "reviewer": {
+      "type": "string"
+    },
+    "review_note": {
+      "type": "text"
+    }
+  }
+}

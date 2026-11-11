@@ -8,7 +8,9 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     ports: ["5432:5432"]
-    volumes: [pgdata:/var/lib/postgresql/data]
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./services/cms/scripts/create-cms-db.sql:/docker-entrypoint-initdb.d/10-cms.sql:ro
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
       interval: 5s
@@ -38,6 +40,29 @@ services:
       ADMIN_USERS: ${ADMIN_USERS:-}
       DEV_AUTH_ENABLED: ${DEV_AUTH_ENABLED:-true}
     ports: ["8080:8080"]
+
+  cms:
+    build:
+      context: .
+      dockerfile: services/cms/Dockerfile
+    depends_on:
+      postgres: { condition: service_healthy }
+      api: { condition: service_started }
+    environment:
+      DATABASE_HOST: postgres
+      DATABASE_NAME: gitapath_cms
+      DATABASE_USERNAME: postgres
+      DATABASE_PASSWORD: postgres
+      GITAPATH_API_URL: http://api:8080
+      CMS_WEBHOOK_SECRET: ${CMS_WEBHOOK_SECRET:-dev-cms-secret}
+      # Strapi secrets: set real values in .env (run `npm run setup` in services/cms to generate them)
+      APP_KEYS: ${STRAPI_APP_KEYS:-dev-key-1,dev-key-2}
+      API_TOKEN_SALT: ${STRAPI_API_TOKEN_SALT:-dev-api-token-salt}
+      ADMIN_JWT_SECRET: ${STRAPI_ADMIN_JWT_SECRET:-dev-admin-jwt-secret}
+      TRANSFER_TOKEN_SALT: ${STRAPI_TRANSFER_TOKEN_SALT:-dev-transfer-salt}
+      JWT_SECRET: ${STRAPI_JWT_SECRET:-dev-jwt-secret}
+      ENCRYPTION_KEY: ${STRAPI_ENCRYPTION_KEY:-dev-encryption-key}
+    ports: ["1337:1337"]
 
 volumes:
   pgdata:

@@ -7,7 +7,8 @@ Learn one Bhagavad Gita verse a day: listen, understand, chant, act. The app is 
 | Mobile app | `apps/mobile` | React Native, Expo SDK 58, expo-router |
 | API | `services/api` | Spring Boot 4.1 modular monolith, PostgreSQL |
 | Shared content | `packages/content` | JSON seed (verses, stories, topics) |
-| CMS + admin | `services/cms`, `apps/admin` | Strapi 5 + React (coming in #6) |
+| Content studio | `services/cms` | Strapi 5 (editors; publishing needs approved review) |
+| Admin portal | `apps/admin` | React + Vite (content library, verse review, AI answer review) |
 | Design | `docs/design/stitch` | Google Stitch export |
 
 Build progress is tracked in [PLAN.md](PLAN.md) and GitHub issues. The workflow:
@@ -71,6 +72,21 @@ Once the URL is set:
 
 When `CLERK_ISSUER` is set, the API accepts Clerk tokens and turns dev tokens off. In production, also set `DEV_AUTH_ENABLED=false`.
 
+## 4. Content studio and admin portal
+
+```bash
+# Strapi — needs the API running
+createdb -h localhost -U postgres gitapath_cms
+cd services/cms && npm install && npm run setup && npm run develop     # http://localhost:1337/admin
+
+# Admin portal
+cd apps/admin && npm install && npm run dev                            # http://localhost:5174
+```
+
+With Docker, `docker compose up --build` also starts Strapi on port 1337.
+- Publishing rules: [services/cms/README.md](services/cms/README.md)
+- Admin portal: [apps/admin/README.md](apps/admin/README.md)
+
 ## Keys and secrets
 
 - Real values go only in local `.env` files. These are git-ignored.
@@ -80,6 +96,7 @@ When `CLERK_ISSUER` is set, the API accepts Clerk tokens and turns dev tokens of
 ## Tests
 
 ```bash
-cd services/api && ./scripts/test-api.sh                      # 18 API tests + module boundary check
+cd services/api && ./scripts/test-api.sh                      # 19 API tests + module boundary check
 cd apps/mobile && npx tsc --noEmit && npx expo lint            # typecheck + lint
+cd apps/admin && npm run build                                 # typecheck + build
 ```

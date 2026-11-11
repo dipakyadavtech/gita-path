@@ -1,0 +1,78 @@
+{
+  "kind": "collectionType",
+  "collectionName": "translations",
+  "info": {
+    "singularName": "translation",
+    "pluralName": "translations",
+    "displayName": "Translation",
+    "description": "Meaning and life note of a verse in one language."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "verse": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::verse.verse",
+      "inversedBy": "translations"
+    },
+    "language": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "hi",
+        "mr",
+        "gu",
+        "bn",
+        "ta",
+        "te",
+        "kn",
+        "ml",
+        "pa",
+        "or",
+        "as",
+        "ur",
+        "sa",
+        "ne",
+        "kok",
+        "mai",
+        "doi",
+        "sd",
+        "ks",
+        "mni",
+        "sat",
+        "brx",
+        "en"
+      ]
+    },
+    "meaning": {
+      "type": "text",
+      "required": true
+    },
+    "life_note": {
+      "type": "text"
+    },
+    "narration_url": {
+      "type": "string"
+    },
+    "review_status": {
+      "type": "enumeration",
+      "enum": [
+        "draft",
+        "in_review",
+        "changes_requested",
+        "approved"
+      ],
+      "default": "draft",
+      "required": true
+    },
+    "reviewer": {
+      "type": "string"
+    },
+    "review_note": {
+      "type": "text"
+    }
+  }
+}

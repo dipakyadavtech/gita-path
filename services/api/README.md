@@ -27,5 +27,5 @@ Add `"admin": true` to get an admin token for `/admin/v1/*`. Dev tokens are disa
 
 ## Tests
 ```bash
-./scripts/test-api.sh      # recreates gitapath_test DB, runs 18 tests incl. module boundary check
+./scripts/test-api.sh      # recreates gitapath_test DB, runs 19 tests incl. module boundary check
 ```

@@ -97,4 +97,26 @@ class ApiFlowTests {
         mvc.perform(post("/internal/content/verses").header("X-Webhook-Secret", "wrong").contentType(MediaType.APPLICATION_JSON).content(verse)).andExpect(status().isForbidden());
         mvc.perform(post("/internal/content/verses").header("X-Webhook-Secret", "dev-cms-secret").contentType(MediaType.APPLICATION_JSON).content(verse)).andExpect(status().isConflict());
     }
+
+    @Test
+    void flaggedAnswerIsReviewedByAdmin() throws Exception {
+        String user = token("9876500010", false);
+        String body = mvc.perform(post("/v1/ask").header("Authorization", user).contentType(MediaType.APPLICATION_JSON).content("{\"question\":\"How do I handle stress at work?\"}"))
+                .andExpect(status().isOk()).andReturn().getResponse().getContentAsString();
+        String id = JsonPath.read(body, "$.id");
+        mvc.perform(post("/v1/ask/" + id + "/flag").header("Authorization", user).contentType(MediaType.APPLICATION_JSON).content("{\"reason\":\"Wrong verse\"}"))
+                .andExpect(status().is2xxSuccessful());
+
+        String admin = token("9876500011", true);
+        mvc.perform(get("/admin/v1/ai/flags").header("Authorization", admin))
+                .andExpect(status().isOk()).andExpect(jsonPath("$[?(@.id == '" + id + "')].flag_reason").value("Wrong verse"));
+        mvc.perform(post("/admin/v1/ai/flags/" + id + "/resolve").header("Authorization", admin).contentType(MediaType.APPLICATION_JSON)
+                        .content("{\"action\":\"confirmed\",\"note\":\"Cite 2.47 instead\"}"))
+                .andExpect(status().isNoContent());
+        mvc.perform(get("/admin/v1/ai/flags?status=resolved").header("Authorization", admin))
+                .andExpect(jsonPath("$[?(@.id == '" + id + "')].review_action").value("confirmed"))
+                .andExpect(jsonPath("$[?(@.id == '" + id + "')].reviewed_by").value("dev-9876500011"));
+        mvc.perform(get("/admin/v1/verses/2.47").header("Authorization", admin))
+                .andExpect(status().isOk()).andExpect(jsonPath("$.verse.id").value("2.47")).andExpect(jsonPath("$.checksum").isNotEmpty());
+    }
 }
