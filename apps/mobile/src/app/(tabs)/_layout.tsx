@@ -30,12 +30,12 @@ export default function TabsLayout() {
             title: t.title,
             tabBarIcon: ({ focused, color }) => (
               <View style={{ alignItems: 'center' }}>
-                <Icon name={focused ? t.iconActive : t.icon} size={22} color={color} />
+                <Icon name={focused ? t.iconActive : t.icon} size={22} color={String(color)} />
               </View>
             ),
             tabBarLabel: ({ focused, color }) => (
               <View style={{ alignItems: 'center' }}>
-                <Text style={{ fontFamily: focused ? fonts.bodyBold : fonts.bodyMedium, fontSize: 11, color }}>{t.title}</Text>
+                <Text style={{ fontFamily: focused ? fonts.bodyBold : fonts.bodyMedium, fontSize: 11, color: String(color) }}>{t.title}</Text>
                 <View style={{ width: 4, height: 4, borderRadius: 2, marginTop: 2, backgroundColor: focused ? colors.saffron : 'transparent' }} />
               </View>
             ),

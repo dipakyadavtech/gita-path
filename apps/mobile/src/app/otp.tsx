@@ -1,6 +1,6 @@
 import { router, useLocalSearchParams } from 'expo-router';
 import { useEffect, useRef, useState } from 'react';
-import { Pressable, Text, TextInput, View } from 'react-native';
+import { Pressable, Text, TextInput, View, type TextInputInstance } from 'react-native';
 import { Button, Screen, TopBar } from '@/components/ui';
 import { DEV_OTP, useAuth } from '@/lib/auth';
 import { colors, fonts, type } from '@/theme';
@@ -12,7 +12,7 @@ export default function Otp() {
   const [code, setCode] = useState('');
   const [error, setError] = useState('');
   const [seconds, setSeconds] = useState(30);
-  const input = useRef<TextInput>(null);
+  const input = useRef<TextInputInstance>(null);
 
   useEffect(() => {
     const t = setInterval(() => setSeconds((s) => (s > 0 ? s - 1 : 0)), 1000);

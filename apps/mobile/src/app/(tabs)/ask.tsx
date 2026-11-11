@@ -1,6 +1,6 @@
 import { router, useLocalSearchParams } from 'expo-router';
 import { useEffect, useRef, useState } from 'react';
-import { KeyboardAvoidingView, Platform, Pressable, ScrollView, Text, TextInput, View } from 'react-native';
+import { KeyboardAvoidingView, Platform, Pressable, ScrollView, Text, TextInput, View, type ScrollViewInstance } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Caps, Icon, Row } from '@/components/ui';
 import { verseById } from '@/lib/content';
@@ -26,7 +26,7 @@ export default function Ask() {
   const countAsk = useApp((s) => s.countAsk);
   const [input, setInput] = useState('');
   const [msgs, setMsgs] = useState<Msg[]>([]);
-  const scroll = useRef<ScrollView>(null);
+  const scroll = useRef<ScrollViewInstance>(null);
 
   useEffect(() => {
     if (params.mood && MOOD_PROMPTS[params.mood]) setInput(MOOD_PROMPTS[params.mood]);

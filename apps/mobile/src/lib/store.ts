@@ -28,6 +28,8 @@ type State = {
   quiz: Record<number, { correct: number; total: number }>;
   plan: Plan;
   ask: { date: string; count: number };
+  watched: Record<string, string>;
+  markWatched: (storyId: string) => void;
   // actions
   setSession: (s: Session | null) => void;
   setPrefs: (p: Partial<Prefs>) => void;
@@ -62,6 +64,7 @@ const initial = {
   quiz: {} as Record<number, { correct: number; total: number }>,
   plan: 'free' as Plan,
   ask: { date: todayKey(), count: 0 },
+  watched: {} as Record<string, string>,
 };
 
 export const useApp = create<State>()(
@@ -107,6 +110,7 @@ export const useApp = create<State>()(
         set({ ask: next });
         return next.count;
       },
+      markWatched: (storyId) => set({ watched: { ...get().watched, [storyId]: new Date().toISOString() } }),
       reset: () => set({ ...initial }),
     }),
     { name: 'gita-path', storage: createJSONStorage(() => AsyncStorage) },
