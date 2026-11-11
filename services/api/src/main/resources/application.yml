@@ -1,0 +1,38 @@
+spring:
+  application.name: gita-path-api
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/gitapath}
+    username: ${DATABASE_USER:postgres}
+    password: ${DATABASE_PASSWORD:}
+  flyway:
+    locations: classpath:db/migration
+  modulith:
+    events:
+      jdbc.schema-initialization.enabled: true
+      republish-outstanding-events-on-restart: true
+
+server:
+  port: ${PORT:8080}
+
+management:
+  endpoints.web.exposure.include: health,info,modulith
+
+gitapath:
+  # Sign-in. With CLERK_ISSUER set (e.g. https://your-app.clerk.accounts.dev), tokens are verified
+  # against Clerk's public keys. Without it, dev tokens from POST /v1/auth/dev-token are accepted.
+  clerk-issuer: ${CLERK_ISSUER:}
+  dev-auth-secret: ${DEV_AUTH_SECRET:dev-only-secret-change-me-dev-only-secret-32b}
+  dev-auth-enabled: ${DEV_AUTH_ENABLED:true}
+  # Shared secret Strapi sends in X-Webhook-Secret when content is published.
+  cms-webhook-secret: ${CMS_WEBHOOK_SECRET:dev-cms-secret}
+  # RevenueCat webhook Authorization header value.
+  revenuecat-webhook-secret: ${REVENUECAT_WEBHOOK_SECRET:dev-rc-secret}
+  # Comma-separated user ids that get the ADMIN role (admin portal).
+  admin-users: ${ADMIN_USERS:}
+  allowed-origins: ${ALLOWED_ORIGINS:*}
+  guide:
+    free-daily-questions: 5
+    # Optional: any OpenAI-compatible chat completions endpoint. Empty = template answers from verses.
+    llm-url: ${GUIDE_LLM_URL:}
+    llm-key: ${GUIDE_LLM_KEY:}
+    llm-model: ${GUIDE_LLM_MODEL:}
