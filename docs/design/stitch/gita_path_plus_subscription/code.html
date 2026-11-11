@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_modal" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Noto+Serif:ital,wght@0,400;0,600;1,400&amp;family=Sora:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-container-highest": "#e1e2e6", "background": "#f8f9fd", "on-surface-variant": "#59413a", "surface": "#f8f9fd", "tertiary": "#0f5e63", "tertiary-fixed-dim": "#8fd2d7", "on-tertiary-container": "#c2faff", "surface-container": "#edeef2", "error": "#ba1a1a", "on-background": "#191c1f", "primary-fixed-dim": "#ffb59d", "secondary": "#5b5794", "primary-container": "#c2410c", "primary-fixed": "#ffdbd0", "on-tertiary": "#ffffff", "on-primary-fixed": "#390c00", "on-secondary-container": "#4b4883", "tertiary-container": "#32777c", "surface-container-high": "#e7e8ec", "on-primary-fixed-variant": "#832600", "on-secondary-fixed-variant": "#43407b", "on-primary-container": "#ffece7", "surface-tint": "#ac3400", "on-error": "#ffffff", "on-error-container": "#93000a", "inverse-surface": "#2e3134", "surface-container-low": "#f2f3f7", "secondary-container": "#bebafe", "secondary-fixed-dim": "#c4c0ff", "inverse-on-surface": "#eff1f5", "inverse-primary": "#ffb59d", "on-surface": "#191c1f", "surface-bright": "#f8f9fd", "outline": "#8d7168", "secondary-fixed": "#e3dfff", "on-secondary": "#ffffff", "error-container": "#ffdad6", "on-tertiary-fixed-variant": "#004f54", "surface-variant": "#e1e2e6", "on-primary": "#ffffff", "outline-variant": "#e1bfb5", "on-tertiary-fixed": "#002022", "surface-container-lowest": "#ffffff", "primary": "#9b2f00", "tertiary-fixed": "#abeef4", "surface-dim": "#d9dade", "on-secondary-fixed": "#17114d" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-sm": "0.75rem", "space-lg": "1.5rem", "space-md": "1rem", "space-xs": "0.5rem", "space-2xs": "0.25rem", "space-2xl": "3rem", "margin-tablet": "2rem", "gutter-tablet": "1.5rem", "margin-desktop": "3rem", "gutter": "1rem", "gutter-desktop": "2rem", "margin": "1.25rem", "space-xl": "2rem" }, fontFamily: { "headline-display-mobile": ["Sora"], "label-caps": ["Sora"], "scripture-verse-mobile": ["Noto Serif"], "headline-display": ["Sora"], "body-lg": ["Inter"], "label-lg": ["Inter"], "label-md": ["Inter"], "headline-md": ["Sora"], "body-sm": ["Inter"], "headline-lg": ["Sora"], "headline-sm": ["Sora"], "scripture-verse": ["Noto Serif"], "body-md": ["Inter"] }, fontSize: { "headline-display-mobile": ["30px", { lineHeight: "38px", letterSpacing: "-0.02em", fontWeight: "600" }], "label-caps": ["11px", { lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "700" }], "scripture-verse-mobile": ["17px", { lineHeight: "28px", letterSpacing: "0.01em", fontWeight: "400" }], "headline-display": ["40px", { lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-lg": ["17px", { lineHeight: "28px", fontWeight: "400" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "500" }], "headline-md": ["22px", { lineHeight: "30px", letterSpacing: "-0.01em", fontWeight: "600" }], "body-sm": ["13px", { lineHeight: "20px", fontWeight: "400" }], "headline-lg": ["28px", { lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "600" }], "headline-sm": ["18px", { lineHeight: "26px", fontWeight: "600" }], "scripture-verse": ["20px", { lineHeight: "34px", letterSpacing: "0.01em", fontWeight: "400" }], "body-md": ["15px", { lineHeight: "24px", fontWeight: "400" }] } } } };</script><style>@layer base { html, body { width: 100vw; margin: 0; padding: 0; min-height: 100%; } body { overscroll-behavior-y: none; -webkit-tap-highlight-color: transparent; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(25,28,31,0.03)] pt-safe"><div class="h-16 px-margin flex items-center justify-between max-w-[480px] mx-auto w-full"><button aria-label="Close modal" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface rounded-full hover:bg-surface-container transition-colors active:scale-95" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">close</span></button><h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight select-none">Gita Path Plus</h1><button class="min-h-[44px] px-space-xs flex items-center justify-center font-label-lg text-label-lg text-primary hover:text-primary-container active:scale-95 transition-all select-none">Restore</button></div></header><main class="flex flex-col relative w-full max-w-[480px] mx-auto pt-16 pb-safe px-margin bg-surface flex-grow"><div class="flex flex-col w-full pb-36">
+<!-- Glowing Sacred Chakra / Emblem Hero -->
+<div class="flex flex-col items-center text-center mt-2 mb-6">
+<div class="relative w-20 h-20 flex items-center justify-center mb-4">
+<div class="absolute inset-0 rounded-full bg-primary-fixed blur-xl opacity-70 animate-pulse"></div>
+<div class="relative w-16 h-16 rounded-full bg-secondary flex items-center justify-center shadow-lg shadow-secondary/30">
+<!-- Sacred Dharma Wheel & Lotus Vector Emblem -->
+<svg class="w-10 h-10 text-on-secondary" fill="none" stroke="currentColor" viewbox="0 0 48 48">
+<circle class="text-secondary-fixed-dim" cx="24" cy="24" r="21" stroke-dasharray="3 3.5" stroke-width="1.75"></circle>
+<circle cx="24" cy="24" r="15" stroke-width="1.5"></circle>
+<circle cx="24" cy="24" fill="currentColor" r="5"></circle>
+<path d="M24 3v6M24 39v6M3 24h6M39 24h6M9.17 9.17l4.24 4.24M34.59 34.59l4.24 4.24M9.17 38.83l4.24-4.24M34.59 13.41l4.24-4.24" stroke-linecap="round" stroke-width="2"></path>
+<path d="M24 13c-4.5 5-4.5 17 0 22M24 13c4.5 5 4.5 17 0 22" stroke-linecap="round" stroke-width="1.25"></path>
+</svg>
+</div>
+</div>
+<!-- Sacred Tag -->
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary/10 mb-2">
+<span class="material-symbols-outlined text-[15px] text-secondary" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-secondary">Gita Path Plus</span>
+</div>
+<h2 class="font-headline-display-mobile text-headline-display-mobile text-on-surface mb-2 font-bold tracking-tight">
+      Deepen Your Inner Journey
+    </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-[340px] leading-relaxed">
+      Experience the timeless wisdom of the Gita without limits, distractions, or advertisements. One sanctuary for your whole family.
+    </p>
+</div>
+<!-- Value Feature List -->
+<div class="flex flex-col gap-3 mb-6">
+<!-- Feature 1 -->
+<div class="flex items-start gap-3.5 p-3.5 rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="w-8 h-8 rounded-full bg-tertiary/10 text-tertiary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">psychology_alt</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface text-[15px]">Unlimited Ask the Gita AI</span>
+<span class="text-[10px] font-label-caps uppercase tracking-wider px-1.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant">AI Sadhana</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          Seek spiritual counsel anytime for complex life dilemmas with unbounded philosophical depth and cross-chapter synthesis.
+        </p>
+</div>
+</div>
+<!-- Feature 2 -->
+<div class="flex items-start gap-3.5 p-3.5 rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="w-8 h-8 rounded-full bg-tertiary/10 text-tertiary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">spatial_audio_off</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface text-[15px]">Mahabharata Cinematic Sound</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          All 18 chapters mastered with 3D spatial Kurukshetra ambiance and binaural Vedic throat chants tuned to 432 Hz.
+        </p>
+</div>
+</div>
+<!-- Feature 3 -->
+<div class="flex items-start gap-3.5 p-3.5 rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="w-8 h-8 rounded-full bg-tertiary/10 text-tertiary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">offline_pin</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface text-[15px]">Offline Sanctuary Mode</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          Download sacred chants, verse commentaries, and deep meditation timers for silent retreats and flight travel.
+        </p>
+</div>
+</div>
+<!-- Feature 4 -->
+<div class="flex items-start gap-3.5 p-3.5 rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="w-8 h-8 rounded-full bg-tertiary/10 text-tertiary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">diversity_3</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface text-[15px]">Family Circle (Up to 6 Accounts)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          Adult reflection profiles, grandparent-friendly large scripture font, and dedicated illustrated Kids Mode included.
+        </p>
+</div>
+</div>
+<!-- Feature 5 -->
+<div class="flex items-start gap-3.5 p-3.5 rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="w-8 h-8 rounded-full bg-tertiary/10 text-tertiary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface text-[15px]">100% Ad-Free Sacred Space</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          Zero advertising, zero tracker profiling, and zero commercial interruptions during your daily contemplative practice.
+        </p>
+</div>
+</div>
+</div>
+<!-- Plan Selection Section -->
+<div class="flex flex-col gap-3 mb-5">
+<div class="flex items-center justify-between px-1">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">Choose Sadhana Commitment</span>
+<span class="font-label-md text-label-md text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock</span> Encrypted &amp; Secure
+      </span>
+</div>
+<!-- Plan 1: Yearly Plan (Selected) -->
+<div class="plan-card relative flex flex-col p-4 rounded-xl bg-surface-container-lowest shadow-md cursor-pointer transition-all duration-200" id="plan-yearly" onclick="selectPlan('yearly')">
+<!-- Highlighting Indicator Bar -->
+<div class="plan-indicator absolute inset-y-0 left-0 w-1.5 bg-primary-container rounded-l-xl"></div>
+<!-- Top Row Badges -->
+<div class="flex items-center justify-between mb-2">
+<div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-primary-container text-on-primary font-label-caps text-label-caps tracking-wider uppercase">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">hotel_class</span>
+<span>Most Popular · Save 45%</span>
+</div>
+<div class="plan-radio w-6 h-6 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[16px] font-bold">check</span>
+</div>
+</div>
+<!-- Pricing Row -->
+<div class="flex items-baseline justify-between mt-1">
+<div>
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">₹799</span>
+<span class="font-body-md text-body-md text-on-surface-variant">/ year</span>
+<span class="font-body-sm text-body-sm text-outline line-through ml-1.5">₹1,440</span>
+</div>
+<div class="text-right">
+<span class="font-label-lg text-label-lg font-semibold text-primary">₹66/month</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant mt-2 pt-2 bg-surface-container-low/70 rounded-lg px-2.5 py-1.5">
+<span class="flex items-center gap-1.5 text-[12px] font-medium text-tertiary">
+<span class="material-symbols-outlined text-[15px]">event_available</span>
+          7-Day Free Trial Included
+        </span>
+<span class="text-[12px] text-on-surface-variant font-medium">Less than ₹3/day</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[12px] mt-2 leading-tight">
+        Cancel anytime in your app store settings during the 7-day trial without being charged.
+      </p>
+</div>
+<!-- Plan 2: Monthly Plan -->
+<div class="plan-card relative flex flex-col p-4 rounded-xl bg-surface-container-lowest shadow-sm cursor-pointer transition-all duration-200 opacity-85" id="plan-monthly" onclick="selectPlan('monthly')">
+<div class="plan-indicator absolute inset-y-0 left-0 w-1.5 bg-transparent rounded-l-xl"></div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">Flexible Monthly</span>
+<div class="plan-radio w-6 h-6 rounded-full bg-surface-container-high text-transparent flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+</div>
+<div class="flex items-baseline justify-between mt-1">
+<div>
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">₹99</span>
+<span class="font-body-md text-body-md text-on-surface-variant">/ month</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Billed monthly</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[12px] mt-2">
+        Standard access with 7-day free trial. Flexible cancellation at the end of each billing cycle.
+      </p>
+</div>
+</div>
+<!-- Trust / Sacred Giving Guarantee Card -->
+<div class="flex items-center gap-3.5 p-4 rounded-xl bg-secondary/5 text-on-surface mb-6">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">volunteer_activism</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-[14px] text-secondary font-semibold">Sacred Giving Guarantee</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[12px] leading-relaxed mt-0.5">
+        10% of every Gita Path Plus membership directly sponsors Vedic scholarship endowments and high-resolution preservation of endangered palm-leaf manuscripts.
+      </p>
+</div>
+</div>
+<!-- Community Testimonial Snippet -->
+<div class="flex flex-col p-4 rounded-xl bg-surface-container-low mb-6">
+<div class="flex items-center gap-2 mb-2">
+<div class="flex text-primary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Seeker Reflection</span>
+</div>
+<p class="font-scripture-verse-mobile text-scripture-verse-mobile text-[14px] text-on-surface italic leading-snug">
+      “Having the Gita in 3D binaural chanting during my morning commute has completely dissolved my workplace anxiety. The family plan made my father fall in love with scripture again.”
+    </p>
+<span class="font-label-md text-label-md text-on-surface-variant mt-2">— Dr. Radhika Sharma, Mumbai</span>
+</div>
+<!-- Fixed Bottom CTA Bar for Mobile Paywall -->
+<div class="fixed bottom-0 left-0 right-0 z-40 bg-surface/95 backdrop-blur-xl shadow-[0_-8px_24px_rgba(25,28,31,0.06)] pb-safe pt-3">
+<div class="max-w-[480px] mx-auto px-margin flex flex-col items-center">
+<!-- Main Action Button -->
+<button class="w-full h-[54px] rounded-xl bg-primary-container hover:bg-primary text-on-primary font-headline-sm text-headline-sm text-[16px] flex items-center justify-center gap-2 shadow-lg shadow-primary-container/25 active:scale-[0.98] transition-all" id="cta-button" onclick="handleSubscribe()">
+<span>Start 7-Day Free Trial</span>
+<span class="font-body-md text-[14px] opacity-90">(Then ₹799/yr)</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<!-- Microcopy Reassurance -->
+<div class="flex items-center justify-center gap-1.5 mt-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-tertiary">check_circle</span>
+<span class="font-body-sm text-body-sm text-[11px]">No payment due today · Cancel anytime before Day 7</span>
+</div>
+<!-- Footer Policy Links -->
+<div class="flex items-center justify-center gap-3 py-2 text-outline">
+<a class="font-label-md text-label-md text-[11px] hover:text-on-surface transition-colors" href="#terms">Terms of Service</a>
+<span class="text-[10px] opacity-40">·</span>
+<a class="font-label-md text-label-md text-[11px] hover:text-on-surface transition-colors" href="#privacy">Privacy Policy</a>
+<span class="text-[10px] opacity-40">·</span>
+<button class="font-label-md text-label-md text-[11px] hover:text-on-surface transition-colors underline decoration-dotted" onclick="alert('Restoring previous purchases...')">Restore Purchase</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  let currentPlan = 'yearly';
+
+  function selectPlan(plan) {
+    currentPlan = plan;
+    const yearlyCard = document.getElementById('plan-yearly');
+    const monthlyCard = document.getElementById('plan-monthly');
+    const ctaBtn = document.getElementById('cta-button');
+
+    const yearlyIndicator = yearlyCard.querySelector('.plan-indicator');
+    const yearlyRadio = yearlyCard.querySelector('.plan-radio');
+    const monthlyIndicator = monthlyCard.querySelector('.plan-indicator');
+    const monthlyRadio = monthlyCard.querySelector('.plan-radio');
+
+    if (plan === 'yearly') {
+      yearlyCard.classList.add('shadow-md', 'opacity-100');
+      yearlyCard.classList.remove('opacity-85');
+      yearlyIndicator.className = 'plan-indicator absolute inset-y-0 left-0 w-1.5 bg-primary-container rounded-l-xl';
+      yearlyRadio.className = 'plan-radio w-6 h-6 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-sm';
+      yearlyRadio.innerHTML = '<span class="material-symbols-outlined text-[16px] font-bold">check</span>';
+
+      monthlyCard.classList.remove('shadow-md');
+      monthlyCard.classList.add('opacity-85');
+      monthlyIndicator.className = 'plan-indicator absolute inset-y-0 left-0 w-1.5 bg-transparent rounded-l-xl';
+      monthlyRadio.className = 'plan-radio w-6 h-6 rounded-full bg-surface-container-high text-transparent flex items-center justify-center';
+      monthlyRadio.innerHTML = '<span class="material-symbols-outlined text-[16px]">check</span>';
+
+      ctaBtn.innerHTML = `<span>Start 7-Day Free Trial</span><span class="font-body-md text-[14px] opacity-90">(Then ₹799/yr)</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span>`;
+    } else {
+      monthlyCard.classList.add('shadow-md', 'opacity-100');
+      monthlyCard.classList.remove('opacity-85');
+      monthlyIndicator.className = 'plan-indicator absolute inset-y-0 left-0 w-1.5 bg-primary-container rounded-l-xl';
+      monthlyRadio.className = 'plan-radio w-6 h-6 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-sm';
+      monthlyRadio.innerHTML = '<span class="material-symbols-outlined text-[16px] font-bold">check</span>';
+
+      yearlyCard.classList.remove('shadow-md');
+      yearlyCard.classList.add('opacity-85');
+      yearlyIndicator.className = 'plan-indicator absolute inset-y-0 left-0 w-1.5 bg-transparent rounded-l-xl';
+      yearlyRadio.className = 'plan-radio w-6 h-6 rounded-full bg-surface-container-high text-transparent flex items-center justify-center';
+      yearlyRadio.innerHTML = '<span class="material-symbols-outlined text-[16px]">check</span>';
+
+      ctaBtn.innerHTML = `<span>Start 7-Day Free Trial</span><span class="font-body-md text-[14px] opacity-90">(Then ₹99/mo)</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span>`;
+    }
+  }
+
+  function handleSubscribe() {
+    const period = currentPlan === 'yearly' ? '₹799/year' : '₹99/month';
+    const ctaBtn = document.getElementById('cta-button');
+    const originalText = ctaBtn.innerHTML;
+    
+    ctaBtn.innerHTML = `<span class="material-symbols-outlined animate-spin text-[20px]">progress_activity</span><span>Initiating Sacred Pass...</span>`;
+    ctaBtn.disabled = true;
+
+    setTimeout(() => {
+      ctaBtn.disabled = false;
+      ctaBtn.innerHTML = originalText;
+      alert(`Welcome to Gita Path Plus! Your 7-day free trial (${period}) has been initiated with full family circle privileges.`);
+    }, 900);
+  }
+</script></main></body></html>

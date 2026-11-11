@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><title>Gita Path</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Serif:ital,wght@0,400;0,600;1,400&amp;family=Sora:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { width: 100%; margin: 0; padding: 0; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary": "#9b2f00", "tertiary-fixed-dim": "#8fd2d7", "surface-variant": "#e1e2e6", "primary-container": "#c2410c", "on-surface-variant": "#59413a", "tertiary-fixed": "#abeef4", "on-tertiary-fixed-variant": "#004f54", "surface-container-lowest": "#ffffff", "on-secondary": "#ffffff", "surface-container-highest": "#e1e2e6", "surface-tint": "#ac3400", "error-container": "#ffdad6", "on-primary": "#ffffff", "on-secondary-fixed-variant": "#43407b", "primary-fixed": "#ffdbd0", "surface-container-low": "#f2f3f7", "on-error": "#ffffff", "on-background": "#191c1f", "surface-bright": "#f8f9fd", "on-primary-fixed-variant": "#832600", "surface-dim": "#d9dade", "outline": "#8d7168", "on-secondary-container": "#4b4883", "tertiary-container": "#32777c", "on-tertiary-container": "#c2faff", "inverse-surface": "#2e3134", "primary-fixed-dim": "#ffb59d", "surface": "#f8f9fd", "on-tertiary-fixed": "#002022", "on-surface": "#191c1f", "secondary": "#5b5794", "surface-container": "#edeef2", "inverse-on-surface": "#eff1f5", "on-error-container": "#93000a", "inverse-primary": "#ffb59d", "surface-container-high": "#e7e8ec", "on-primary-container": "#ffece7", "secondary-fixed": "#e3dfff", "tertiary": "#0f5e63", "on-tertiary": "#ffffff", "secondary-container": "#bebafe", "outline-variant": "#e1bfb5", "background": "#f8f9fd", "on-primary-fixed": "#390c00", "on-secondary-fixed": "#17114d", "error": "#ba1a1a", "secondary-fixed-dim": "#c4c0ff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "margin-tablet": "2rem", "gutter-desktop": "2rem", "space-sm": "0.75rem", "space-xs": "0.5rem", "space-lg": "1.5rem", "gutter-tablet": "1.5rem", "space-md": "1rem", "space-2xl": "3rem", "space-xl": "2rem", "margin": "1.25rem", "gutter": "1rem", "space-2xs": "0.25rem", "margin-desktop": "3rem" }, fontFamily: { "body-md": ["Inter"], "headline-sm": ["Sora"], "headline-md": ["Sora"], "body-lg": ["Inter"], "headline-lg": ["Sora"], "label-caps": ["Sora"], "headline-display-mobile": ["Sora"], "body-sm": ["Inter"], "scripture-verse": ["Noto Serif"], "scripture-verse-mobile": ["Noto Serif"], "label-lg": ["Inter"], "headline-display": ["Sora"], "label-md": ["Inter"] }, fontSize: { "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-sm": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["17px", { "lineHeight": "28px", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "700" }], "headline-display-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "scripture-verse": ["20px", { "lineHeight": "34px", "letterSpacing": "0.01em", "fontWeight": "400" }], "scripture-verse-mobile": ["17px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-display": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-full antialiased selection:bg-primary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(25,28,31,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Go Back" class="w-11 h-11 -ml-2 flex items-center justify-center text-on-surface hover:text-primary transition-colors active:scale-95" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="Gita Path Chakra Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6-EY-KoAs7TyyEPvmGHctj0RC8ry_cNJCVaO-XfF2nK-RB145WVH-8hhTNFmR-4uiqcWM98cOC7pPJVSWldb4lq60RyitcAU_hUiNO7oZXBtokMmxmBaJdEL0jNsn9BuXMTfXBKD8FBhI6AaXZ2ZxA5GcF9Bti1fwdBdEcLRwfW-DQG8uvBaZ4wAoqjBkRGtWGHHXJPDW9FrxJsYATtr-DyiRMiUwfKA_C78JLwxV"/><h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight line-clamp-1">Shloka Study</h1></div><div class="flex items-center gap-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container/20 cursor-pointer active:scale-95 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6PX6kNkiSHGHsKBiI2DYDG1ZSK_I5C5eHfqbYReNCryXGmvPb_Y6rvW2QMMPLdgYy48_Hi1lJ2M3oQgUFGZ8DXypMNyRekNUkwdg1krnJCxH9cJLkdIVy1sEqkV1XkTCulSkW8VV6TvgOY0GcLqRFTmwxnH-XG4a5akot-TpuHS-veoCa6y5niOZ5HvDlT36XO4Qu-aSaB3i5Lzd87XJZv-FvXQcVA2eMNJP_Si_B"/></div></div></header><main class="flex-1 flex flex-col relative w-full max-w-[480px] mx-auto px-margin pt-16 pb-safe bg-surface"><div class="flex flex-col w-full pb-8 space-y-4">
+<!-- Top Practice Context Strip (Modal / Sub-header bar) -->
+<div class="flex items-center justify-between bg-surface-container-lowest rounded-xl p-3 shadow-sm">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed/50 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">graphic_eq</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase">Interactive Chanting</p>
+<h2 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Gita 2.47 Practice</h2>
+</div>
+</div>
+<!-- Mode Switcher Pill -->
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md active:scale-95 transition-all cursor-pointer hover:bg-secondary-fixed-dim" id="tempoBtn" title="Toggle Practice Tempo">
+<span class="text-sm" id="tempoEmoji">🐢</span>
+<span class="font-semibold" id="tempoLabel">Slow (0.75x)</span>
+</button>
+</div>
+<!-- Repetition Bead Counter Indicator -->
+<div class="bg-surface-container-lowest rounded-xl p-3.5 shadow-sm flex items-center justify-between cursor-pointer select-none transition-all active:scale-[0.99] hover:shadow-md" id="malaContainer" title="Tap beads to advance Mala repetition">
+<div class="flex items-center gap-2.5">
+<div class="relative flex items-center justify-center w-7 h-7 rounded-full bg-primary-fixed text-primary transition-transform duration-200" id="malaIconWrap">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">spa</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Mala Round</span>
+<span class="text-[10px] font-semibold text-primary px-1.5 py-0.2 rounded bg-primary-fixed hidden" id="malaCelebrationBadge">✨ Completed!</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface flex items-baseline gap-1">
+<span class="text-primary-container font-bold text-lg transition-all" id="countCurrent">3</span>
+<span class="text-on-surface-variant text-sm font-normal">/ 11 repetitions</span>
+</div>
+</div>
+</div>
+<!-- Beads Visual Micro-Chain -->
+<div class="flex items-center gap-1.5 py-1 px-1" id="beadChain">
+<button aria-label="Bead 1" class="w-2.5 h-2.5 rounded-full bg-primary-container ring-2 ring-primary-container/20 transition-all cursor-pointer hover:scale-125 active:scale-95" data-bead="0" type="button"></button>
+<button aria-label="Bead 2" class="w-2.5 h-2.5 rounded-full bg-primary-container ring-2 ring-primary-container/20 transition-all cursor-pointer hover:scale-125 active:scale-95" data-bead="1" type="button"></button>
+<button aria-label="Bead 3" class="w-2.5 h-2.5 rounded-full bg-primary-container ring-2 ring-primary-container/20 transition-all cursor-pointer hover:scale-125 active:scale-95" data-bead="2" type="button"></button>
+<button aria-label="Bead 4" class="w-2.5 h-2.5 rounded-full bg-surface-variant ring-1 ring-primary-container/40 animate-pulse transition-all cursor-pointer hover:scale-125 active:scale-95" data-bead="3" type="button"></button>
+<button aria-label="Bead 5" class="w-2 h-2 rounded-full bg-surface-variant transition-all cursor-pointer hover:scale-125 active:scale-95" data-bead="4" type="button"></button>
+<button aria-label="Bead 6" class="w-2 h-2 rounded-full bg-surface-variant transition-all cursor-pointer hover:scale-125 active:scale-95" data-bead="5" type="button"></button>
+<button aria-label="Bead 7" class="w-2 h-2 rounded-full bg-surface-variant transition-all cursor-pointer hover:scale-125 active:scale-95" data-bead="6" type="button"></button>
+<button aria-label="Bead 8" class="w-2 h-2 rounded-full bg-surface-variant transition-all cursor-pointer hover:scale-125 active:scale-95" data-bead="7" type="button"></button>
+<button aria-label="Bead 9" class="w-2 h-2 rounded-full bg-surface-variant transition-all cursor-pointer hover:scale-125 active:scale-95" data-bead="8" type="button"></button>
+<button aria-label="Bead 10" class="w-2 h-2 rounded-full bg-surface-variant transition-all cursor-pointer hover:scale-125 active:scale-95" data-bead="9" type="button"></button>
+<button aria-label="Bead 11" class="w-2 h-2 rounded-full bg-surface-variant transition-all cursor-pointer hover:scale-125 active:scale-95" data-bead="10" type="button"></button>
+</div>
+</div>
+<!-- Main Karaoke Sacred Chanting Canvas -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm relative overflow-hidden flex flex-col items-center text-center">
+<!-- Ambient Subtle Sacred Aura Glow -->
+<div class="absolute -top-16 left-1/2 -translate-x-1/2 w-48 h-48 bg-primary-fixed/30 rounded-full blur-3xl pointer-events-none transition-opacity duration-500" id="auraGlow"></div>
+<div class="w-full flex items-center justify-between mb-4">
+<span class="px-2.5 py-1 rounded-full bg-surface-container font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">
+        Sanskrit Swara Sync
+      </span>
+<div class="flex items-center gap-1.5 text-tertiary cursor-pointer active:scale-95 transition-transform" id="liveFollowBadge">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-ping" id="liveFollowDot"></span>
+<span class="font-label-md text-label-md font-semibold" id="liveFollowText">Live Follow</span>
+</div>
+</div>
+<!-- Devanagari Karaoke Block -->
+<div class="py-2 space-y-3 max-w-sm w-full">
+<p class="font-scripture-verse text-scripture-verse text-on-surface leading-loose select-none flex flex-wrap justify-center items-center gap-y-2">
+<!-- Word 1 (Active Karaoke Target) -->
+<span class="karaoke-word inline-block px-2 py-0.5 rounded-lg bg-primary-container text-on-primary font-semibold shadow-sm transition-all duration-300 transform scale-105 cursor-pointer hover:opacity-90 active:scale-95" data-word-idx="0" id="word0">
+          कर्मण्येवाधिकारस्ते
+        </span>
+<!-- Subsequent verse words in soft dark indigo tone -->
+<span class="karaoke-word text-secondary transition-all duration-300 px-1.5 py-0.5 rounded-lg cursor-pointer hover:bg-secondary-fixed/30 active:scale-95" data-word-idx="1" id="word1">
+          मा
+        </span>
+<span class="karaoke-word text-secondary transition-all duration-300 px-1.5 py-0.5 rounded-lg cursor-pointer hover:bg-secondary-fixed/30 active:scale-95" data-word-idx="2" id="word2">
+          फलेषु
+        </span>
+<span class="karaoke-word text-secondary transition-all duration-300 px-1.5 py-0.5 rounded-lg cursor-pointer hover:bg-secondary-fixed/30 active:scale-95" data-word-idx="3" id="word3">
+          कदाचन ।
+        </span>
+<span class="w-full"></span>
+<span class="karaoke-word text-secondary transition-all duration-300 px-1.5 py-0.5 rounded-lg cursor-pointer hover:bg-secondary-fixed/30 active:scale-95" data-word-idx="4" id="word4">
+          मा कर्मफलहेतुर्भूर्मा ते
+        </span>
+<span class="karaoke-word text-secondary transition-all duration-300 px-1.5 py-0.5 rounded-lg cursor-pointer hover:bg-secondary-fixed/30 active:scale-95" data-word-idx="5" id="word5">
+          सङ्गोऽस्त्वकर्मणि ॥
+        </span>
+</p>
+<!-- English Phonetic Cadence Guide -->
+<div class="bg-surface-container-low rounded-xl px-3.5 py-2.5 inline-block text-left w-full mt-2 transition-all">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Phonetic Meter (Anuṣṭubh)</span>
+<span class="font-label-md text-label-md text-primary-container font-semibold" id="pitchIndicator">Pitch: Medium</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary tracking-wide select-none leading-relaxed" id="phoneticContainer">
+<span class="phonetic-syllable text-primary font-semibold underline decoration-primary/40 underline-offset-4 cursor-pointer hover:text-primary-container" data-word-idx="0">kar-man-yey-vaa-dhi-kaa-ras-tey</span>
+<span class="phonetic-syllable text-on-surface-variant cursor-pointer hover:text-primary transition-colors" data-word-idx="1">maa</span>
+<span class="phonetic-syllable text-on-surface-variant cursor-pointer hover:text-primary transition-colors" data-word-idx="2">fa-le-shu</span>
+<span class="phonetic-syllable text-on-surface-variant cursor-pointer hover:text-primary transition-colors" data-word-idx="3">ka-daa-cha-na</span>
+<span class="phonetic-syllable text-on-surface-variant cursor-pointer hover:text-primary transition-colors block mt-0.5" data-word-idx="4">maa kar-ma-pha-la-he-tur-bhoor-maa tey</span>
+<span class="phonetic-syllable text-on-surface-variant cursor-pointer hover:text-primary transition-colors inline-block mt-0.5" data-word-idx="5">san-gost-vak-ar-ma-nee</span>
+</p>
+</div>
+</div>
+</div>
+<!-- Pronunciation & Live Resonance HUD -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[20px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Vocal Resonance</span>
+</div>
+<!-- Peacock Teal Pill Feedback Badge -->
+<button class="px-3 py-1 rounded-full bg-tertiary text-on-tertiary flex items-center gap-1.5 shadow-sm active:scale-95 transition-all cursor-pointer hover:opacity-90" id="resonanceBadge" title="Tap to re-analyze vocal tone">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span>
+<span class="font-label-md text-label-md font-semibold tracking-wide" id="resonanceBadgeText">Pronunciation: Good (94%)</span>
+</button>
+</div>
+<!-- Live Audio Waveform Visualizer -->
+<div class="bg-surface-container-low rounded-xl p-3 flex flex-col justify-center">
+<div class="flex items-end justify-between h-10 px-2 gap-1" id="waveform">
+<span class="w-1.5 bg-tertiary/40 rounded-full h-3 transition-all duration-150"></span>
+<span class="w-1.5 bg-tertiary/50 rounded-full h-5 transition-all duration-150"></span>
+<span class="w-1.5 bg-tertiary rounded-full h-8 animate-pulse"></span>
+<span class="w-1.5 bg-primary-container rounded-full h-10 animate-bounce"></span>
+<span class="w-1.5 bg-tertiary rounded-full h-7 transition-all duration-150"></span>
+<span class="w-1.5 bg-tertiary/70 rounded-full h-9 transition-all duration-150"></span>
+<span class="w-1.5 bg-primary-container rounded-full h-6 animate-pulse"></span>
+<span class="w-1.5 bg-tertiary rounded-full h-10 transition-all duration-150"></span>
+<span class="w-1.5 bg-tertiary/90 rounded-full h-8 transition-all duration-150"></span>
+<span class="w-1.5 bg-tertiary/60 rounded-full h-4 transition-all duration-150"></span>
+<span class="w-1.5 bg-tertiary/40 rounded-full h-3 transition-all duration-150"></span>
+<span class="w-1.5 bg-primary-container rounded-full h-7 animate-pulse"></span>
+<span class="w-1.5 bg-tertiary/80 rounded-full h-9 transition-all duration-150"></span>
+<span class="w-1.5 bg-tertiary/50 rounded-full h-5 transition-all duration-150"></span>
+<span class="w-1.5 bg-tertiary/30 rounded-full h-2 transition-all duration-150"></span>
+</div>
+<div class="flex justify-between items-center mt-2 px-1 text-on-surface-variant font-label-caps text-label-caps">
+<span id="audioTimestamp">0.00s</span>
+<span class="text-tertiary font-semibold" id="tuningStatus">Tuning: 432 Hz Sā</span>
+<span id="latencyStatus">0.12s latency</span>
+</div>
+</div>
+<!-- AI Pronunciation Tip Card -->
+<div class="bg-surface-container rounded-xl p-3 flex items-start gap-2.5">
+<div class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">tips_and_updates</span>
+</div>
+<div class="flex-1">
+<p class="font-label-md text-label-md text-on-surface font-semibold">Guruji Pronunciation Tip</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug mt-0.5" id="pronunciationTip">
+          Soften the aspirated <span class="font-semibold text-primary">"dh"</span> in <em>adhikāra</em> and prolong the final <span class="font-semibold text-primary">"ste"</span> resonance with relaxed lips.
+        </p>
+</div>
+</div>
+</div>
+<!-- Large Interactive Center Microphone Button -->
+<div class="flex flex-col items-center justify-center py-2 space-y-2 relative">
+<!-- Feedback Toast / Dynamic Resonance Toast -->
+<div class="absolute -top-6 px-3.5 py-1 rounded-full bg-inverse-surface text-inverse-on-surface text-xs font-medium shadow-md opacity-0 pointer-events-none transition-all duration-300 transform -translate-y-1 z-30" id="dynamicToast">
+  Resonance: 96% Satva Harmony 🎯
+</div>
+<div class="relative flex items-center justify-center">
+<!-- Tactile Radiant Pulse Rings -->
+<div class="absolute w-24 h-24 rounded-full bg-primary-container/20 animate-ping transition-all" id="micPulseRing"></div>
+<div class="absolute w-20 h-20 rounded-full bg-primary-container/30 transition-all" id="micAuraRing"></div>
+<!-- Prominent 72px Saffron CTA Button -->
+<button aria-label="Microphone active" class="relative z-10 w-[72px] h-[72px] rounded-full bg-primary-container text-on-primary shadow-lg flex items-center justify-center active:scale-95 transition-all hover:bg-primary cursor-pointer ring-4 ring-primary-fixed/40" id="micButton">
+<span class="material-symbols-outlined text-[34px] transition-transform duration-200" id="micIcon" style="font-variation-settings: 'FILL' 1;">mic</span>
+</button>
+</div>
+<!-- Live State Label -->
+<div class="flex items-center gap-1.5 text-center cursor-pointer select-none" id="micStatusContainer">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse" id="micDot"></span>
+<p class="font-label-md text-label-md text-on-surface font-medium transition-colors" id="micStatusText">
+        Listening... chant along with Guruji
+      </p>
+</div>
+</div>
+<!-- Bottom Interactive Flow Controls -->
+<div class="grid grid-cols-2 gap-3 pt-1">
+<!-- Slow Mode Toggle Action -->
+<button class="h-[52px] px-3 rounded-xl bg-surface-container-lowest text-on-surface font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-sm hover:bg-surface-container active:scale-95 transition-all cursor-pointer" id="slowToggleAction">
+<span class="text-base" id="actionTempoEmoji">🐢</span>
+<span class="truncate font-semibold" id="actionTempoLabel">Slow 0.75x</span>
+</button>
+<!-- Teal Secondary / Confirmation CTA -->
+<button class="h-[52px] px-3 rounded-xl bg-tertiary text-on-tertiary font-label-lg text-label-lg flex items-center justify-center gap-1.5 shadow-sm hover:opacity-95 active:scale-95 transition-all cursor-pointer" id="finishPracticeBtn">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+<span class="truncate font-semibold" id="finishPracticeText">Finish Practice</span>
+</button>
+</div>
+</div>
+<script>
+  // Word and Syllable definitions for interactive karaoke sync
+  const wordElements = [
+    { id: 'word0', devanagari: 'कर्मण्येवाधिकारस्ते', phonetic: 'kar-man-yey-vaa-dhi-kaa-ras-tey', tip: 'Soften the aspirated <span class="font-semibold text-primary">"dh"</span> in <em>adhikāra</em> and prolong the final <span class="font-semibold text-primary">"ste"</span> resonance with relaxed lips.', pitch: 'Pitch: Medium' },
+    { id: 'word1', devanagari: 'मा', phonetic: 'maa', tip: 'Produce a deep, chest-centered nasal vowel <span class="font-semibold text-primary">"mā"</span> without clipping early.', pitch: 'Pitch: High-Stable' },
+    { id: 'word2', devanagari: 'फलेषु', phonetic: 'fa-le-shu', tip: 'Pronounce the retroflex <span class="font-semibold text-primary">"ṣu"</span> by gently curling your tongue against the roof of the palate.', pitch: 'Pitch: Soft Fall' },
+    { id: 'word3', devanagari: 'कदाचन ।', phonetic: 'ka-daa-cha-na', tip: 'Keep the syllable <span class="font-semibold text-primary">"kadā"</span> open, letting the caesura pause breathe peacefully.', pitch: 'Pitch: Grounded' },
+    { id: 'word4', devanagari: 'मा कर्मफलहेतुर्भूर्मा ते', phonetic: 'maa kar-ma-pha-la-he-tur-bhoor-maa tey', tip: 'Flow through the conjunct <span class="font-semibold text-primary">"rbhūr"</span> with steady diaphragmatic support.', pitch: 'Pitch: Dynamic Surge' },
+    { id: 'word5', devanagari: 'सङ्गोऽस्त्वकर्मणि ॥', phonetic: 'san-gost-vak-ar-ma-nee', tip: 'Conclude with gentle release at the double danda, settling heart rate into stillness.', pitch: 'Pitch: Meditative Deep' }
+  ];
+
+  let currentIdx = 0;
+  let isListening = true;
+  let tempoIdx = 0; // 0: 0.75x, 1: 1.0x, 2: 1.25x
+  const tempos = [
+    { speed: 0.75, label: 'Slow (0.75x)', shortLabel: 'Slow 0.75x', emoji: '🐢', interval: 2200, waveInterval: 300 },
+    { speed: 1.0, label: 'Flow (1.0x)', shortLabel: 'Flow 1.0x', emoji: '🪷', interval: 1600, waveInterval: 220 },
+    { speed: 1.25, label: 'Swift (1.25x)', shortLabel: 'Swift 1.25x', emoji: '⚡', interval: 1100, waveInterval: 140 }
+  ];
+
+  let karaokeTimer = null;
+  let waveTimer = null;
+  let elapsedTimer = null;
+  let secondsElapsed = 0;
+
+  // Active word styling classes
+  const activeWordClass = 'karaoke-word inline-block px-2.5 py-0.5 rounded-lg bg-primary-container text-on-primary font-semibold shadow-md transition-all duration-300 transform scale-105 cursor-pointer ring-2 ring-primary-fixed';
+  const inactiveWordClass = 'karaoke-word text-secondary transition-all duration-300 px-1.5 py-0.5 rounded-lg cursor-pointer hover:bg-secondary-fixed/30 active:scale-95';
+
+  function applyActiveWord(idx) {
+    currentIdx = idx;
+    wordElements.forEach((item, i) => {
+      const el = document.getElementById(item.id);
+      if (el) {
+        if (i === idx) {
+          el.className = activeWordClass;
+        } else {
+          el.className = inactiveWordClass;
+        }
+      }
+    });
+
+    // Update Phonetic Guide Syllable Highlights
+    const phoneticSpans = document.querySelectorAll('.phonetic-syllable');
+    phoneticSpans.forEach(span => {
+      const pIdx = parseInt(span.getAttribute('data-word-idx'), 10);
+      if (pIdx === idx) {
+        span.className = 'phonetic-syllable text-primary font-semibold underline decoration-primary/40 underline-offset-4 cursor-pointer hover:text-primary-container transition-all scale-102';
+      } else {
+        span.className = 'phonetic-syllable text-on-surface-variant cursor-pointer hover:text-primary transition-colors';
+      }
+    });
+
+    // Update Pitch and Guruji tip
+    const currentMeta = wordElements[idx];
+    const pitchIndicator = document.getElementById('pitchIndicator');
+    const pronunciationTip = document.getElementById('pronunciationTip');
+    if (pitchIndicator && currentMeta) pitchIndicator.textContent = currentMeta.pitch;
+    if (pronunciationTip && currentMeta) pronunciationTip.innerHTML = currentMeta.tip;
+  }
+
+  // Clickable Devanagari words & syllables
+  document.querySelectorAll('.karaoke-word').forEach(el => {
+    el.addEventListener('click', (e) => {
+      const idx = parseInt(el.getAttribute('data-word-idx'), 10);
+      applyActiveWord(idx);
+      showFeedbackToast(`Focused pada: "${wordElements[idx].devanagari}"`);
+    });
+  });
+
+  document.querySelectorAll('.phonetic-syllable').forEach(el => {
+    el.addEventListener('click', (e) => {
+      const idx = parseInt(el.getAttribute('data-word-idx'), 10);
+      applyActiveWord(idx);
+      showFeedbackToast(`Syllable sync: "${wordElements[idx].phonetic}"`);
+    });
+  });
+
+  // Automated Karaoke Cycle
+  function stepKaraoke() {
+    if (!isListening) return;
+    const nextIdx = (currentIdx + 1) % wordElements.length;
+    applyActiveWord(nextIdx);
+  }
+
+  function restartKaraokeLoop() {
+    if (karaokeTimer) clearInterval(karaokeTimer);
+    if (isListening) {
+      karaokeTimer = setInterval(stepKaraoke, tempos[tempoIdx].interval);
+    }
+  }
+
+  // Toast Feedback Helper
+  const dynamicToast = document.getElementById('dynamicToast');
+  let toastTimeout = null;
+  function showFeedbackToast(msg) {
+    if (!dynamicToast) return;
+    if (toastTimeout) clearTimeout(toastTimeout);
+    dynamicToast.textContent = msg;
+    dynamicToast.classList.remove('opacity-0', '-translate-y-1');
+    dynamicToast.classList.add('opacity-100', 'translate-y-0');
+    toastTimeout = setTimeout(() => {
+      dynamicToast.classList.remove('opacity-100', 'translate-y-0');
+      dynamicToast.classList.add('opacity-0', '-translate-y-1');
+    }, 1800);
+  }
+
+  // Mic Button Toggle Interaction
+  const micButton = document.getElementById('micButton');
+  const micIcon = document.getElementById('micIcon');
+  const micPulseRing = document.getElementById('micPulseRing');
+  const micAuraRing = document.getElementById('micAuraRing');
+  const micStatusText = document.getElementById('micStatusText');
+  const micDot = document.getElementById('micDot');
+  const auraGlow = document.getElementById('auraGlow');
+  const liveFollowDot = document.getElementById('liveFollowDot');
+  const liveFollowText = document.getElementById('liveFollowText');
+
+  function toggleListening(forceState) {
+    isListening = typeof forceState === 'boolean' ? forceState : !isListening;
+
+    if (isListening) {
+      micIcon.textContent = 'mic';
+      micPulseRing.classList.remove('hidden');
+      micAuraRing.classList.remove('opacity-30', 'scale-90');
+      micStatusText.textContent = 'Listening... chant along with Guruji';
+      micDot.className = 'w-2 h-2 rounded-full bg-primary-container animate-pulse';
+      if (auraGlow) auraGlow.classList.remove('opacity-10');
+      if (liveFollowDot) liveFollowDot.className = 'w-2 h-2 rounded-full bg-tertiary animate-ping';
+      if (liveFollowText) liveFollowText.textContent = 'Live Follow';
+      restartKaraokeLoop();
+      showFeedbackToast('Resonance: 96% Satva Harmony 🎯');
+    } else {
+      micIcon.textContent = 'mic_off';
+      micPulseRing.classList.add('hidden');
+      micAuraRing.classList.add('opacity-30', 'scale-90');
+      micStatusText.textContent = 'Paused / Tap to Chant';
+      micDot.className = 'w-2 h-2 rounded-full bg-on-surface-variant';
+      if (auraGlow) auraGlow.classList.add('opacity-10');
+      if (liveFollowDot) liveFollowDot.className = 'w-2 h-2 rounded-full bg-on-surface-variant';
+      if (liveFollowText) liveFollowText.textContent = 'Paused';
+      if (karaokeTimer) clearInterval(karaokeTimer);
+      showFeedbackToast('Chant paused. Tap mic to resume.');
+    }
+  }
+
+  if (micButton) {
+    micButton.addEventListener('click', () => toggleListening());
+  }
+
+  const micStatusContainer = document.getElementById('micStatusContainer');
+  if (micStatusContainer) {
+    micStatusContainer.addEventListener('click', () => toggleListening());
+  }
+
+  // Resonance Badge Click interaction
+  const resonanceBadge = document.getElementById('resonanceBadge');
+  const resonanceBadgeText = document.getElementById('resonanceBadgeText');
+  if (resonanceBadge && resonanceBadgeText) {
+    const scores = ['Pronunciation: Superb (98%)', 'Pronunciation: Good (95%)', 'Pronunciation: Satva (99%)', 'Pronunciation: Great (92%)'];
+    let scoreIdx = 0;
+    resonanceBadge.addEventListener('click', () => {
+      scoreIdx = (scoreIdx + 1) % scores.length;
+      resonanceBadgeText.textContent = scores[scoreIdx];
+      showFeedbackToast('Vocal harmonic analysis updated ✨');
+    });
+  }
+
+  // Mala Bead Counter Interaction
+  const beadChain = document.getElementById('beadChain');
+  const countCurrent = document.getElementById('countCurrent');
+  const malaCelebrationBadge = document.getElementById('malaCelebrationBadge');
+  const malaContainer = document.getElementById('malaContainer');
+  const malaIconWrap = document.getElementById('malaIconWrap');
+  let count = 3;
+
+  function updateMalaUI() {
+    if (countCurrent) countCurrent.textContent = count;
+    const beads = beadChain ? beadChain.querySelectorAll('button') : [];
+    beads.forEach((bead, i) => {
+      if (i < count) {
+        bead.className = 'w-2.5 h-2.5 rounded-full bg-primary-container ring-2 ring-primary-container/20 transition-all cursor-pointer hover:scale-125 active:scale-95 shadow-xs';
+      } else if (i === count) {
+        bead.className = 'w-2.5 h-2.5 rounded-full bg-surface-variant ring-2 ring-primary-container/60 animate-pulse transition-all cursor-pointer hover:scale-125 active:scale-95';
+      } else {
+        bead.className = 'w-2 h-2 rounded-full bg-surface-variant transition-all cursor-pointer hover:scale-125 active:scale-95';
+      }
+    });
+
+    if (count >= 11) {
+      if (malaCelebrationBadge) malaCelebrationBadge.classList.remove('hidden');
+      if (malaIconWrap) malaIconWrap.classList.add('rotate-12', 'scale-110');
+      showFeedbackToast('🌸 Full Mala Round 11/11 Achieved! Hari Om!');
+    } else {
+      if (malaCelebrationBadge) malaCelebrationBadge.classList.add('hidden');
+      if (malaIconWrap) malaIconWrap.classList.remove('rotate-12', 'scale-110');
+    }
+  }
+
+  function advanceMala() {
+    if (count < 11) {
+      count++;
+      updateMalaUI();
+      showFeedbackToast(`Mala Bead Advanced: ${count}/11 🙏`);
+    } else {
+      count = 1;
+      updateMalaUI();
+      showFeedbackToast('Starting fresh Mala cycle (1/11)');
+    }
+  }
+
+  if (beadChain) {
+    beadChain.querySelectorAll('button').forEach((b, idx) => {
+      b.addEventListener('click', (e) => {
+        e.stopPropagation();
+        count = idx + 1;
+        updateMalaUI();
+        showFeedbackToast(`Jumped to bead repetition ${count}/11`);
+      });
+    });
+  }
+
+  if (malaContainer) {
+    malaContainer.addEventListener('click', advanceMala);
+  }
+
+  // Speed / Tempo Toggle Switcher
+  const tempoBtn = document.getElementById('tempoBtn');
+  const tempoLabel = document.getElementById('tempoLabel');
+  const tempoEmoji = document.getElementById('tempoEmoji');
+  const slowToggleAction = document.getElementById('slowToggleAction');
+  const actionTempoLabel = document.getElementById('actionTempoLabel');
+  const actionTempoEmoji = document.getElementById('actionTempoEmoji');
+
+  function cycleTempo() {
+    tempoIdx = (tempoIdx + 1) % tempos.length;
+    const currentT = tempos[tempoIdx];
+    if (tempoLabel) tempoLabel.textContent = currentT.label;
+    if (tempoEmoji) tempoEmoji.textContent = currentT.emoji;
+    if (actionTempoLabel) actionTempoLabel.textContent = currentT.shortLabel;
+    if (actionTempoEmoji) actionTempoEmoji.textContent = currentT.emoji;
+
+    restartKaraokeLoop();
+    restartWaveAnimation();
+    showFeedbackToast(`Tempo set to ${currentT.label}`);
+  }
+
+  if (tempoBtn) tempoBtn.addEventListener('click', cycleTempo);
+  if (slowToggleAction) slowToggleAction.addEventListener('click', cycleTempo);
+
+  // Live Audio Resonance Waveform Animation
+  const waveformContainer = document.getElementById('waveform');
+  const audioTimestamp = document.getElementById('audioTimestamp');
+
+  function updateWaveBars() {
+    if (!waveformContainer) return;
+    const bars = waveformContainer.children;
+    for (let i = 0; i < bars.length; i++) {
+      if (isListening) {
+        const randomHeight = Math.floor(Math.random() * 30) + 6;
+        bars[i].style.height = `${randomHeight}px`;
+      } else {
+        bars[i].style.height = '6px';
+      }
+    }
+  }
+
+  function restartWaveAnimation() {
+    if (waveTimer) clearInterval(waveTimer);
+    waveTimer = setInterval(updateWaveBars, tempos[tempoIdx].waveInterval);
+  }
+
+  // Elapsed Timer simulation
+  elapsedTimer = setInterval(() => {
+    if (isListening) {
+      secondsElapsed += 0.25;
+      if (audioTimestamp) audioTimestamp.textContent = `${secondsElapsed.toFixed(2)}s`;
+    }
+  }, 250);
+
+  // Finish Practice CTA Interaction
+  const finishPracticeBtn = document.getElementById('finishPracticeBtn');
+  const finishPracticeText = document.getElementById('finishPracticeText');
+  let isFinished = false;
+  if (finishPracticeBtn && finishPracticeText) {
+    finishPracticeBtn.addEventListener('click', () => {
+      isFinished = !isFinished;
+      if (isFinished) {
+        toggleListening(false);
+        finishPracticeText.textContent = 'Session Saved';
+        finishPracticeBtn.classList.replace('bg-tertiary', 'bg-tertiary-container');
+        showFeedbackToast('✨ Practice recorded to your Sadhana log!');
+      } else {
+        finishPracticeText.textContent = 'Finish Practice';
+        finishPracticeBtn.classList.replace('bg-tertiary-container', 'bg-tertiary');
+        toggleListening(true);
+      }
+    });
+  }
+
+  // Initialize all states
+  applyActiveWord(0);
+  restartKaraokeLoop();
+  restartWaveAnimation();
+  updateMalaUI();
+</script></main></body></html>

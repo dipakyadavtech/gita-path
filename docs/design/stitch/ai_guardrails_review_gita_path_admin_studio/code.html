@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Serif:wght@400;600&amp;family=Sora:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-background":"#191c1f","secondary-container":"#bebafe","surface-bright":"#f8f9fd","surface-container-lowest":"#ffffff","surface-container-highest":"#e1e2e6","tertiary-container":"#32777c","on-secondary-container":"#4b4883","secondary-fixed-dim":"#c4c0ff","on-primary-fixed":"#390c00","error-container":"#ffdad6","surface-container-low":"#f2f3f7","surface-container-high":"#e7e8ec","outline":"#8d7168","secondary-fixed":"#e3dfff","secondary":"#5b5794","inverse-surface":"#2e3134","surface-dim":"#d9dade","primary":"#9b2f00","on-secondary-fixed-variant":"#43407b","inverse-on-surface":"#eff1f5","on-tertiary-container":"#c2faff","surface-variant":"#e1e2e6","on-surface":"#191c1f","on-primary-fixed-variant":"#832600","on-tertiary-fixed-variant":"#004f54","on-tertiary":"#ffffff","surface-tint":"#ac3400","on-error":"#ffffff","primary-fixed":"#ffdbd0","tertiary-fixed-dim":"#8fd2d7","on-primary-container":"#ffece7","primary-container":"#c2410c","on-secondary":"#ffffff","tertiary-fixed":"#abeef4","tertiary":"#0f5e63","on-primary":"#ffffff","outline-variant":"#e1bfb5","on-surface-variant":"#59413a","surface-container":"#edeef2","error":"#ba1a1a","on-tertiary-fixed":"#002022","background":"#f8f9fd","on-secondary-fixed":"#17114d","primary-fixed-dim":"#ffb59d","on-error-container":"#93000a","inverse-primary":"#ffb59d","surface":"#f8f9fd"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-sm":"0.75rem","space-lg":"1.5rem","margin-tablet":"2rem","space-2xl":"3rem","gutter":"1rem","space-xs":"0.5rem","margin":"1.25rem","space-2xs":"0.25rem","margin-desktop":"3rem","gutter-desktop":"2rem","space-md":"1rem","space-xl":"2rem","gutter-tablet":"1.5rem"},"fontFamily":{"label-md":["Inter"],"body-sm":["Inter"],"body-md":["Inter"],"headline-lg":["Sora"],"headline-md":["Sora"],"label-lg":["Inter"],"label-caps":["Sora"],"scripture-verse-mobile":["Noto Serif"],"scripture-verse":["Noto Serif"],"body-lg":["Inter"],"headline-display-mobile":["Sora"],"headline-sm":["Sora"],"headline-display":["Sora"]},"fontSize":{"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"body-sm":["13px",{"lineHeight":"20px","fontWeight":"400"}],"body-md":["15px",{"lineHeight":"24px","fontWeight":"400"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-md":["22px",{"lineHeight":"30px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"label-caps":["11px",{"lineHeight":"16px","letterSpacing":"0.08em","fontWeight":"700"}],"scripture-verse-mobile":["17px",{"lineHeight":"28px","letterSpacing":"0.01em","fontWeight":"400"}],"scripture-verse":["20px",{"lineHeight":"34px","letterSpacing":"0.01em","fontWeight":"400"}],"body-lg":["17px",{"lineHeight":"28px","fontWeight":"400"}],"headline-display-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-sm":["18px",{"lineHeight":"26px","fontWeight":"600"}],"headline-display":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-low"><div class="flex items-center gap-space-xs"><div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[20px]">qr_code_scanner</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight">Gita Path</span><span class="font-label-caps text-label-caps text-on-surface-variant tracking-wider uppercase">Studio</span></div></div><span class="px-2 py-0.5 rounded-full bg-tertiary-container text-on-tertiary-container font-label-caps text-label-caps">Prod v2.4</span></div><div class="p-space-md"><span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider block mb-space-xs px-space-xs">Sanctuary Core</span><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-xl shadow-sm"><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="content-library" href="#"><span class="material-symbols-outlined text-[20px]">auto_stories</span><span>Content Library</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="verse-curriculum-editor" href="#"><span class="material-symbols-outlined text-[20px]">edit_note</span><span>Verse &amp; Curriculum</span></a><a class="flex items-center justify-between px-space-sm py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="ai-guardrails-review" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">policy</span><span>AI Guardrails</span></div><span class="w-5 h-5 rounded-full bg-error-container text-on-error-container flex items-center justify-center font-label-caps text-label-caps font-bold">3</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="user-analytics-sangha" href="#"><span class="material-symbols-outlined text-[20px]">groups</span><span>Analytics &amp; Sangha</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="settings-api-keys" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span>Settings &amp; APIs</span></a></nav></div></div><div class="p-space-md m-space-xs rounded-xl bg-surface-container-low flex flex-col gap-space-xs"><div class="flex items-center justify-between text-on-surface-variant"><span class="font-label-caps text-label-caps uppercase">700 Slokas Canonical</span><span class="material-symbols-outlined text-[16px] text-tertiary">verified</span></div><div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden"><div class="bg-tertiary h-full w-[100%]"></div></div><span class="font-body-sm text-body-sm text-on-surface-variant">Sanskrit Lock: Verified Integrity</span></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full h-16 px-space-lg flex items-center justify-between gap-space-md"><div class="flex-1 max-w-xl"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-[18px] text-on-surface-variant">search</span><input class="w-full h-10 pl-9 pr-4 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-secondary placeholder:text-on-surface-variant/70 transition-all" placeholder="Search across 700 verses, Sanskrit commentary, audio tracks..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="flex items-center rounded-xl bg-surface-container p-0.5"><button class="px-2.5 py-1 rounded-lg bg-surface-container-lowest font-label-caps text-label-caps text-on-surface shadow-sm">Production</button><button class="px-2.5 py-1 rounded-lg font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors">Staging</button></div><button class="relative p-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface-container-lowest"></span></button><div class="h-6 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col text-left"><span class="font-label-lg text-label-lg text-on-surface leading-snug">Dr. Radhakrishnan</span><span class="font-label-caps text-label-caps text-on-surface-variant">Lead Sanskrit Scholar</span></div></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Command Strip -->
+<div class="w-full bg-surface-container-lowest shadow-sm px-space-xl py-space-lg flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-caps text-label-caps tracking-widest uppercase">Theological Governance Engine</span>
+<span class="flex h-2 w-2 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span class="font-label-md text-label-md text-tertiary">Real-Time Ingestion Active</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">AI Guidance Review &amp; Theological Guardrails</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-3xl">Monitoring Seeker AI dialogues, doctrinal consistency against classical commentaries, tone empathy fidelity, and automated Vedic boundaries.</p>
+</div>
+<!-- Quick Tool Actions -->
+<div class="flex flex-wrap items-center gap-space-xs self-start md:self-auto">
+<button class="flex items-center gap-2 h-10 px-4 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-lg text-label-lg transition-all shadow-sm" id="openSandboxBtn">
+<span class="material-symbols-outlined text-[18px] text-tertiary">science</span>
+<span>Test AI Sandbox</span>
+</button>
+<button class="flex items-center gap-2 h-10 px-4 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-lg text-label-lg transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">download</span>
+<span>Export Audit JSON</span>
+</button>
+<button class="flex items-center gap-2 h-10 px-4 rounded-xl bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg transition-all shadow-sm" id="createRuleModalTrigger">
+<span class="material-symbols-outlined text-[18px]">add_moderator</span>
+<span>+ Create Guardrail Rule</span>
+</button>
+</div>
+</div>
+<div class="p-space-xl flex flex-col gap-space-xl">
+<!-- Row 1: High Level Scholar Telemetry KPIs -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Metric 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Flagged for Review</span>
+<span class="p-1.5 rounded-lg bg-error-container text-on-error-container">
+<span class="material-symbols-outlined text-[18px]">flag</span>
+</span>
+</div>
+<div class="mt-space-sm">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-display text-headline-display text-on-surface leading-none">14</span>
+<span class="font-label-md text-label-md text-on-surface-variant">in queue</span>
+</div>
+<div class="mt-2 flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-caps text-label-caps font-bold">3 High Priority</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Avg latency 4.2m</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-low h-1 rounded-full mt-3 overflow-hidden">
+<div class="bg-error h-full w-[21%]"></div>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between group hover:shadow-md transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Guardrail Accuracy</span>
+<span class="p-1.5 rounded-lg bg-tertiary-container text-on-tertiary-container">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</span>
+</div>
+<div class="mt-space-sm">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-display text-headline-display text-tertiary leading-none">99.4%</span>
+<span class="font-label-caps text-label-caps text-tertiary font-bold tracking-tight">▲ +0.2%</span>
+</div>
+<p class="mt-2 font-body-sm text-body-sm text-on-surface-variant leading-tight truncate">vs. Shankara &amp; Ramanuja Bhashya</p>
+</div>
+<div class="w-full bg-surface-container-low h-1 rounded-full mt-3 overflow-hidden">
+<div class="bg-tertiary h-full w-[99.4%]"></div>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between group hover:shadow-md transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Hallucination Block</span>
+<span class="p-1.5 rounded-lg bg-secondary-fixed text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[18px]">security</span>
+</span>
+</div>
+<div class="mt-space-sm">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-display text-headline-display text-on-surface leading-none">100%</span>
+<span class="font-label-md text-label-md text-on-surface-variant">efficacy</span>
+</div>
+<p class="mt-2 font-body-sm text-body-sm text-on-surface-variant leading-tight">42 unverified citations blocked this week</p>
+</div>
+<div class="w-full bg-surface-container-low h-1 rounded-full mt-3 overflow-hidden">
+<div class="bg-secondary h-full w-[100%]"></div>
+</div>
+</div>
+<!-- Metric 4 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between group hover:shadow-md transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Active Guardrails</span>
+<span class="p-1.5 rounded-lg bg-surface-container-high text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">rule</span>
+</span>
+</div>
+<div class="mt-space-sm">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-display text-headline-display text-on-surface leading-none">68</span>
+<span class="font-label-md text-label-md text-on-surface-variant">enforced</span>
+</div>
+<div class="mt-2 flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">12 Canonical Shloka Anchors</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-low h-1 rounded-full mt-3 overflow-hidden">
+<div class="bg-primary-container h-full w-[85%]"></div>
+</div>
+</div>
+</div>
+<!-- Row 2: Scholar Workspace Split Grid (60% Queue Review / 40% Guardrail Configuration) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- LEFT COLUMN: Scholar Moderation Queue (7 cols = ~58-60%) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- Queue Filter Tabs & Batch Bar -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<!-- Filter Segmented Tabs -->
+<div class="flex flex-wrap items-center gap-1.5" id="queueTabs">
+<button class="queue-tab active px-3 py-1.5 rounded-lg bg-surface-container font-label-caps text-label-caps text-on-surface shadow-xs transition-colors" data-filter="all">
+              All Queue <span class="ml-1 opacity-70">(14)</span>
+</button>
+<button class="queue-tab px-3 py-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant font-label-caps text-label-caps transition-colors flex items-center gap-1" data-filter="theology">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> High Priority <span class="ml-0.5 opacity-70">(3)</span>
+</button>
+<button class="queue-tab px-3 py-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant font-label-caps text-label-caps transition-colors" data-filter="tone">
+              Tone &amp; Sanctuary Voice <span class="ml-1 opacity-70">(6)</span>
+</button>
+<button class="queue-tab px-3 py-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant font-label-caps text-label-caps transition-colors" data-filter="citation">
+              Citation Verification <span class="ml-1 opacity-70">(5)</span>
+</button>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="font-label-caps text-label-caps uppercase">Batch Sort:</span>
+<select class="bg-surface-container-low text-on-surface font-label-caps text-label-caps px-2 py-1 rounded-lg focus:outline-none">
+<option>Severity: High to Low</option>
+<option>Latest Timestamp</option>
+<option>Lowest Confidence</option>
+</select>
+</div>
+</div>
+<!-- REVIEW CARDS STREAM -->
+<!-- CARD 1: High Priority (Theological Deviation) -->
+<div class="queue-item theological bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm hover:shadow-md transition-all">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-caps text-label-caps font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">warning</span> High Priority • Doctrinal Deviation
+              </span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">ID: Q-9804</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Model Confidence: <strong class="text-on-surface">82%</strong></span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span class="font-label-caps text-label-caps text-tertiary">Automated Vedic Guardrail v3</span>
+</div>
+</div>
+<!-- Seeker Query Prompt -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">account_circle</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider">Seeker Dialogue Prompt</span>
+<span class="font-label-caps text-label-caps ml-auto text-on-surface-variant">Session #4928 • 8 mins ago</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic">
+              “Does the Gita encourage giving up my family and duties when stressed? I just want to walk away into meditation forever.”
+            </p>
+</div>
+<!-- AI Initial Intercepted Output -->
+<div class="p-space-sm rounded-xl bg-surface-container-highest/60 flex flex-col gap-1">
+<div class="flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">smart_toy</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-primary">Generated Guidance (Held in Quarantine)</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-error/10 text-error font-label-caps text-label-caps">Flagged: Unbalanced Sannyasa</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed">
+              “Renunciation (Sannyasa) is praised throughout the Gita, specifically in Chapter 5 where the sage detaches from outward circumstances. Withdrawing from worldly bonds to find Brahman is a celebrated path in classical practice...”
+            </p>
+</div>
+<!-- Scholar Evaluation & Root Cause Breakdown -->
+<div class="p-space-sm rounded-xl bg-primary-fixed/25 flex flex-col gap-1.5">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[18px]">gavel</span>
+<span class="font-label-caps text-label-caps uppercase font-bold tracking-wider">Theological Variance Root Cause</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-primary-fixed">
+              AI overemphasized external ascetic abandonment without balancing with <strong>BG 3.8 (Niyatam kuru karma tvam)</strong> and <strong>BG 5.2 (Karma-sannyasa vs. Karma-yoga)</strong>. Krishna explicitly instructs Arjuna that selfless engagement in one's sacred duty (Svadharma) is superior to premature physical renunciation. High risk of seeker rationalizing inaction (Akarma).
+            </p>
+<div class="flex flex-wrap items-center gap-2 mt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-label-caps text-label-caps shadow-xs">Required Ref: BG 3.8</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-label-caps text-label-caps shadow-xs">Required Ref: BG 18.7</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-label-caps text-label-caps shadow-xs">Rule Violations: #12, #29</span>
+</div>
+</div>
+<!-- Action Workflow -->
+<div class="flex flex-wrap items-center justify-between gap-space-xs pt-space-xs">
+<div class="flex items-center gap-2">
+<button class="px-3 py-2 rounded-xl bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-lg text-label-lg transition-all shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">edit_note</span>
+<span>Override &amp; Inject Bhashya</span>
+</button>
+<button class="px-3 py-2 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-lg text-label-lg transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">auto_fix_high</span>
+<span>Quick Canonical Re-anchor</span>
+</button>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-2 rounded-xl text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps hover:bg-surface-container transition-colors">
+                + Append Rule
+              </button>
+<button class="px-2.5 py-2 rounded-xl text-on-surface-variant hover:text-error font-label-caps text-label-caps hover:bg-surface-container transition-colors">
+                Dismiss Flag
+              </button>
+</div>
+</div>
+</div>
+<!-- CARD 2: Medium Priority (Cross-Chapter Hallucination) -->
+<div class="queue-item citation bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm hover:shadow-md transition-all">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-caps text-label-caps font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">find_replace</span> Scripture Citation Mismatch
+              </span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">ID: Q-9801</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Flagged by: Citation Check Engine</span>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">account_circle</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider">Seeker Dialogue Prompt</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic">
+              “What does Lord Krishna specifically conclude about grief and surrendering sorrow in Chapter 18?”
+            </p>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-highest/60 flex flex-col gap-1">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-secondary">AI Generated Output</span>
+<span class="px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-caps text-label-caps">Erroneous Cross-Chapter Anchor</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed">
+              “In Chapter 18, Krishna counsels Arjuna: <em>'The wise grieve neither for the living nor for the dead' (Gita 18.11)</em>, advising that grief is born of body attachment.”
+            </p>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-start gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Auto-Diagnosis: Hallucinated verse location.</span>
+<span class="font-body-sm text-body-sm">
+                The quoted verse <em>“aśocyān anvaśocas tvaṁ...”</em> is precisely <strong>BG 2.11</strong>. In Chapter 18, the climactic counsel on relinquishing sorrow is <strong>BG 18.66</strong> (<em>mā śucaḥ</em> / “do not grieve”).
+              </span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded-xl bg-tertiary text-on-tertiary hover:bg-tertiary/90 font-label-lg text-label-lg transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+<span>Auto-Reassign to BG 18.66</span>
+</button>
+<button class="px-3 py-1.5 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-lg text-label-lg transition-colors">
+                Regenerate Guidance
+              </button>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Confidence: 94% correction match</span>
+</div>
+</div>
+<!-- CARD 3: Gentle Tone & Empathy Guardrail -->
+<div class="queue-item tone bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm hover:shadow-md transition-all">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-caps text-label-caps font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">sentiment_neutral</span> Voice &amp; Tone Deviation
+              </span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">ID: Q-9799</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Flagged by: Empathy Classifier v2</span>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">account_circle</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider">Seeker Dialogue Prompt</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic">
+              “I failed my college entrance exam for the third time today. I feel worthless and feel like I've wasted my family's sacrifices.”
+            </p>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-highest/60 flex flex-col gap-1">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-secondary">AI Generated Output</span>
+<span class="px-1.5 py-0.5 rounded bg-error/10 text-error font-label-caps text-label-caps">Deficient Empathy Score (0.41 / 1.0)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed">
+              “One must understand that worldly success is ephemeral and an illusion of Maya. Gita Chapter 2, verse 47 establishes you have rights only to action, never to fruits. Mourning test results proves ignorance of the Atman.”
+            </p>
+</div>
+<div class="p-space-sm rounded-xl bg-primary-fixed/20 flex flex-col gap-1">
+<span class="font-label-caps text-label-caps font-bold text-primary uppercase">Sanctuary Tone Guideline Violation</span>
+<p class="font-body-sm text-body-sm text-on-primary-fixed">
+              Tone is cold, intellectually dismissive, and violates Gita Path Compassion Rule #4. Krishna spent Chapter 1 listening patiently to Arjuna's collapse before delivering wisdom. The response must acknowledge pain gently, validate human vulnerability, and apply <strong>BG 6.5</strong> (<em>You are your own friend, not your enemy</em>) with warm pastoral cadence.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<button class="px-3 py-2 rounded-xl bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-lg text-label-lg transition-all shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">volunteer_activism</span>
+<span>Re-synthesize with Sanctuary Pastoral Voice</span>
+</button>
+<button class="px-3 py-1.5 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-lg text-label-lg transition-colors">
+              Direct Scholar Edit
+            </button>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Guardrail Rules Manager & Prompt Injection Controls (5 cols = ~40%) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Rule Creation Drawer / Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="p-2 rounded-xl bg-primary-container text-on-primary">
+<span class="material-symbols-outlined text-[20px]">add_moderator</span>
+</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-snug">Quick Guardrail Rule</h3>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Dynamic Prompt Boundary</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-caps text-label-caps">Production Ready</span>
+</div>
+<form class="flex flex-col gap-3 mt-1" id="guardrailForm" onsubmit="event.preventDefault(); window.deployRuleMock();">
+<div>
+<label class="block font-label-caps text-label-caps uppercase text-on-surface-variant mb-1">Trigger Pattern (Regex or Semantic Intent)</label>
+<div class="relative">
+<input class="w-full h-11 px-3 bg-surface-container-low rounded-xl text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary/40 placeholder:text-on-surface-variant/60" id="rulePatternInput" placeholder="e.g. (?i)(renounce duty|abandon family|quit everything)" type="text" value="(?i)(abandon duty|renounce family obligation)"/>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-on-surface-variant text-[18px]">code</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div>
+<label class="block font-label-caps text-label-caps uppercase text-on-surface-variant mb-1">Enforcement Action</label>
+<select class="w-full h-11 px-3 bg-surface-container-low rounded-xl text-on-surface font-label-md text-label-md focus:outline-none focus:ring-2 focus:ring-primary/40">
+<option>Append Theological Balance</option>
+<option>Immediate Intercept &amp; Quarantine</option>
+<option>Refuse Autonomous Generation</option>
+<option>Redirect to Crisis Hotlines</option>
+</select>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps uppercase text-on-surface-variant mb-1">Canonical Shloka Anchor</label>
+<div class="relative">
+<input class="w-full h-11 px-3 bg-surface-container-low rounded-xl text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary/40" placeholder="e.g. BG 3.8, BG 5.2" type="text" value="BG 3.8, BG 18.47"/>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-on-surface-variant text-[18px]">bookmark</span>
+</div>
+</div>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps uppercase text-on-surface-variant mb-1">Mandatory Scholar System Prompt Injection</label>
+<textarea class="w-full p-3 bg-surface-container-low rounded-xl text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary/40 placeholder:text-on-surface-variant/60" placeholder="Specify instructions for the LLM when this guardrail activates..." rows="3">Instruct the seeker that Krishna repeatedly emphasizes Karma Yoga over physical renunciation. Quote BG 3.8 and remind the seeker that inner detachment (Phala-tyaga) while fulfilling responsibilities is the true Gita teaching.</textarea>
+</div>
+<button class="w-full h-11 rounded-xl bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg transition-all shadow-sm flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>Save &amp; Deploy Rule to Production</span>
+</button>
+</form>
+</div>
+<!-- Active System Guardrail Rules List -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Active Canonical Guardrails</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-label-caps">68 Total</span>
+</div>
+<button class="font-label-caps text-label-caps text-tertiary hover:underline uppercase">View All Rules</button>
+</div>
+<div class="flex flex-col gap-space-xs mt-1" id="activeRulesContainer">
+<!-- Rule Card 1 -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-2 transition-all hover:bg-surface-container">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-md bg-secondary-fixed text-on-secondary-fixed font-label-caps text-label-caps font-bold">Rule #12</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Strict Ahimsa &amp; Anti-Fatalism</span>
+</div>
+<!-- Interactive Toggle -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-tertiary"></div>
+</label>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Always interpret Kshatriya battlefield warfare as allegorical of the inner battle against ego (Ahamkara), senses, and unwholesome desires whenever seekers ask about personal or interpersonal modern conflicts. Explicitly forbid literal militant incitement.
+              </p>
+<div class="flex items-center gap-2 text-tertiary font-label-caps text-label-caps">
+<span class="material-symbols-outlined text-[14px]">anchor</span>
+<span>Anchor: BG 2.31, BG 3.43 • Invocations: 1,482 this month</span>
+</div>
+</div>
+<!-- Rule Card 2 -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-2 transition-all hover:bg-surface-container">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-md bg-secondary-fixed text-on-secondary-fixed font-label-caps text-label-caps font-bold">Rule #24</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Mandatory Canonical Grounding</span>
+</div>
+<!-- Interactive Toggle -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-tertiary"></div>
+</label>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Every advice paragraph generated by the counselor must explicitly correlate to an authentic Gita chapter &amp; verse reference verified against the 700 canonical slokas index. Free-form vague spiritualizing is halted.
+              </p>
+<div class="flex items-center gap-2 text-tertiary font-label-caps text-label-caps">
+<span class="material-symbols-outlined text-[14px]">anchor</span>
+<span>Anchor: Global Canonical Index • Invocations: 18,940 this month</span>
+</div>
+</div>
+<!-- Rule Card 3 -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-2 transition-all hover:bg-surface-container">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-md bg-error-container text-on-error-container font-label-caps text-label-caps font-bold">Rule #41</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Crisis Intervention Intercept</span>
+</div>
+<!-- Interactive Toggle -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-tertiary"></div>
+</label>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Immediate display of certified mental health emergency crisis hotlines if self-harm or hopelessness is detected. Disallow autonomous philosophical rationalization of bodily harm; prioritize immediate somatic safety.
+              </p>
+<div class="flex items-center gap-2 text-error font-label-caps text-label-caps font-bold">
+<span class="material-symbols-outlined text-[14px]">emergency</span>
+<span>Immediate Priority • Intercept Latency: &lt;12ms</span>
+</div>
+</div>
+<!-- Rule Card 4 -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-2 transition-all hover:bg-surface-container">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-md bg-secondary-fixed text-on-secondary-fixed font-label-caps text-label-caps font-bold">Rule #56</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Samkhya / Non-Dual Synthesis</span>
+</div>
+<!-- Interactive Toggle -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-tertiary"></div>
+</label>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Ensure Advaitic, Vishishtadvaitic, and Dvaitic perspectives are treated with ecumenical reverence. When theological debate arises, synthesize through the lens of devotion and selfless action.
+              </p>
+<div class="flex items-center gap-2 text-tertiary font-label-caps text-label-caps">
+<span class="material-symbols-outlined text-[14px]">balance</span>
+<span>Anchor: BG 12.1-5 • Invocations: 820 this month</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Real-Time Evaluation Telemetry Mini-Card -->
+<div class="p-space-md rounded-xl bg-surface-container-high/60 shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-tertiary flex items-center justify-center text-on-tertiary shadow-sm">
+<span class="material-symbols-outlined text-[22px]">policy</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Automated Guardrail Evaluator v3.8</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Continuous testing against 5,000 synthetic adversarial prompts</span>
+</div>
+</div>
+<span class="font-label-caps text-label-caps px-2.5 py-1 rounded-lg bg-surface-container-lowest text-tertiary font-bold shadow-xs">99.8% Pass Rate</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive AI Sandbox Drawer (Hidden by default, triggered by button) -->
+<div class="fixed inset-0 bg-inverse-surface/40 backdrop-blur-sm z-50 flex items-center justify-center p-space-md hidden" id="sandboxModal">
+<div class="w-full max-w-2xl bg-surface-container-lowest rounded-2xl shadow-xl p-space-lg flex flex-col gap-space-md animate-in fade-in zoom-in-95 duration-200">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="p-2 rounded-xl bg-secondary-fixed text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[20px]">science</span>
+</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Scholar AI Sandbox Tester</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Simulate seeker queries against active guardrails without affecting production metrics.</p>
+</div>
+</div>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant" id="closeSandboxBtn">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant">Test Adversarial / Sensitive Query</label>
+<textarea class="w-full p-3 bg-surface-container-low rounded-xl text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary/40" id="sandboxInput" placeholder="Type prompt to test guardrail responses..." rows="3"></textarea>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<button class="h-10 px-4 rounded-xl bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg transition-colors flex items-center gap-1.5 shadow-sm" id="runSimulationBtn">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+<span>Execute Test</span>
+</button>
+<button class="h-10 px-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors" onclick="document.getElementById('sandboxInput').value = 'Why shouldn\'t I just give up everything and let fate decide? Krishna says he does everything anyway.'">
+            Load Pre-built Stress Query
+          </button>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Engine: Llama 3 70B + RAG Canonical</span>
+</div>
+<!-- Simulation Result Area -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-1.5 hidden" id="simulationResult">
+<div class="flex items-center justify-between text-tertiary">
+<span class="font-label-caps text-label-caps uppercase font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">verified</span> Guardrails Enforced (3 Intercepts)
+          </span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Inference Latency: 310ms</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed">
+<strong>Synthesized Output:</strong> “While Lord Krishna in BG 11.33 notes that time ultimately accomplishes its destiny (<em>Nimitta-mātram bhava savya-sāchin</em>), He immediately forbids fatalistic abandonment. In BG 2.47 and BG 18.48, agency and adherence to sacred duty are paramount. Self-surrender is an active dedication of fruits, not passive defeat.”
+        </p>
+</div>
+</div>
+</div>
+<!-- Toast Notification Container -->
+<div class="fixed bottom-6 right-6 bg-inverse-surface text-inverse-on-surface px-4 py-3 rounded-xl shadow-xl flex items-center gap-3 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none z-50" id="toastNotification">
+<span class="material-symbols-outlined text-[20px] text-tertiary-fixed">check_circle</span>
+<span class="font-label-md text-label-md" id="toastMessage">Guardrail deployed successfully.</span>
+</div>
+<script>
+    // Tab filtering behavior
+    const queueTabs = document.querySelectorAll('#queueTabs .queue-tab');
+    const queueItems = document.querySelectorAll('.queue-item');
+
+    queueTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        queueTabs.forEach(t => {
+          t.classList.remove('bg-surface-container', 'text-on-surface');
+          t.classList.add('text-on-surface-variant');
+        });
+        tab.classList.add('bg-surface-container', 'text-on-surface');
+        tab.classList.remove('text-on-surface-variant');
+
+        const filter = tab.getAttribute('data-filter');
+        queueItems.forEach(item => {
+          if (filter === 'all') {
+            item.style.display = 'flex';
+          } else {
+            if (item.classList.contains(filter)) {
+              item.style.display = 'flex';
+            } else {
+              item.style.display = 'none';
+            }
+          }
+        });
+      });
+    });
+
+    // Sandbox modal interactions
+    const openSandboxBtn = document.getElementById('openSandboxBtn');
+    const closeSandboxBtn = document.getElementById('closeSandboxBtn');
+    const sandboxModal = document.getElementById('sandboxModal');
+    const runSimulationBtn = document.getElementById('runSimulationBtn');
+    const simulationResult = document.getElementById('simulationResult');
+
+    if (openSandboxBtn && sandboxModal) {
+      openSandboxBtn.addEventListener('click', () => sandboxModal.classList.remove('hidden'));
+    }
+    if (closeSandboxBtn && sandboxModal) {
+      closeSandboxBtn.addEventListener('click', () => sandboxModal.classList.add('hidden'));
+    }
+    if (runSimulationBtn && simulationResult) {
+      runSimulationBtn.addEventListener('click', () => {
+        simulationResult.classList.remove('hidden');
+      });
+    }
+
+    // Deploy Rule Function with Toast feedback
+    window.deployRuleMock = function() {
+      const pattern = document.getElementById('rulePatternInput').value;
+      const toast = document.getElementById('toastNotification');
+      const toastMsg = document.getElementById('toastMessage');
+      
+      toastMsg.textContent = `Rule "${pattern.slice(0, 24)}..." compiled and distributed to AI nodes.`;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      
+      setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 3500);
+    };
+
+    // Quick trigger from top button
+    const modalTrigger = document.getElementById('createRuleModalTrigger');
+    if (modalTrigger) {
+      modalTrigger.addEventListener('click', () => {
+        const input = document.getElementById('rulePatternInput');
+        if (input) {
+          input.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          input.focus();
+        }
+      });
+    }
+  </script>
+</div></main></div></body></html>

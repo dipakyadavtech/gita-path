@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,400..800;1,6..12,400..800&amp;family=Sora:wght@400..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-dim": "#e1d9c9", "tertiary-fixed-dim": "#ffb95f", "on-primary-container": "#a8b8ff", "error": "#ba1a1a", "on-tertiary-fixed-variant": "#653e00", "error-container": "#ffdad6", "primary-container": "#1e40af", "on-tertiary": "#ffffff", "secondary": "#1f686d", "background": "#fff9ee", "on-error": "#ffffff", "on-surface-variant": "#444653", "surface-container-highest": "#e9e2d1", "on-primary": "#ffffff", "on-secondary-fixed": "#002022", "surface-container": "#f5eddc", "surface-tint": "#3755c3", "primary-fixed": "#dde1ff", "outline": "#757684", "surface-container-lowest": "#ffffff", "surface-variant": "#e9e2d1", "on-secondary": "#ffffff", "on-secondary-fixed-variant": "#004f54", "inverse-on-surface": "#f8f0df", "on-background": "#1e1b11", "on-surface": "#1e1b11", "tertiary-container": "#6b4200", "on-error-container": "#93000a", "tertiary-fixed": "#ffddb8", "surface-container-low": "#fbf3e2", "on-tertiary-container": "#ffa929", "secondary-fixed": "#abeef4", "on-primary-fixed": "#001453", "on-secondary-container": "#256c71", "primary-fixed-dim": "#b8c4ff", "surface-bright": "#fff9ee", "inverse-surface": "#343025", "surface-container-high": "#efe7d7", "inverse-primary": "#b8c4ff", "primary": "#00288e", "secondary-container": "#a8ebf1", "on-tertiary-fixed": "#2a1700", "outline-variant": "#c4c5d5", "tertiary": "#4c2e00", "on-primary-fixed-variant": "#173bab", "secondary-fixed-dim": "#8fd2d7", "surface": "#fff9ee" }, "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, "spacing": { "space-md": "1.25rem", "margin": "2.5rem", "space-xl": "3rem", "gutter-mobile": "1rem", "space-xs": "0.5rem", "margin-mobile": "1.25rem", "gutter": "1.5rem", "space-lg": "2rem", "space-sm": "0.75rem" }, "fontFamily": { "label-lg": ["Sora"], "display-hero-mobile": ["Sora"], "label-sm": ["Sora"], "headline-sm": ["Sora"], "headline-lg-mobile": ["Sora"], "body-md": ["Nunito Sans"], "headline-lg": ["Sora"], "label-md": ["Sora"], "display-hero": ["Sora"], "body-lg": ["Nunito Sans"], "body-sm": ["Nunito Sans"], "headline-md": ["Sora"] }, "fontSize": { "label-lg": ["18px", {"lineHeight": "24px", "fontWeight": "700"}], "display-hero-mobile": ["34px", {"lineHeight": "42px", "fontWeight": "800"}], "label-sm": ["13px", {"lineHeight": "18px", "fontWeight": "700"}], "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}], "headline-lg-mobile": ["26px", {"lineHeight": "34px", "fontWeight": "700"}], "body-md": ["17px", {"lineHeight": "26px", "fontWeight": "600"}], "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}], "label-md": ["15px", {"lineHeight": "20px", "fontWeight": "700"}], "display-hero": ["48px", {"lineHeight": "56px", "fontWeight": "800"}], "body-lg": ["20px", {"lineHeight": "30px", "fontWeight": "600"}], "body-sm": ["15px", {"lineHeight": "22px", "fontWeight": "600"}], "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#fff9ee;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 px-gutter-mobile flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs"><div class="w-11 h-11 rounded-full bg-secondary flex items-center justify-center shadow-[0_3px_0_#0f5e63]"><span class="material-symbols-outlined text-on-secondary text-[26px]">cruelty_free</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">Sticker Book</span><span class="font-label-sm text-label-sm text-secondary font-bold">Moru Garden</span></div></div><div class="flex items-center gap-space-xs"><div class="h-11 px-space-sm rounded-full bg-surface-container-high flex items-center gap-1.5 shadow-[0_2px_0_#e1d9c9]"><span class="material-symbols-outlined text-secondary text-[18px]">timer</span><span class="font-label-sm text-label-sm text-on-surface font-bold">12m left</span></div><button aria-label="Parent Lock" class="w-11 h-11 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shadow-[0_3px_0_#8fd2d7] active:translate-y-0.5" type="button"><span class="material-symbols-outlined text-[20px]">lock</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-20 pb-28 bg-surface px-gutter-mobile"><div class="flex flex-col w-full pb-8 space-y-space-md">
+<!-- Celebration Header & Quest Progress Banner -->
+<div class="w-full bg-surface-container-lowest rounded-lg p-space-md shadow-md flex flex-col gap-space-xs relative overflow-hidden">
+<!-- Festive Background Ambient Accents -->
+<div class="absolute -right-6 -bottom-6 w-28 h-28 rounded-full bg-tertiary-fixed opacity-40 pointer-events-none"></div>
+<div class="absolute right-14 top-2 text-tertiary-fixed-dim text-lg select-none">✨</div>
+<div class="absolute left-1/2 -top-3 text-secondary-container text-sm select-none">🌸</div>
+<div class="flex items-center justify-between z-10">
+<div class="flex items-center gap-space-xs">
+<span class="text-2xl animate-bounce">🦚</span>
+<div>
+<h1 class="font-headline-md text-headline-md text-primary tracking-tight">Aarav's Vrindavan Garden</h1>
+<p class="font-label-sm text-label-sm text-secondary font-bold">Sacred Sticker Album</p>
+</div>
+</div>
+<div class="px-space-sm py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">hotel_class</span>
+<span class="font-label-sm text-label-sm font-bold">Lvl 3</span>
+</div>
+</div>
+<!-- Progress Meter -->
+<div class="mt-2 z-10 flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-on-surface">
+<span class="font-label-md text-label-md flex items-center gap-1">
+<span>9 of 12 Stickers Placed</span>
+<span class="text-tertiary-fixed-dim">🌟</span>
+</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">75% Complete</span>
+</div>
+<!-- Tactile Caterpillar Progress Bar -->
+<div class="w-full h-4 bg-surface-container rounded-full p-0.5 shadow-inner flex items-center gap-1">
+<div class="h-full bg-gradient-to-r from-secondary to-primary-container rounded-full flex-1 transition-all duration-500 shadow-sm" style="width: 75%;"></div>
+</div>
+<div class="flex items-center gap-1.5 mt-1 bg-surface-container-low px-space-sm py-1.5 rounded-full">
+<span class="material-symbols-outlined text-tertiary text-[18px]">celebration</span>
+<p class="font-body-sm text-body-sm text-tertiary font-bold tracking-tight">
+          Collect 3 more to unlock the Grand Radha-Krishna Festival!
+        </p>
+</div>
+</div>
+</div>
+<!-- Interactive Illustrated Vrindavan Garden Canvas (Scene View) -->
+<div class="w-full flex flex-col gap-2">
+<div class="flex items-center justify-between px-1">
+<span class="font-headline-sm text-headline-sm text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[22px]">auto_awesome</span>
+        Garden Mandala Scene
+      </span>
+<button class="px-space-xs py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm flex items-center gap-1 shadow-sm active:translate-y-0.5" id="sparkle-hint" type="button">
+<span class="material-symbols-outlined text-[15px]">touch_app</span>
+<span>Tap to Listen</span>
+</button>
+</div>
+<!-- Mandala Scene Canvas Container -->
+<div class="relative w-full h-80 rounded-lg overflow-hidden shadow-lg bg-surface-container-highest" id="mandala-stage">
+<!-- Illustrated Pastoral Vrindavan Backdrop -->
+<div class="w-full h-full bg-cover bg-center relative select-none" data-alt="A warm, whimsical children book illustration of sacred Vrindavan landscape. Gentle rolling green hills with flowering Kadamba trees, sunlit Yamuna river shimmering in lapis blue, warm cream sky with golden clouds and blooming pink lotuses. Vibrant warm storybook aesthetic for kids." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAsegoiK_Ueuh8ZNTq4EfirwXJptT7EHJmds2Y7lQN-yhBJDyZcsYVrDK2gjVHgVkxv-hG6cgx5iHmqZ_CI5_33XENALCHyEmpE5M4c172DMetTUcS4PKm2wjUEvto5GC8eZM744QBy9CrFA4nla02M6GHRVaGQ-5si7jrYhBnaIjoP0XB_GrpjPB4SVxzneZhyYbTCR2rxkA9YBN-_cFBDsFPpw2FYf_4_RDSvtnhu')">
+<!-- Sacred Sound Toast Alert (hidden by default) -->
+<div class="absolute top-3 left-1/2 transform -translate-x-1/2 bg-surface-container-lowest/95 backdrop-blur-md px-space-sm py-1.5 rounded-full shadow-md text-primary font-label-sm text-label-sm items-center gap-1.5 hidden z-30 transition-all" id="audio-feedback">
+<span class="material-symbols-outlined text-secondary text-[18px] animate-spin">music_note</span>
+<span id="audio-text">Playing sacred tune...</span>
+</div>
+<!-- River Yamuna Sparkle Overlay -->
+<div class="absolute bottom-2 left-4 text-xs font-bold text-surface-container-lowest/80 px-2 py-0.5 rounded-full bg-secondary/40 backdrop-blur-xs flex items-center gap-1">
+<span>Yamuna Waterway</span> 🌊
+        </div>
+<!-- Placed Interactive Sticker 1: Golden Flute (Bansuri) -->
+<div class="absolute bottom-10 left-12 group cursor-pointer" onclick="playStickerSound('Golden Bansuri Flute Melody 🎶', this)">
+<div class="relative flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm p-1 shadow-md flex items-center justify-center transform group-hover:scale-110 active:scale-95 transition-transform">
+<img class="w-12 h-12 object-contain" data-alt="Charming cartoon sticker of a divine golden flute with delicate peacock feather and dangling pearl tassles, soft golden radiant aura, playful children book sticker style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBptoR8WgvLsLv3DeL_FLdiEGTkbSJ_MFZZS3q0_vC1hiSeyxu4cry-zUClFlq-ZM-vSh_2dSl9JX4OS7xQssadla2rLJXXfl-IlYrqsJdxUNaPrpoNkPi6FJRCAKujf-0o5pv5MQX5Usnjuw6UsVywf8qTdP16cG2F7U4pSE7f2C913jnpdYWSy5C-I9q_24oI5MmCeqbMB6G1qfnbeVKoJdlKEMoRb7m4vf5PB02k"/>
+<div class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[12px]">volume_up</span>
+</div>
+</div>
+<span class="mt-1 font-label-sm text-[11px] font-bold text-on-surface bg-surface-container-lowest/90 px-1.5 py-0.5 rounded-full shadow-xs">Bansuri</span>
+</div>
+</div>
+<!-- Placed Interactive Sticker 2: Mischievous Butter Pot -->
+<div class="absolute bottom-6 right-10 group cursor-pointer" onclick="playStickerSound('Makhan Pot Splash &amp; Giggle! 🍯', this)">
+<div class="relative flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm p-1 shadow-md flex items-center justify-center transform group-hover:scale-110 active:scale-95 transition-transform">
+<img class="w-12 h-12 object-contain" data-alt="Cute clay terracotta butter pot overflowing with sweet white cream butter and flower garland, vibrant playful storybook sticker style with soft sparkle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWV-_pU2gJXDeSWr00Yg3HBy1QyjDApURQ6gpQMCDDvftpoGM1s-QnXrfzPCcGgcIQjeQ0tmw1EnW_12KaHkJ0za_5ok3ntn51Bkl0hl6i1JBRFyvU88_9QEawWJE85Tm01mIDOTTj3Q7i6de_Z2RgEOBZjM30AcuEcSeWtx_o3tASxWI9vElU_iT7gAbELF6tVoLi9hsIBeWcy0z3BQD7_7aaNb9LKWNq0TDR_GNF"/>
+<div class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[12px]">volume_up</span>
+</div>
+</div>
+<span class="mt-1 font-label-sm text-[11px] font-bold text-on-surface bg-surface-container-lowest/90 px-1.5 py-0.5 rounded-full shadow-xs">Makhan Pot</span>
+</div>
+</div>
+<!-- Placed Interactive Sticker 3: Dancing Moru Peacock -->
+<div class="absolute top-10 right-8 group cursor-pointer" onclick="playStickerSound('Moru Peacock Joyful Call &amp; Feather Flap! 🦚', this)">
+<div class="relative flex flex-col items-center">
+<div class="w-18 h-18 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm p-1.5 shadow-md flex items-center justify-center transform group-hover:scale-110 active:scale-95 transition-transform">
+<img class="w-14 h-14 object-contain" data-alt="Adorable vibrant cartoon peacock named Moru with fanned royal blue and turquoise feathers crowned with gold, perched gracefully on a blossoming Kadamba branch." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeJkzandiM0fDf2Vp8MuUVeGIzjmHUl-4-PilwhvWDKFx5_p-H1fwb4Nv-BvZRxDoN6thY9Ac57H5dDXPACHPvdrEdeD0gQvbBkjvhe8eF1j3-vpi8jdfDAEsxLHRnI9Ia1f2Fp5MyR6dyDYLBstrn9M5K5QvQDi0OP68oHNFXaAiSpAl-TX-C8ioxD3hOiI_jQVErP1Fv15chwRR2hjsm_N0AvemZmWidxYlOepLN"/>
+<div class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[12px]">volume_up</span>
+</div>
+</div>
+<span class="mt-1 font-label-sm text-[11px] font-bold text-on-surface bg-surface-container-lowest/90 px-1.5 py-0.5 rounded-full shadow-xs">Moru Guide</span>
+</div>
+</div>
+<!-- Placed Interactive Sticker 4: Gentle Surabhi Cow -->
+<div class="absolute top-16 left-6 group cursor-pointer" onclick="playStickerSound('Surabhi Cow Tender Bell Ring &amp; Moosh! 🔔', this)">
+<div class="relative flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm p-1 shadow-md flex items-center justify-center transform group-hover:scale-110 active:scale-95 transition-transform">
+<img class="w-12 h-12 object-contain" data-alt="Sweet innocent cartoon white holy cow with golden painted horns and orange marigold floral necklace garland, calm loving expression, storybook illustration." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCk434ms0OEXYEySptyGeLzpWspt7BKCzZ3XEb3HCBZJHzV7qZyyngdVrYYYAe-AD9hxFXceEQMGjxPVMayyPhnkJqcULd5DEOat32yMsH3J9boEGHSAgFKhCjYJtBNhz6pIG7bRpJGr4l-FzpsSSi84-Cze8NDyYjzSDH_pRLh1E_pxGCk8fI3Nf2-YAz1BwP8qge-vyQrhQ4RwvluV3cjDLw9Somnd7XTvkBI02Is"/>
+<div class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[12px]">volume_up</span>
+</div>
+</div>
+<span class="mt-1 font-label-sm text-[11px] font-bold text-on-surface bg-surface-container-lowest/90 px-1.5 py-0.5 rounded-full shadow-xs">Surabhi Cow</span>
+</div>
+</div>
+<!-- Interactive Floating Sparkle Helper -->
+<div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 pointer-events-none">
+<div class="bg-primary/80 backdrop-blur-md px-3 py-1 rounded-full text-on-primary font-label-sm text-[11px] flex items-center gap-1 shadow-md">
+<span class="material-symbols-outlined text-[13px]">stars</span>
+<span>Tap placed stickers for sacred audio!</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Category Filter Pill Tray -->
+<div class="w-full flex flex-col gap-2 pt-1">
+<div class="flex items-center justify-between px-1">
+<span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Aarav's Sticker Box</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">12 Total</span>
+</div>
+<!-- Scrollable Horizontal Chip Tabs -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 -mx-gutter-mobile px-gutter-mobile select-none">
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow-md flex items-center gap-1.5 active:translate-y-0.5" type="button">
+<span class="material-symbols-outlined text-[16px]">apps</span>
+<span>All Stickers (9/12)</span>
+</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm shadow-sm flex items-center gap-1.5 active:translate-y-0.5" type="button">
+<span>Friends of Krishna</span>
+</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm shadow-sm flex items-center gap-1.5 active:translate-y-0.5" type="button">
+<span>Sacred Objects</span>
+</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm shadow-sm flex items-center gap-1.5 active:translate-y-0.5" type="button">
+<span>Forest Creatures</span>
+</button>
+</div>
+</div>
+<!-- 3-Column Tactile Sticker Grid -->
+<div class="grid grid-cols-3 gap-2.5 w-full">
+<!-- Card 1: Unlocked - Mischievous Butter Pot (NEW / Action) -->
+<div class="bg-surface-container-lowest rounded-lg p-2 flex flex-col items-center justify-between text-center shadow-md relative overflow-hidden group">
+<!-- New Ribbon -->
+<div class="absolute top-1.5 left-1.5 bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[10px] px-1.5 py-0.5 rounded-full font-extrabold flex items-center gap-0.5 shadow-xs">
+<span>NEW</span> ✨
+      </div>
+<div class="w-16 h-16 rounded-full bg-surface-container-low flex items-center justify-center mt-3 group-hover:scale-105 transition-transform p-1">
+<img class="w-12 h-12 object-contain" data-alt="Clay butter pot sticker icon with golden honey-yellow glow and happy face decoration, cheerful nursery art style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVydZUBZmjowl3L-U7-a4uOeiDEKmZ5b_fDX65av9nUVb6SaetUq3hnrdu0VrA65O94Nr_OIFDuIrtgXnDOm8AnG6JhjY7ShG7qwy5-0610Cn2Tk0R9_NIoE0Dllj2YrJ2Mv0kh73r4Qj9f2_AsdpIzHSPgcL1x1ENyjcrKPkTro65lG5O52nDIB3pZIasU08TjvpLMgRotm3BpWeR9RyXqlUer3jsEByz_sZvsCIO"/>
+</div>
+<div class="w-full mt-2">
+<p class="font-label-sm text-label-sm text-on-surface font-bold truncate">Butter Pot</p>
+<span class="font-body-sm text-[11px] text-secondary font-bold block">Ready to Peel!</span>
+</div>
+<button class="mt-2 w-full py-1.5 rounded-full bg-secondary text-on-secondary font-label-sm text-[12px] font-bold shadow-sm active:translate-y-0.5 flex items-center justify-center gap-1" onclick="playPeelInteraction(this)" type="button">
+<span class="material-symbols-outlined text-[14px]">pan_tool_alt</span>
+<span>Peel</span>
+</button>
+</div>
+<!-- Card 2: Unlocked - Dancing Moru -->
+<div class="bg-surface-container-lowest rounded-lg p-2 flex flex-col items-center justify-between text-center shadow-md relative overflow-hidden group">
+<div class="w-16 h-16 rounded-full bg-secondary-container/40 flex items-center justify-center mt-3 group-hover:scale-105 transition-transform p-1">
+<img class="w-12 h-12 object-contain" data-alt="Dancing peacock sticker with vibrant feathers and celebratory sparkles, cute flat-vector style for kids." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1KG_VEoYzf2fFty7GTwHAG7u-H-9kiEI2O0b_p90WayKM0dVeG3OAxs3lZEno0OYWmy06DNxfZ_G1DYc0pvoHt6PywkA9_Pi_n7USlkJN6eEi8_Hs8fRi-uBx1drch92WPrTaQWGOUNLUGcTpMj-JbtSwzzAwxD0oYe2gDNTaW4HaqeY17zX14l7-z1vlEZoaZPPqFe7kA3D-DDDMUhPaH23Jb8DhrSDhwCFOvAM_"/>
+</div>
+<div class="w-full mt-2">
+<p class="font-label-sm text-label-sm text-on-surface font-bold truncate">Dancing Moru</p>
+<span class="font-body-sm text-[11px] text-primary font-bold block">Companion Lvl 2</span>
+</div>
+<div class="mt-2 w-full py-1.5 rounded-full bg-surface-container-high text-secondary font-label-sm text-[12px] font-bold flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Placed</span>
+</div>
+</div>
+<!-- Card 3: Unlocked - Golden Flute -->
+<div class="bg-surface-container-lowest rounded-lg p-2 flex flex-col items-center justify-between text-center shadow-md relative overflow-hidden group">
+<div class="w-16 h-16 rounded-full bg-tertiary-fixed/40 flex items-center justify-center mt-3 group-hover:scale-105 transition-transform p-1">
+<img class="w-12 h-12 object-contain" data-alt="Golden flute sticker wrapped with colorful ribbons, glowing gently, children spiritual story art." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDu1lbrChfXEL3ZJIPHVAO17J4vcCm8rzQhWPbVXcyQV6sKQ2EeSmhs_JrU0mSH47NwgI586WAHGr02IgDPzlC4JHnKBglCUa4jyt0mTCmE_GwYedAiJZcoocN52JrAwW7O9y2iCbm9XrDqQw_cS226cIPHxBQgpPXXKmA2xoqVRsXsj1f4okccWRmtisuhDaADVfr3ddFNsMz_fyQL5alBBPAcptJGG_Td6x2uqli_"/>
+</div>
+<div class="w-full mt-2">
+<p class="font-label-sm text-label-sm text-on-surface font-bold truncate">Golden Flute</p>
+<span class="font-body-sm text-[11px] text-tertiary font-bold block">Melody Sound</span>
+</div>
+<button class="mt-2 w-full py-1.5 rounded-full bg-primary-container text-on-primary font-label-sm text-[12px] font-bold shadow-sm active:translate-y-0.5 flex items-center justify-center gap-1" onclick="playStickerSound('Divine Flute Raga Melodies 🪈', this)" type="button">
+<span class="material-symbols-outlined text-[14px]">play_arrow</span>
+<span>Play</span>
+</button>
+</div>
+<!-- Card 4: Unlocked - Lotus Bloom -->
+<div class="bg-surface-container-lowest rounded-lg p-2 flex flex-col items-center justify-between text-center shadow-md relative overflow-hidden group">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center mt-3 group-hover:scale-105 transition-transform p-1">
+<img class="w-12 h-12 object-contain" data-alt="Vibrant pink sacred lotus bloom flower sticker resting on soft green pad, clean cartoon style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt5ZgZDeIxzV-pAkq3DJ1-3bgXAR6Me_7VDHcnQdjUkKMoJBhhNQZ0OpCnp7udRuHG92auSqb9U4KOjYZM52h4ILa4re6C-gUONy327DXx16BRkF_TM1MAHUNzhTZbsZpltTv-eH75AJWV2gRGmcC3pSHbOBekcO6pkcWhQOgcfl8TMgN9Jkpcrmq0jpdJMNpxi4ilj6HGu_R0hf_oF-Gf0hDD_hQj8kDyygsIQUVv"/>
+</div>
+<div class="w-full mt-2">
+<p class="font-label-sm text-label-sm text-on-surface font-bold truncate">Lotus Bloom</p>
+<span class="font-body-sm text-[11px] text-secondary font-bold block">Purity Badge</span>
+</div>
+<div class="mt-2 w-full py-1.5 rounded-full bg-surface-container-high text-secondary font-label-sm text-[12px] font-bold flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Placed</span>
+</div>
+</div>
+<!-- Card 5: Unlocked - Brave Little Bow -->
+<div class="bg-surface-container-lowest rounded-lg p-2 flex flex-col items-center justify-between text-center shadow-md relative overflow-hidden group">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center mt-3 group-hover:scale-105 transition-transform p-1">
+<img class="w-12 h-12 object-contain" data-alt="Stylized wooden archer bow with sweet lotus arrow tip sticker, warm brown and gold tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDft9_vhqcJ6JLzP41vvHYYSQv07w272blRUNO9ESkbhMUNtNN70HuIYZ4Ha4IeZFx6-jDN1hkVFy9oNI1NM2A0Ijd9zrBUGH9AFAXb1oE9L6VsJFixLtJL8R8WmDQ_lTZgOV4T-XS8p5Ch8DtlPu60AnrytgP_8mIcXTLTaVLxE_CkbtOoOn4Zt1IawL-T-mjydrAgAcOQMy6_nqkfILCCue-IZCQAqhsMqiGCQDjH"/>
+</div>
+<div class="w-full mt-2">
+<p class="font-label-sm text-label-sm text-on-surface font-bold truncate">Little Bow</p>
+<span class="font-body-sm text-[11px] text-tertiary-fixed-dim font-bold block">Courage Badge</span>
+</div>
+<div class="mt-2 w-full py-1.5 rounded-full bg-surface-container-high text-secondary font-label-sm text-[12px] font-bold flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Placed</span>
+</div>
+</div>
+<!-- Card 6: Locked - Divine Chariot -->
+<div class="bg-surface-container-high/60 rounded-lg p-2 flex flex-col items-center justify-between text-center shadow-sm relative overflow-hidden">
+<div class="absolute top-2 right-2 text-outline">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+</div>
+<div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mt-3 opacity-40">
+<span class="material-symbols-outlined text-outline text-[32px]">directions_car</span>
+</div>
+<div class="w-full mt-2">
+<p class="font-label-sm text-label-sm text-outline font-bold truncate">Divine Chariot</p>
+<span class="font-body-sm text-[11px] text-on-surface-variant block">Episode 5</span>
+</div>
+<div class="mt-2 w-full py-1.5 rounded-full bg-surface-container-highest text-outline font-label-sm text-[11px] font-bold flex items-center justify-center">
+        Locked
+      </div>
+</div>
+<!-- Card 7: Locked - Balarama's Plough -->
+<div class="bg-surface-container-high/60 rounded-lg p-2 flex flex-col items-center justify-between text-center shadow-sm relative overflow-hidden">
+<div class="absolute top-2 right-2 text-outline">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+</div>
+<div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mt-3 opacity-40">
+<span class="material-symbols-outlined text-outline text-[32px]">agriculture</span>
+</div>
+<div class="w-full mt-2">
+<p class="font-label-sm text-label-sm text-outline font-bold truncate">Sacred Plough</p>
+<span class="font-body-sm text-[11px] text-on-surface-variant block">Chant 2.50</span>
+</div>
+<div class="mt-2 w-full py-1.5 rounded-full bg-surface-container-highest text-outline font-label-sm text-[11px] font-bold flex items-center justify-center">
+        Locked
+      </div>
+</div>
+<!-- Card 8: Locked - Kadamba Tree -->
+<div class="bg-surface-container-high/60 rounded-lg p-2 flex flex-col items-center justify-between text-center shadow-sm relative overflow-hidden">
+<div class="absolute top-2 right-2 text-outline">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+</div>
+<div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mt-3 opacity-40">
+<span class="material-symbols-outlined text-outline text-[32px]">park</span>
+</div>
+<div class="w-full mt-2">
+<p class="font-label-sm text-label-sm text-outline font-bold truncate">Kadamba Tree</p>
+<span class="font-body-sm text-[11px] text-on-surface-variant block">Opens Tomorrow</span>
+</div>
+<div class="mt-2 w-full py-1.5 rounded-full bg-surface-container-highest text-outline font-label-sm text-[11px] font-bold flex items-center justify-center">
+        Locked
+      </div>
+</div>
+<!-- Mystery Slot: Question Mark -->
+<div class="bg-surface-container-high/60 rounded-lg p-2 flex flex-col items-center justify-between text-center shadow-sm relative overflow-hidden">
+<div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mt-3 text-tertiary-fixed-dim">
+<span class="material-symbols-outlined text-[32px]">help</span>
+</div>
+<div class="w-full mt-2">
+<p class="font-label-sm text-label-sm text-outline font-bold truncate">Mystery Gift</p>
+<span class="font-body-sm text-[11px] text-on-surface-variant block">Keep Exploring</span>
+</div>
+<div class="mt-2 w-full py-1.5 rounded-full bg-surface-container-highest text-outline font-label-sm text-[11px] font-bold flex items-center justify-center">
+        Secret
+      </div>
+</div>
+</div>
+<!-- Fun Sharing & Family Showcase Card -->
+<div class="w-full bg-secondary-container rounded-lg p-space-md shadow-md flex flex-col gap-space-xs relative overflow-hidden">
+<div class="flex items-start gap-space-xs">
+<div class="w-12 h-12 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-sm shrink-0">
+<span class="material-symbols-outlined text-[26px]">family_restroom</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-secondary-fixed leading-tight">Show Mom &amp; Dad My Garden!</h2>
+<p class="font-body-sm text-body-sm text-on-secondary-fixed-variant">Send a personalized postcard of Aarav's Vrindavan Mandala into the Family Circle.</p>
+</div>
+</div>
+<button class="mt-1 w-full h-14 rounded-full bg-primary text-on-primary font-label-lg text-label-lg shadow-md flex items-center justify-center gap-2 active:translate-y-1 transition-all" onclick="shareGardenCard(this)" type="button">
+<span class="material-symbols-outlined text-[24px]">send</span>
+<span>Share Garden Postcard 💌</span>
+</button>
+</div>
+</div>
+<script>
+  function playStickerSound(title, element) {
+    const toast = document.getElementById('audio-feedback');
+    const toastText = document.getElementById('audio-text');
+    if (!toast || !toastText) return;
+
+    toastText.textContent = title;
+    toast.classList.remove('hidden');
+    toast.classList.add('flex');
+
+    // Fun scale animation on the element
+    element.classList.add('scale-125');
+    setTimeout(() => {
+      element.classList.remove('scale-125');
+    }, 300);
+
+    setTimeout(() => {
+      toast.classList.add('hidden');
+      toast.classList.remove('flex');
+    }, 2800);
+  }
+
+  function playPeelInteraction(button) {
+    button.innerHTML = '<span class="material-symbols-outlined text-[14px]">auto_awesome</span> Placed! ✨';
+    button.classList.remove('bg-secondary');
+    button.classList.add('bg-tertiary-fixed-dim', 'text-on-tertiary-fixed-variant');
+
+    const toast = document.getElementById('audio-feedback');
+    const toastText = document.getElementById('audio-text');
+    if (toast && toastText) {
+      toastText.textContent = "Sticker Placed into Vrindavan Mandala! 🌟";
+      toast.classList.remove('hidden');
+      toast.classList.add('flex');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+        toast.classList.remove('flex');
+      }, 2500);
+    }
+  }
+
+  function shareGardenCard(btn) {
+    const originalText = btn.innerHTML;
+    btn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-bounce">check_circle</span> Sent to Mom & Dad! 💖';
+    btn.classList.remove('bg-primary');
+    btn.classList.add('bg-secondary');
+    setTimeout(() => {
+      btn.innerHTML = originalText;
+      btn.classList.remove('bg-secondary');
+      btn.classList.add('bg-primary');
+    }, 3000);
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(30,27,75,0.06)]" data-active-classes="text-primary font-bold"><div class="h-20 px-gutter-mobile flex items-center justify-around"><a class="flex flex-col items-center justify-center min-w-[48px] min-h-[48px] gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#"><div class="w-12 h-10 rounded-full flex items-center justify-center bg-surface-container-low"><span class="material-symbols-outlined text-[26px]">cottage</span></div><span class="font-label-sm text-label-sm">Home</span></a><a class="flex flex-col items-center justify-center min-w-[48px] min-h-[48px] gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="watch" href="#"><div class="w-12 h-10 rounded-full flex items-center justify-center bg-surface-container-low"><span class="material-symbols-outlined text-[26px]">smart_display</span></div><span class="font-label-sm text-label-sm">Watch</span></a><a class="flex flex-col items-center justify-center min-w-[48px] min-h-[48px] gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="sing-shloka" href="#"><div class="w-12 h-10 rounded-full flex items-center justify-center bg-surface-container-low"><span class="material-symbols-outlined text-[26px]">music_note</span></div><span class="font-label-sm text-label-sm">Sing</span></a><a class="flex flex-col items-center justify-center min-w-[48px] min-h-[48px] gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="game" href="#"><div class="w-12 h-10 rounded-full flex items-center justify-center bg-surface-container-low"><span class="material-symbols-outlined text-[26px]">sports_esports</span></div><span class="font-label-sm text-label-sm">Play</span></a></div></nav></body></html>

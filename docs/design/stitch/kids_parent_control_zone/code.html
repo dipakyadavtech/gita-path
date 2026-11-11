@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,400..800;1,6..12,400..800&amp;family=Sora:wght@400..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-dim": "#e1d9c9", "tertiary-fixed-dim": "#ffb95f", "on-primary-container": "#a8b8ff", "error": "#ba1a1a", "on-tertiary-fixed-variant": "#653e00", "error-container": "#ffdad6", "primary-container": "#1e40af", "on-tertiary": "#ffffff", "secondary": "#1f686d", "background": "#fff9ee", "on-error": "#ffffff", "on-surface-variant": "#444653", "surface-container-highest": "#e9e2d1", "on-primary": "#ffffff", "on-secondary-fixed": "#002022", "surface-container": "#f5eddc", "surface-tint": "#3755c3", "primary-fixed": "#dde1ff", "outline": "#757684", "surface-container-lowest": "#ffffff", "surface-variant": "#e9e2d1", "on-secondary": "#ffffff", "on-secondary-fixed-variant": "#004f54", "inverse-on-surface": "#f8f0df", "on-background": "#1e1b11", "on-surface": "#1e1b11", "tertiary-container": "#6b4200", "on-error-container": "#93000a", "tertiary-fixed": "#ffddb8", "surface-container-low": "#fbf3e2", "on-tertiary-container": "#ffa929", "secondary-fixed": "#abeef4", "on-primary-fixed": "#001453", "on-secondary-container": "#256c71", "primary-fixed-dim": "#b8c4ff", "surface-bright": "#fff9ee", "inverse-surface": "#343025", "surface-container-high": "#efe7d7", "inverse-primary": "#b8c4ff", "primary": "#00288e", "secondary-container": "#a8ebf1", "on-tertiary-fixed": "#2a1700", "outline-variant": "#c4c5d5", "tertiary": "#4c2e00", "on-primary-fixed-variant": "#173bab", "secondary-fixed-dim": "#8fd2d7", "surface": "#fff9ee" }, "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, "spacing": { "space-md": "1.25rem", "margin": "2.5rem", "space-xl": "3rem", "gutter-mobile": "1rem", "space-xs": "0.5rem", "margin-mobile": "1.25rem", "gutter": "1.5rem", "space-lg": "2rem", "space-sm": "0.75rem" }, "fontFamily": { "label-lg": ["Sora"], "display-hero-mobile": ["Sora"], "label-sm": ["Sora"], "headline-sm": ["Sora"], "headline-lg-mobile": ["Sora"], "body-md": ["Nunito Sans"], "headline-lg": ["Sora"], "label-md": ["Sora"], "display-hero": ["Sora"], "body-lg": ["Nunito Sans"], "body-sm": ["Nunito Sans"], "headline-md": ["Sora"] }, "fontSize": { "label-lg": ["18px", {"lineHeight": "24px", "fontWeight": "700"}], "display-hero-mobile": ["34px", {"lineHeight": "42px", "fontWeight": "800"}], "label-sm": ["13px", {"lineHeight": "18px", "fontWeight": "700"}], "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}], "headline-lg-mobile": ["26px", {"lineHeight": "34px", "fontWeight": "700"}], "body-md": ["17px", {"lineHeight": "26px", "fontWeight": "600"}], "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}], "label-md": ["15px", {"lineHeight": "20px", "fontWeight": "700"}], "display-hero": ["48px", {"lineHeight": "56px", "fontWeight": "800"}], "body-lg": ["20px", {"lineHeight": "30px", "fontWeight": "600"}], "body-sm": ["15px", {"lineHeight": "22px", "fontWeight": "600"}], "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#fff9ee;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Go back" class="w-11 h-11 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center shadow-[0_3px_0_#e1d9c9] active:translate-y-0.5" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><div class="flex flex-col"><h1 class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">Parent Control Zone</h1><span class="font-label-sm text-label-sm text-on-surface-variant font-bold">Protected Space</span></div></div><div class="flex items-center gap-space-xs"><div class="h-11 px-space-sm rounded-full bg-error-container text-on-error-container flex items-center gap-1 shadow-[0_2px_0_#ffdad6]"><span class="material-symbols-outlined text-[18px]">pin</span><span class="font-label-sm text-label-sm font-bold">PIN Gate</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-20 pb-safe bg-surface px-gutter-mobile"><div class="flex flex-col w-full pb-10 space-y-5">
+<!-- Parent Sanctuary Banner & Quick Mode Switch -->
+<div class="flex items-center justify-between bg-surface-container rounded-lg p-space-sm shadow-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">shield_person</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-primary leading-tight">Guardian Zone</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Calm &amp; Protected Sanctuary</span>
+</div>
+</div>
+<button aria-label="Exit to Kids View" class="h-10 px-space-sm bg-secondary-container text-on-secondary-container rounded-full flex items-center gap-1.5 shadow-sm active:scale-95 transition-transform" type="button">
+<span class="font-label-sm text-label-sm">Kids View</span>
+<span class="text-base leading-none">🦚</span>
+</button>
+</div>
+<!-- Child Profile Switcher -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Active Learner Profile</span>
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+        2 Profiles Linked
+      </span>
+</div>
+<!-- Active Child Card -->
+<div class="flex items-center justify-between bg-surface-container-high rounded-DEFAULT p-3 mb-2">
+<div class="flex items-center gap-3">
+<div class="relative w-12 h-12 rounded-full overflow-hidden shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Charming painted portrait of an 8-year-old Indian boy named Aarav wearing a soft saffron yellow kurta, smiling warmly with a gentle peacock feather pin, warm ambient lighting, storybook illustration aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxhGrsTfnr7yUL0IV64neUhPdv2_0OVVuZP6dpRrwNbJZKvTKNOKCN-8bpk07wS-x_dNkaHvplpylpwovceNpBXJhYhBgJOYvsEt36ykGlHFVHDzYDFyNkUGxoDS-1pu56hL8svlb04zvmfucDqk49DYccgO1rOrxvE7_ecB6chvzWx6kBNtNMzGCTbQwRZRVR450Olh7ZstyyGiQC6zOLMZwQF2TAU6zHwnijLVYX"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface">Aarav</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm leading-none">Age 8</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-tertiary-container" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+            Level 2 Explorer • Gita Quest
+          </span>
+</div>
+</div>
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+</div>
+<!-- Switch Sibling Option -->
+<button class="w-full flex items-center justify-between p-2.5 rounded-DEFAULT bg-surface-container-low active:bg-surface-container transition-colors" type="button">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full overflow-hidden opacity-80">
+<img class="w-full h-full object-cover" data-alt="Sweet soft illustration portrait of a 4-year-old Indian girl named Meera with twin buns and a bright lotus hairpin, playful joyful expression, warm pastel storybook style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHhbxvTphtznidToe_0UOMLf2jxyvkjz8zrCsV9xKjHZi2obBk9Wt9CjUnGaziEioZb5M1XBRzsD-vGECQWau5wVAJT19wbiej7mxwGOcIzcN4d3KbVZkpzvyujF-ylgsaTp0Z_5VAp78OGqa0ihOPgbTzVFgtVWB0JWjAUXlDa71L3vDHHOTNY6MVjvkLP624JSO_lnU0lUUhqhEVDjNhPOu-3jQBS5qAIpJvfOAw"/>
+</div>
+<div class="flex flex-col text-left">
+<span class="font-label-sm text-label-sm text-on-surface">Switch to Meera (Age 4)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Bal-Gita Nursery Path</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">swap_horiz</span>
+</button>
+</div>
+<!-- Healthy Digital Boundaries -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm space-y-4">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">timer</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface leading-snug">Healthy Screen Boundaries</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Gentle pacing calibrated for developing young minds</span>
+</div>
+</div>
+<!-- Today's Consumption Gauge -->
+<div class="p-3.5 bg-surface-container rounded-DEFAULT space-y-2.5">
+<div class="flex justify-between items-baseline">
+<span class="font-label-sm text-label-sm text-on-surface">Today's Usage Pace</span>
+<div class="flex items-baseline gap-1">
+<span class="font-label-md text-label-md text-primary">11m</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ 15m allocated</span>
+</div>
+</div>
+<!-- Segmented Bar Meter -->
+<div class="w-full h-3 rounded-full bg-surface-container-highest overflow-hidden flex">
+<div class="h-full bg-primary rounded-l-full" style="width: 73%;"></div>
+<div class="h-full bg-tertiary-fixed-dim" style="width: 27%;"></div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[14px]">eco</span>
+          4 mins peaceful window left
+        </span>
+<span class="font-label-sm text-label-sm">No tantrums auto-lock</span>
+</div>
+</div>
+<!-- Screen Limit Options Chips -->
+<div class="space-y-1.5">
+<label class="font-label-sm text-label-sm text-on-surface">Daily Screen Limit Ceiling</label>
+<div class="grid grid-cols-4 gap-2">
+<button class="py-2 rounded-DEFAULT bg-surface-container text-on-surface font-label-sm text-label-sm text-center active:scale-95 transition-transform" type="button">10m</button>
+<button class="py-2 rounded-DEFAULT bg-primary text-on-primary font-label-sm text-label-sm text-center shadow-md" type="button">15m</button>
+<button class="py-2 rounded-DEFAULT bg-surface-container text-on-surface font-label-sm text-label-sm text-center active:scale-95 transition-transform" type="button">20m</button>
+<button class="py-2 rounded-DEFAULT bg-surface-container text-on-surface font-label-sm text-label-sm text-center active:scale-95 transition-transform" type="button">30m</button>
+</div>
+</div>
+<!-- Bedtime Lockout Schedule Switch -->
+<div class="pt-2 flex items-center justify-between">
+<div class="flex items-start gap-2.5 pr-2">
+<div class="w-7 h-7 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">bedtime</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Bedtime Sanctuary Lockout</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Shuts screen access from 7:30 PM to 7:00 AM</span>
+</div>
+</div>
+<!-- Toggle Component -->
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-12 h-7 bg-surface-container-highest rounded-full peer peer-checked:bg-secondary transition-colors relative after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:after:translate-x-5 shadow-sm"></div>
+</label>
+</div>
+<!-- Shloka First Toggle -->
+<div class="pt-1 flex items-center justify-between">
+<div class="flex items-start gap-2.5 pr-2">
+<div class="w-7 h-7 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">record_voice_over</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Shloka Recitation Gate</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Child chants 1 morning verse before animated tales unlock</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-12 h-7 bg-surface-container-highest rounded-full peer peer-checked:bg-secondary transition-colors relative after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:after:translate-x-5 shadow-sm"></div>
+</label>
+</div>
+</div>
+<!-- Wisdom Insights & Moral Starters Card -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm space-y-3.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed text-tertiary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">lightbulb</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Wisdom &amp; Moral Insights</h2>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-tertiary-container font-bold">This Week</span>
+</div>
+<!-- Story Module Overview -->
+<div class="bg-surface-container rounded-DEFAULT p-3.5 space-y-2">
+<div class="flex items-center gap-3">
+<div class="w-14 h-14 rounded-DEFAULT overflow-hidden shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Playful cartoon watercolor illustration of little Bal Krishna with a sweet blue complexion reaching happily into a clay earthen pot overflowing with white fresh butter, radiant warmth, ancient Vrindavan cottage setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSaZu5oQjwXCXVsGqh0OIjAUYJFHUKhl2M8BAw9racbKuJJQRoszYluK-oye9nNjqle4R_4a821waj4HXxfkgGcDoVBwfeRSYxha2tWMMiF5f8Vy0AYFp9cSyxfLuGtRZDwDKMh2LWl9BxI3MpBfdtZp76itpBu1Wwfe7-TMo-Sj8HCQnlF5nQv96kxmIzARGRSEpolHwleJj3Ztor0a0QIFRXvgo-TSs9j9pXBjY3"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-primary">Mastered Story Arc</span>
+<h3 class="font-label-md text-label-md text-on-surface truncate">Bal Krishna &amp; The Butter Pot</h3>
+<span class="font-body-sm text-body-sm text-secondary font-bold">Value: Honesty &amp; Generous Joy</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Aarav finished the chapter with 100% pronunciation score on the "Makhanchori" verse and opted to replay the verse on sharing with friends.
+      </p>
+</div>
+<!-- Parent Dinner Table Dialogue Starter -->
+<div class="bg-secondary-fixed/50 rounded-DEFAULT p-3.5 space-y-2">
+<div class="flex items-center gap-1.5 text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[18px]">forum</span>
+<span class="font-label-md text-label-md">Family Dinner Conversation Starter</span>
+</div>
+<blockquote class="font-body-md text-body-md text-on-secondary-fixed-variant italic">
+        "Ask Aarav tonight: ‘Why do you think Krishna loved giving butter to the birds and baby calves instead of hiding it just for himself?’"
+      </blockquote>
+<div class="flex items-center gap-2 pt-1 text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">family_restroom</span>
+        Cultivates natural empathy without lecturing
+      </div>
+</div>
+</div>
+<!-- Audio, Language & Safety Setup -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm space-y-4">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">translate</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Audio &amp; Vedic Recitation</h2>
+</div>
+<!-- Language Selector Dropdown Simulation -->
+<div class="space-y-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Primary Narration Track</label>
+<div class="w-full flex items-center justify-between bg-surface-container rounded-DEFAULT px-3.5 py-3 text-on-surface">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">hearing</span>
+<span class="font-label-md text-label-md">Bilingual (Hindi Narration + English Subtitles)</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">expand_more</span>
+</div>
+</div>
+<!-- Pronunciation Rigor Radios -->
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Pronunciation Recognition Meter</label>
+<div class="space-y-2">
+<div class="flex items-center justify-between p-3 rounded-DEFAULT bg-surface-container">
+<div class="flex flex-col pr-2">
+<span class="font-label-md text-label-md text-on-surface">Gentle &amp; Encouraging (Beginners)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Awards praise for earnest attempts and melodic rhythm</span>
+</div>
+<div class="w-5 h-5 rounded-full bg-primary flex items-center justify-center shrink-0">
+<div class="w-2 h-2 rounded-full bg-surface-container-lowest"></div>
+</div>
+</div>
+<div class="flex items-center justify-between p-3 rounded-DEFAULT bg-surface-container-low opacity-75">
+<div class="flex flex-col pr-2">
+<span class="font-label-md text-label-md text-on-surface">Strict Vedic Chanda Meter</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Enforces rigorous Sanskrit vowel lengths &amp; visarga sounds</span>
+</div>
+<div class="w-5 h-5 rounded-full bg-surface-container-highest shrink-0"></div>
+</div>
+</div>
+</div>
+<!-- Autoplay Safety Lockout Card -->
+<div class="flex items-center justify-between p-3 bg-surface-container rounded-DEFAULT">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-error text-[20px]">motion_photos_off</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Infinite Feed &amp; Autoplay</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Permanently Locked OFF</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">Safe Guarded</span>
+</div>
+</div>
+<!-- Green Shield Guarantee Card -->
+<div class="bg-secondary-container rounded-lg p-space-md flex flex-col space-y-2 shadow-sm text-on-secondary-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+<span class="font-headline-sm text-headline-sm">Sacred Trust Commitment</span>
+</div>
+<p class="font-body-md text-body-md">
+      100% Ad-Free • Zero Open Chat • Zero In-App Commercial Traps. Aarav’s journey is strictly dedicated to pure contemplation and mindful stories.
+    </p>
+<div class="pt-2 flex items-center justify-between">
+<button class="font-label-sm text-label-sm text-on-secondary-container flex items-center gap-1 underline underline-offset-4" type="button">
+<span class="material-symbols-outlined text-[16px]">lock_reset</span>
+        Change 4-Digit Parent PIN
+      </button>
+<span class="font-label-sm text-label-sm">COPPA &amp; Vedic Safe</span>
+</div>
+</div>
+<!-- Primary Sticky Bottom Action Button -->
+<div class="pt-2">
+<button class="w-full h-16 rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg shadow-lg active:translate-y-1 transition-transform flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[22px]">save</span>
+<span>Save Settings &amp; Return to Gita Path</span>
+<span class="material-symbols-outlined text-[20px]">lock</span>
+</button>
+<p class="text-center font-body-sm text-body-sm text-on-surface-variant mt-2">
+      Settings will sync immediately across Aarav’s linked learning tablet.
+    </p>
+</div>
+</div></main></body></html>

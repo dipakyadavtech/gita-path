@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,600;1,6..12,600&amp;family=Sora:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#fff9ee;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { 'colors': { 'on-secondary-fixed-variant': '#004f54', 'inverse-primary': '#b8c4ff', 'surface-container-low': '#fbf3e2', 'on-tertiary-fixed-variant': '#653e00', 'surface-container-highest': '#e9e2d1', 'on-surface': '#1e1b11', 'primary-fixed': '#dde1ff', 'on-error': '#ffffff', 'inverse-on-surface': '#f8f0df', 'on-primary': '#ffffff', 'error-container': '#ffdad6', 'secondary-fixed': '#abeef4', 'on-background': '#1e1b11', 'secondary-fixed-dim': '#8fd2d7', 'primary': '#00288e', 'secondary': '#1f686d', 'on-secondary': '#ffffff', 'on-secondary-fixed': '#002022', 'background': '#fff9ee', 'secondary-container': '#a8ebf1', 'surface-variant': '#e9e2d1', 'primary-container': '#1e40af', 'on-tertiary-container': '#ffa929', 'tertiary': '#4c2e00', 'on-tertiary-fixed': '#2a1700', 'on-tertiary': '#ffffff', 'surface-bright': '#fff9ee', 'surface-dim': '#e1d9c9', 'on-primary-fixed-variant': '#173bab', 'tertiary-container': '#6b4200', 'outline': '#757684', 'on-primary-fixed': '#001453', 'surface-container-high': '#efe7d7', 'primary-fixed-dim': '#b8c4ff', 'error': '#ba1a1a', 'on-primary-container': '#a8b8ff', 'outline-variant': '#c4c5d5', 'tertiary-fixed-dim': '#ffb95f', 'surface-tint': '#3755c3', 'on-secondary-container': '#256c71', 'inverse-surface': '#343025', 'on-error-container': '#93000a', 'tertiary-fixed': '#ffddb8', 'surface-container-lowest': '#ffffff', 'on-surface-variant': '#444653', 'surface-container': '#f5eddc', 'surface': '#fff9ee' }, 'borderRadius': { 'DEFAULT': '1rem', 'lg': '2rem', 'xl': '3rem', 'full': '9999px' }, 'spacing': { 'space-sm': '0.75rem', 'space-lg': '2rem', 'margin-mobile': '1.25rem', 'space-xl': '3rem', 'gutter-mobile': '1rem', 'margin': '2.5rem', 'gutter': '1.5rem', 'space-md': '1.25rem', 'space-xs': '0.5rem' }, 'fontFamily': { 'body-sm': ['Nunito Sans'], 'headline-md': ['Sora'], 'display-hero': ['Sora'], 'headline-sm': ['Sora'], 'label-lg': ['Sora'], 'body-md': ['Nunito Sans'], 'display-hero-mobile': ['Sora'], 'label-sm': ['Sora'], 'body-lg': ['Nunito Sans'], 'headline-lg-mobile': ['Sora'], 'label-md': ['Sora'], 'headline-lg': ['Sora'] }, 'fontSize': { 'body-sm': ['15px', { 'lineHeight': '22px', 'fontWeight': '600' }], 'headline-md': ['24px', { 'lineHeight': '32px', 'fontWeight': '700' }], 'display-hero': ['48px', { 'lineHeight': '56px', 'fontWeight': '800' }], 'headline-sm': ['20px', { 'lineHeight': '28px', 'fontWeight': '600' }], 'label-lg': ['18px', { 'lineHeight': '24px', 'fontWeight': '700' }], 'body-md': ['17px', { 'lineHeight': '26px', 'fontWeight': '600' }], 'display-hero-mobile': ['34px', { 'lineHeight': '42px', 'fontWeight': '800' }], 'label-sm': ['13px', { 'lineHeight': '18px', 'fontWeight': '700' }], 'body-lg': ['20px', { 'lineHeight': '30px', 'fontWeight': '600' }], 'headline-lg-mobile': ['26px', { 'lineHeight': '34px', 'fontWeight': '700' }], 'label-md': ['15px', { 'lineHeight': '20px', 'fontWeight': '700' }], 'headline-lg': ['32px', { 'lineHeight': '40px', 'fontWeight': '700' }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_4px_20px_rgba(76,46,0,0.06)]"><div class="h-20 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><button aria-label="Go Back" class="w-12 h-12 rounded-full bg-surface-container-high text-primary flex items-center justify-center shadow-[0_3px_0_#e1d9c9] active:translate-y-0.5" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><div class="flex flex-col"><h1 class="font-headline-sm text-headline-sm text-primary tracking-tight leading-tight">Parent Gate Pin</h1></div></div><div class="flex items-center gap-space-xs"><div class="h-11 px-space-sm rounded-full bg-secondary-container text-on-secondary-container flex items-center gap-1.5 shadow-[0_2px_0_#8fd2d7]"><span class="material-symbols-outlined text-[20px]">schedule</span><span class="font-label-sm text-label-sm">12m left</span></div><a aria-label="Parent Lock" class="w-11 h-11 rounded-full bg-surface-container-high text-secondary flex items-center justify-center shadow-[0_2px_0_#e1d9c9] active:translate-y-0.5" data-path="parent-gate-pin" href="#"><span class="material-symbols-outlined text-[20px]">lock</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full px-margin-mobile pt-20 pb-safe bg-surface min-h-screen"><div class="flex flex-col w-full pb-8">
+<!-- Friendly Welcome Banner with Moru the Feathered Guide -->
+<section class="flex flex-col items-center text-center mt-2 mb-6">
+<div class="relative mb-3 flex items-center justify-center">
+<!-- Animated decorative glow / halo -->
+<div class="absolute w-24 h-24 rounded-full bg-secondary-fixed/40 animate-pulse"></div>
+<!-- Moru Mascot Illustrated Avatar Badge -->
+<div class="relative w-20 h-20 rounded-full bg-surface-container-lowest shadow-md flex items-center justify-center overflow-hidden">
+<svg class="w-18 h-18 text-primary" fill="none" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<!-- Feather Fan Base -->
+<circle cx="50" cy="52" fill="#1F686D" r="38"></circle>
+<ellipse cx="28" cy="38" fill="#A8EBF1" rx="8" ry="14" transform="rotate(-30 28 38)"></ellipse>
+<circle cx="28" cy="35" fill="#00288E" r="4"></circle>
+<ellipse cx="72" cy="38" fill="#A8EBF1" rx="8" ry="14" transform="rotate(30 72 38)"></ellipse>
+<circle cx="72" cy="35" fill="#00288E" r="4"></circle>
+<ellipse cx="50" cy="26" fill="#A8EBF1" rx="8" ry="14"></ellipse>
+<circle cx="50" cy="23" fill="#00288E" r="4"></circle>
+<!-- Moru Body -->
+<ellipse cx="50" cy="62" fill="#00288E" rx="20" ry="24"></ellipse>
+<!-- Golden Crown crest -->
+<path d="M43 40L45 47L50 42L55 47L57 40L53 50H47L43 40Z" fill="#FFA929"></path>
+<circle cx="43" cy="38" fill="#FFA929" r="2"></circle>
+<circle cx="50" cy="39" fill="#FFA929" r="2"></circle>
+<circle cx="57" cy="38" fill="#FFA929" r="2"></circle>
+<!-- Expressive Eyes -->
+<circle cx="44" cy="56" fill="#FFFFFF" r="4"></circle>
+<circle cx="45" cy="56" fill="#1E1B11" r="2.5"></circle>
+<circle cx="46" cy="55" fill="#FFFFFF" r="1"></circle>
+<circle cx="56" cy="56" fill="#FFFFFF" r="4"></circle>
+<circle cx="57" cy="56" fill="#1E1B11" r="2.5"></circle>
+<circle cx="58" cy="55" fill="#FFFFFF" r="1"></circle>
+<!-- Warm Beak -->
+<polygon fill="#FFA929" points="50,60 46,65 54,65"></polygon>
+<!-- Rosy Cheeks -->
+<circle cx="41" cy="63" fill="#FFA929" opacity="0.6" r="2.5"></circle>
+<circle cx="59" cy="63" fill="#FFA929" opacity="0.6" r="2.5"></circle>
+</svg>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-tertiary-fixed text-on-tertiary-fixed-variant px-2 py-0.5 rounded-full shadow-sm flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span>
+<span class="font-label-sm text-label-sm">Moru</span>
+</div>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight">Who's Learning Today?</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs mt-1">
+      Choose your avatar to step into Moru's sacred garden!
+    </p>
+</section>
+<!-- Profiles Container -->
+<div class="flex flex-col gap-5 w-full">
+<!-- Profile Card 1: Aarav -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-[0_8px_24px_rgba(30,27,75,0.06)] flex flex-col gap-4 relative overflow-hidden transition-all duration-200">
+<!-- Top Decorative Corner Pill -->
+<div class="flex items-center justify-between">
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm px-3 py-1 rounded-full flex items-center gap-1 shadow-[0_2px_0_#8fd2d7]">
+<span class="material-symbols-outlined text-[16px]">school</span>
+          Age 6–8 years
+        </span>
+<span class="bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm px-3 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+          14 Stars
+        </span>
+</div>
+<!-- Avatar & Info -->
+<div class="flex items-center gap-4">
+<div class="relative w-20 h-20 rounded-full bg-surface-container-high flex-shrink-0 overflow-hidden shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Delightful warm 3D animated cartoon portrait of a cheerful 7 year old Indian boy named Aarav wearing a peacock feather bandana headband, expressive sparkling eyes, soft warm studio lighting, wholesome Pixar aesthetic, friendly smile, cream and teal background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkSujUxhuSf-6Kda9FtQ-cKUfkOWP-w0BxNERr7nB4qj8XSxSwKzCu-5upwsVq9FpYa-w_CVDxe6RtrAmSt-BfwKw2opRK6MyeRXDXNoN-LPPkZlk2xLSqBlZc6k2rJeSSldr7B55yGQGjGUK_OxlkUGRH48WoO2jFvMJ3P5Q9sC8QiHr0KYrTIYrQsroFnXfu_VEStE_OYlt2k08Hm1k0RKWo6TgxcfeTZ05PNuDg"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Aarav</h3>
+<span class="material-symbols-outlined text-secondary text-[20px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<p class="font-label-md text-label-md text-primary mt-0.5">Level 2 Explorer</p>
+<div class="flex items-center gap-1.5 mt-1 text-on-surface-variant font-body-sm text-body-sm truncate">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed-dim">menu_book</span>
+<span class="truncate">Bal Krishna &amp; The Butter Pot</span>
+</div>
+</div>
+</div>
+<!-- Tactile Action Button -->
+<button aria-label="Let's Go Aarav" class="w-full h-[60px] bg-primary text-on-primary rounded-full font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-[0_4px_0_#001453] active:translate-y-1 active:shadow-[0_1px_0_#001453] transition-transform" onclick="launchExplorer('Aarav')">
+<span>Let's Go Aarav!</span>
+<span class="material-symbols-outlined text-[22px]">arrow_forward</span>
+</button>
+</div>
+<!-- Profile Card 2: Meera -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-[0_8px_24px_rgba(30,27,75,0.06)] flex flex-col gap-4 relative overflow-hidden transition-all duration-200">
+<!-- Top Decorative Corner Pill -->
+<div class="flex items-center justify-between">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-3 py-1 rounded-full flex items-center gap-1 shadow-[0_2px_0_#ffb95f]">
+<span class="material-symbols-outlined text-[16px]">child_care</span>
+          Age 3–5 years
+        </span>
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-3 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+          6 Stars
+        </span>
+</div>
+<!-- Avatar & Info -->
+<div class="flex items-center gap-4">
+<div class="relative w-20 h-20 rounded-full bg-surface-container-high flex-shrink-0 overflow-hidden shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Cute 3D animated toddler Indian girl named Meera, smiling gleefully with a bright yellow floral hair clip in curly hair, big curious eyes, warm gentle rim lighting, joyful Disney Pixar style illustration, soft peach background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmywnvAWo0rmsondTqYc3dz3PozBnttEfFt7n7OIXRyVE2XqLeX2NVsBrvr_ZePQe6VMWAfWRh9OI8jhDBdDrVI-eFRS0K-Dto8bxAvbcigUXxa2Ls4rFBpah3y8njS9gCE3MsTr9YYCNk-fUa3a99aOlxPptryfrKmmYnCmR0IzIEoJHP_-F3Aao9S16i5kcjULT-d6SClYMMNsH8xk-D0sE3beKtO4OsaI5Xmq33"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Meera</h3>
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[20px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<p class="font-label-md text-label-md text-tertiary-container mt-0.5">Toddler Rhymes &amp; Chants</p>
+<div class="flex items-center gap-1.5 mt-1 text-on-surface-variant font-body-sm text-body-sm truncate">
+<span class="material-symbols-outlined text-[18px] text-primary">music_note</span>
+<span class="truncate">Baby Krishna's Golden Flute</span>
+</div>
+</div>
+</div>
+<!-- Tactile Action Button -->
+<button aria-label="Let's Go Meera" class="w-full h-[60px] bg-tertiary-container text-on-tertiary rounded-full font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-[0_4px_0_#2a1700] active:translate-y-1 active:shadow-[0_1px_0_#2a1700] transition-transform" onclick="launchExplorer('Meera')">
+<span>Let's Go Meera!</span>
+<span class="material-symbols-outlined text-[22px]">arrow_forward</span>
+</button>
+</div>
+<!-- Profile Card 3: Add a Child -->
+<a aria-label="Add a Child or Little Seeker" class="bg-surface-container-low rounded-lg p-space-md shadow-[0_4px_16px_rgba(76,46,0,0.04)] flex items-center gap-4 active:scale-[0.99] transition-transform" href="#" onclick="openAddChildGate(event)">
+<div class="w-16 h-16 rounded-full bg-surface-container-high text-primary flex items-center justify-center flex-shrink-0 shadow-[0_2px_0_#e1d9c9]">
+<span class="material-symbols-outlined text-[32px]">add</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h4 class="font-label-lg text-label-lg text-primary truncate">Add a Little Seeker</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Set age, avatars &amp; screen-time rules</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant ml-auto">lock</span>
+</a>
+</div>
+<!-- Reassurance & Parent Controls Footer -->
+<div class="flex flex-col gap-4 mt-8">
+<!-- Exit to Adult / Family Gita Path with Parent Gate PIN -->
+<button class="w-full py-3.5 px-4 rounded-full bg-surface-container-high text-secondary flex items-center justify-center gap-2 font-label-md text-label-md shadow-[0_2px_0_#e1d9c9] active:translate-y-0.5" onclick="showParentGateModal()">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+<span>Exit to Family Sanctuary / Adult Gita Path</span>
+<span class="bg-surface-container-lowest text-on-surface-variant text-[11px] font-label-sm px-2 py-0.5 rounded-full ml-1">PIN</span>
+</button>
+<!-- 100% Kid Safe Reassurance Trust Badge -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">100% Safe Kids Sanctuary</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-xs">Zero Ads · Zero Open Chat · Zero In-App Purchases</span>
+</div>
+</div>
+</div>
+<!-- Parent PIN Modal Dialog (Simulated Parent Gate) -->
+<div class="fixed inset-0 z-50 hidden bg-inverse-surface/60 backdrop-blur-md items-end sm:items-center justify-center p-4" id="parent-gate-dialog">
+<div class="bg-surface-container-lowest w-full max-w-sm rounded-t-xl sm:rounded-lg p-6 flex flex-col gap-4 shadow-2xl animate-in fade-in slide-in-from-bottom duration-200">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Grown-Ups Only</h3>
+</div>
+<button class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant" onclick="closeParentGateModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Please solve this quick challenge to access parent settings:
+      </p>
+<div class="bg-surface-container-low rounded-DEFAULT p-3 text-center">
+<span class="font-headline-md text-headline-md text-on-surface tracking-widest">7 × 3 = ?</span>
+</div>
+<div class="grid grid-cols-3 gap-2 mt-1">
+<button class="h-14 rounded-DEFAULT bg-surface-container-high text-primary font-headline-sm text-headline-sm flex items-center justify-center shadow-[0_2px_0_#e1d9c9] active:translate-y-0.5" onclick="checkGateAnswer(21)">21</button>
+<button class="h-14 rounded-DEFAULT bg-surface-container-high text-primary font-headline-sm text-headline-sm flex items-center justify-center shadow-[0_2px_0_#e1d9c9] active:translate-y-0.5" onclick="checkGateAnswer(14)">14</button>
+<button class="h-14 rounded-DEFAULT bg-surface-container-high text-primary font-headline-sm text-headline-sm flex items-center justify-center shadow-[0_2px_0_#e1d9c9] active:translate-y-0.5" onclick="checkGateAnswer(28)">28</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function launchExplorer(name) {
+    // Joyful feedback interaction
+    const el = event.currentTarget;
+    el.style.transform = 'scale(0.96)';
+    setTimeout(() => {
+      el.style.transform = 'scale(1)';
+      alert(`Namaste! Loading ${name}'s magical Gita adventure with Moru...`);
+    }, 150);
+  }
+
+  function openAddChildGate(e) {
+    e.preventDefault();
+    showParentGateModal();
+  }
+
+  function showParentGateModal() {
+    const dialog = document.getElementById('parent-gate-dialog');
+    dialog.classList.remove('hidden');
+    dialog.classList.add('flex');
+  }
+
+  function closeParentGateModal() {
+    const dialog = document.getElementById('parent-gate-dialog');
+    dialog.classList.add('hidden');
+    dialog.classList.remove('flex');
+  }
+
+  function checkGateAnswer(ans) {
+    if (ans === 21) {
+      closeParentGateModal();
+      alert('Parent Verified! Entering Family Sanctuary / Parent Controls.');
+    } else {
+      alert('Oops! Try again or ask a parent.');
+    }
+  }
+</script></main></body></html>

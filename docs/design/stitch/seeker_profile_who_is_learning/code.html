@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Noto+Serif:wght@400;600&amp;family=Sora:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-fixed-dim": "#8fd2d7", "surface-container-high": "#e7e8ec", "error-container": "#ffdad6", "on-secondary": "#ffffff", "on-primary-fixed": "#390c00", "primary-fixed": "#ffdbd0", "surface-dim": "#d9dade", "primary-fixed-dim": "#ffb59d", "tertiary-fixed": "#abeef4", "surface-variant": "#e1e2e6", "surface-tint": "#ac3400", "secondary": "#5b5794", "primary-container": "#c2410c", "on-tertiary-fixed": "#002022", "on-secondary-fixed-variant": "#43407b", "secondary-container": "#bebafe", "surface-container": "#edeef2", "on-tertiary-container": "#c2faff", "on-error-container": "#93000a", "on-primary-container": "#ffece7", "on-background": "#191c1f", "surface-container-highest": "#e1e2e6", "error": "#ba1a1a", "surface": "#f8f9fd", "outline": "#8d7168", "tertiary-container": "#32777c", "surface-container-low": "#f2f3f7", "inverse-surface": "#2e3134", "on-surface-variant": "#59413a", "secondary-fixed": "#e3dfff", "on-tertiary-fixed-variant": "#004f54", "inverse-on-surface": "#eff1f5", "background": "#f8f9fd", "on-secondary-container": "#4b4883", "outline-variant": "#e1bfb5", "on-primary": "#ffffff", "inverse-primary": "#ffb59d", "surface-container-lowest": "#ffffff", "on-error": "#ffffff", "tertiary": "#0f5e63", "on-surface": "#191c1f", "primary": "#9b2f00", "on-secondary-fixed": "#17114d", "surface-bright": "#f8f9fd", "on-tertiary": "#ffffff", "on-primary-fixed-variant": "#832600", "secondary-fixed-dim": "#c4c0ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-2xl": "3rem", "gutter-tablet": "1.5rem", "margin-tablet": "2rem", "space-lg": "1.5rem", "space-xl": "2rem", "gutter-desktop": "2rem", "gutter": "1rem", "margin-desktop": "3rem", "margin": "1.25rem", "space-2xs": "0.25rem", "space-md": "1rem", "space-sm": "0.75rem", "space-xs": "0.5rem" }, "fontFamily": { "label-md": ["Inter"], "label-lg": ["Inter"], "headline-display": ["Sora"], "body-lg": ["Inter"], "headline-lg": ["Sora"], "headline-display-mobile": ["Sora"], "body-sm": ["Inter"], "scripture-verse-mobile": ["Noto Serif"], "headline-md": ["Sora"], "label-caps": ["Sora"], "body-md": ["Inter"], "scripture-verse": ["Noto Serif"], "headline-sm": ["Sora"] }, "fontSize": { "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-display": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-lg": ["17px", { "lineHeight": "28px", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-display-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "scripture-verse-mobile": ["17px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "700" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "scripture-verse": ["20px", { "lineHeight": "34px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-sm": ["18px", { "lineHeight": "26px", "fontWeight": "600" }] } } } };</script><style>@layer base{html,body{width:100vw;min-height:100vh;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface min-h-screen flex flex-col antialiased"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 px-margin flex items-center justify-between max-w-[480px] mx-auto w-full"><button aria-label="Go back" class="w-11 h-11 -ml-space-xs flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container active:scale-95 transition-all" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[22px]">arrow_back_ios_new</span></button><h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate flex-1 text-center px-space-xs">Seeker Profile</h1><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="flex-1 flex flex-col relative w-full bg-surface pt-14 pb-safe max-w-[480px] mx-auto"><div class="flex flex-col w-full px-margin pb-space-xl">
+<!-- Step Indicator & Progress Track -->
+<div class="pt-space-xs pb-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-caps text-label-caps text-primary tracking-widest">STEP 3 OF 5</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+<span class="font-label-md text-label-md text-on-surface-variant">Personalization</span>
+</div>
+<span class="font-label-md text-label-md text-primary font-semibold">60%</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden mb-space-lg">
+<div class="bg-primary h-full rounded-full transition-all duration-500 ease-out" style="width: 60%"></div>
+</div>
+<!-- Editorial Headline Section -->
+<div class="mb-space-lg">
+<h2 class="font-headline-display-mobile text-headline-display-mobile text-on-surface tracking-tight leading-snug">
+      Who will learn <br/><span class="text-primary italic font-scripture-verse-mobile">with you?</span>
+</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs leading-relaxed">
+      We tailor verse commentary, stories, and pacing based on your family circle.
+    </p>
+</div>
+<!-- Interactive Selection Deck -->
+<div aria-label="Seeker Profile Selection" class="flex flex-col gap-space-md" id="profile-selector" role="radiogroup">
+<!-- Option Card 1: Just Me (Default Selected) -->
+<div aria-checked="true" class="profile-card relative p-space-md rounded-xl bg-surface-container-lowest shadow-md transition-all duration-300 cursor-pointer overflow-hidden group select-none active:scale-[0.99] shadow-primary/10" data-id="individual" onclick="selectCard(this)" role="radio" tabindex="0">
+<div class="card-indicator absolute top-0 left-0 bottom-0 w-1.5 bg-primary transition-all duration-300"></div>
+<div class="flex items-start gap-space-md">
+<!-- Visual Accent / Illustration -->
+<div class="relative w-14 h-14 rounded-xl shrink-0 overflow-hidden bg-primary-fixed flex items-center justify-center shadow-inner">
+<img class="w-full h-full object-cover mix-blend-multiply opacity-90" data-alt="Minimalist modern spiritual illustration of a lone adult seeker meditating near a glowing traditional clay diya oil lamp, warm saffron and terracotta palette, contemplative serene atmosphere, clean vector editorial aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMx5-5jcLuORpGR9MfiujRlpOIg85BDFyA9RLVxsF3alvmwoX0QJeEERirrxAapb_xsR4NMA4PzbxA8lpCaZoR4yB26NJzDf5_QdHxl9l8NfTyz9oItVlKS358CoZoA5urlCO-gtqaIHZ1tkRh62MmGdH43dV5iDwmXKZ-OieLmvGP7rbA_PXnzd_HUcXoqC9kyOQWWOxPHluyf2ACJ640cn2diiQKhxIN7BkhYmVm"/>
+<div class="absolute inset-0 bg-primary/10"></div>
+</div>
+<!-- Content -->
+<div class="flex-1 min-w-0 pr-6">
+<div class="flex items-center gap-space-xs mb-1">
+<span class="inline-block font-label-caps text-label-caps text-primary bg-primary-fixed/60 px-2 py-0.5 rounded-full font-bold">
+              INDIVIDUAL SADHANA
+            </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">
+            Just Me
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-normal">
+            Adult contemplation, deep philosophical commentaries, Sanskrit chant accuracy, and private journal.
+          </p>
+</div>
+<!-- Selection Check Badge -->
+<div class="check-box absolute top-space-md right-space-md w-6 h-6 rounded-full bg-primary flex items-center justify-center text-on-primary shadow-sm transition-all duration-200">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'wght' 700;">check</span>
+</div>
+</div>
+<!-- Feature Tags subtle highlight -->
+<div class="mt-space-sm pt-space-xs flex flex-wrap gap-space-xs">
+<span class="inline-flex items-center gap-1 font-label-md text-label-md text-primary bg-primary-fixed/30 px-2.5 py-1 rounded-lg">
+<span class="material-symbols-outlined text-[14px]">auto_stories</span>
+          Original Sanskrit
+        </span>
+<span class="inline-flex items-center gap-1 font-label-md text-label-md text-on-surface-variant bg-surface-container px-2.5 py-1 rounded-lg">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+          Private Reflections
+        </span>
+</div>
+</div>
+<!-- Option Card 2: Me & My Child -->
+<div aria-checked="false" class="profile-card relative p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer overflow-hidden group select-none active:scale-[0.99]" data-id="parent_child" onclick="selectCard(this)" role="radio" tabindex="0">
+<div class="card-indicator absolute top-0 left-0 bottom-0 w-1.5 bg-transparent transition-all duration-300"></div>
+<div class="flex items-start gap-space-md">
+<!-- Visual Accent / Illustration -->
+<div class="relative w-14 h-14 rounded-xl shrink-0 overflow-hidden bg-tertiary-fixed flex items-center justify-center shadow-inner">
+<img class="w-full h-full object-cover mix-blend-multiply opacity-90" data-alt="Editorial warm illustration of a nurturing Indian parent holding their young child's hand while admiring a sacred shimmering peacock feather, calming teal and saffron undertones, gentle whimsical storytelling art style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqcxq7EHKwV84uUM_FVW6Qy6d1q_VltyDbMD8K3pJlYbv-u4izPaT3KLJr-7glI2j-UqadglbXYbW9Nkl7Gqa98m0KWjaKtAIWmS0gKthx_mKxT6BckRVxK8PcvDOpTqujLB0LxoTIzHAlrkVGA_qEXnhFQRxGPejT1cxmMwat--M0_Dt-CxdpO8gxoNwM3XllkG_knsYpMjjp8qwFlG7wGkZCMjg00AmbbtNRwHFU"/>
+<div class="absolute inset-0 bg-tertiary/10"></div>
+</div>
+<!-- Content -->
+<div class="flex-1 min-w-0 pr-6">
+<div class="flex items-center gap-space-xs mb-1">
+<span class="inline-block font-label-caps text-label-caps text-tertiary bg-tertiary-fixed/60 px-2 py-0.5 rounded-full font-bold">
+              PARENT &amp; CHILD
+            </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">
+            Me &amp; My Child
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-normal">
+            Adult study plus Moru the Peacock kids stories, rhyming shlokas, and parent screen-time limits.
+          </p>
+</div>
+<!-- Selection Check Badge -->
+<div class="check-box absolute top-space-md right-space-md w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center text-transparent transition-all duration-200">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'wght' 700;">check</span>
+</div>
+</div>
+<!-- Feature Tags subtle highlight -->
+<div class="mt-space-sm pt-space-xs flex flex-wrap gap-space-xs">
+<span class="inline-flex items-center gap-1 font-label-md text-label-md text-on-surface-variant bg-surface-container px-2.5 py-1 rounded-lg">
+<span class="material-symbols-outlined text-[14px]">cruelty_free</span>
+          Moru Audio Tales
+        </span>
+<span class="inline-flex items-center gap-1 font-label-md text-label-md text-on-surface-variant bg-surface-container px-2.5 py-1 rounded-lg">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+          10-Min Cap
+        </span>
+</div>
+</div>
+<!-- Option Card 3: Our Whole Family -->
+<div aria-checked="false" class="profile-card relative p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer overflow-hidden group select-none active:scale-[0.99]" data-id="family" onclick="selectCard(this)" role="radio" tabindex="0">
+<div class="card-indicator absolute top-0 left-0 bottom-0 w-1.5 bg-transparent transition-all duration-300"></div>
+<div class="flex items-start gap-space-md">
+<!-- Visual Accent / Illustration -->
+<div class="relative w-14 h-14 rounded-xl shrink-0 overflow-hidden bg-secondary-fixed flex items-center justify-center shadow-inner">
+<img class="w-full h-full object-cover mix-blend-multiply opacity-90" data-alt="Editorial warm graphic representation of three generations of an Indian family standing harmoniously in unity with hands softly joined in Namaste prayer, elder grandparents, parents and kids, soft indigo and terracotta colors, calm sacred aura." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCtykmhORlDMTggWM4zs3J0ZOSrJdNvcWex6n-yv9Q3OQZF08P6NyhKAHD0wAgU5xoQg3G-tENN8k3LLdx4NKk0rvKv8pls-14WZKf95pgJqZyuYjJRMDhewlRX_-51tt1vOy4PjlF18zBMtpP51DxfSTKAb6B1P4wGDleGoJ_ifMVg98qsU13Kpj_9Z24EfafyCsViay5dm9WXPmG9RRiV9W5LeCeQPbliXah0yXm"/>
+<div class="absolute inset-0 bg-secondary/10"></div>
+</div>
+<!-- Content -->
+<div class="flex-1 min-w-0 pr-6">
+<div class="flex items-center gap-space-xs mb-1">
+<span class="inline-block font-label-caps text-label-caps text-secondary bg-secondary-fixed px-2 py-0.5 rounded-full font-bold">
+              FAMILY SANGHA
+            </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">
+            Our Whole Family
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-normal">
+            Multi-generation circle with large elder-friendly fonts, kids games, and shared family challenges.
+          </p>
+</div>
+<!-- Selection Check Badge -->
+<div class="check-box absolute top-space-md right-space-md w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center text-transparent transition-all duration-200">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'wght' 700;">check</span>
+</div>
+</div>
+<!-- Feature Tags subtle highlight -->
+<div class="mt-space-sm pt-space-xs flex flex-wrap gap-space-xs">
+<span class="inline-flex items-center gap-1 font-label-md text-label-md text-on-surface-variant bg-surface-container px-2.5 py-1 rounded-lg">
+<span class="material-symbols-outlined text-[14px]">format_size</span>
+          Elder-Ready Type
+        </span>
+<span class="inline-flex items-center gap-1 font-label-md text-label-md text-on-surface-variant bg-surface-container px-2.5 py-1 rounded-lg">
+<span class="material-symbols-outlined text-[14px]">groups</span>
+          Sangha Milestones
+        </span>
+</div>
+</div>
+</div>
+<!-- Micro-quote / Reassurance Note -->
+<div class="mt-space-md p-space-sm rounded-xl bg-surface-container-low flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0" style="font-variation-settings: 'FILL' 1;">spa</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+      You can invite members or switch learning paths at any time in Profile Settings.
+    </p>
+</div>
+<!-- Primary CTA Action -->
+<div class="mt-space-lg pt-space-xs">
+<button class="w-full h-[52px] rounded-xl bg-primary hover:bg-primary-container text-on-primary font-headline-sm text-label-lg flex items-center justify-center gap-space-xs shadow-md shadow-primary/20 transition-all duration-200 active:scale-[0.98]" id="continue-button" onclick="handleContinue()" type="button">
+<span>Continue</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<script>
+  function selectCard(selectedElement) {
+    const cards = document.querySelectorAll('.profile-card');
+    
+    cards.forEach(card => {
+      card.setAttribute('aria-checked', 'false');
+      card.classList.remove('shadow-md', 'shadow-primary/10');
+      card.classList.add('shadow-sm');
+      
+      // Reset indicator bar
+      const indicator = card.querySelector('.card-indicator');
+      if (indicator) {
+        indicator.classList.remove('bg-primary');
+        indicator.classList.add('bg-transparent');
+      }
+
+      // Reset checkbox
+      const check = card.querySelector('.check-box');
+      if (check) {
+        check.classList.remove('bg-primary', 'text-on-primary');
+        check.classList.add('bg-surface-container-high', 'text-transparent');
+      }
+    });
+
+    // Apply active state
+    selectedElement.setAttribute('aria-checked', 'true');
+    selectedElement.classList.remove('shadow-sm');
+    selectedElement.classList.add('shadow-md', 'shadow-primary/10');
+    
+    const activeIndicator = selectedElement.querySelector('.card-indicator');
+    if (activeIndicator) {
+      activeIndicator.classList.remove('bg-transparent');
+      activeIndicator.classList.add('bg-primary');
+    }
+
+    const activeCheck = selectedElement.querySelector('.check-box');
+    if (activeCheck) {
+      activeCheck.classList.remove('bg-surface-container-high', 'text-transparent');
+      activeCheck.classList.add('bg-primary', 'text-on-primary');
+    }
+  }
+
+  function handleContinue() {
+    const activeCard = document.querySelector('.profile-card[aria-checked="true"]');
+    const selectedMode = activeCard ? activeCard.getAttribute('data-id') : 'individual';
+    
+    // Tactile confirmation feedback
+    const btn = document.getElementById('continue-button');
+    btn.classList.add('opacity-90', 'scale-95');
+    setTimeout(() => {
+      btn.classList.remove('opacity-90', 'scale-95');
+    }, 150);
+  }
+</script></main></body></html>

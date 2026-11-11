@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Serif:ital,wght@0,400;0,600;1,400&amp;family=Sora:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-container-lowest": "#ffffff", "tertiary-fixed": "#abeef4", "inverse-on-surface": "#eff1f5", "on-secondary": "#ffffff", "on-surface": "#191c1f", "on-secondary-fixed-variant": "#43407b", "secondary-fixed-dim": "#c4c0ff", "background": "#f8f9fd", "surface-variant": "#e1e2e6", "tertiary-container": "#32777c", "outline": "#8d7168", "secondary": "#5b5794", "tertiary": "#0f5e63", "on-error-container": "#93000a", "surface": "#f8f9fd", "on-primary-fixed": "#390c00", "outline-variant": "#e1bfb5", "surface-container-highest": "#e1e2e6", "on-secondary-fixed": "#17114d", "tertiary-fixed-dim": "#8fd2d7", "on-primary-container": "#ffece7", "inverse-surface": "#2e3134", "on-error": "#ffffff", "on-primary-fixed-variant": "#832600", "secondary-container": "#bebafe", "surface-container": "#edeef2", "on-background": "#191c1f", "on-secondary-container": "#4b4883", "surface-tint": "#ac3400", "on-tertiary": "#ffffff", "on-tertiary-fixed-variant": "#004f54", "surface-dim": "#d9dade", "primary-fixed-dim": "#ffb59d", "secondary-fixed": "#e3dfff", "on-tertiary-container": "#c2faff", "primary-container": "#c2410c", "on-surface-variant": "#59413a", "surface-container-high": "#e7e8ec", "surface-container-low": "#f2f3f7", "surface-bright": "#f8f9fd", "primary-fixed": "#ffdbd0", "error": "#ba1a1a", "error-container": "#ffdad6", "inverse-primary": "#ffb59d", "on-tertiary-fixed": "#002022", "primary": "#9b2f00", "on-primary": "#ffffff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-lg": "1.5rem", "space-sm": "0.75rem", "space-xl": "2rem", "margin-tablet": "2rem", "space-2xl": "3rem", "space-md": "1rem", "gutter-desktop": "2rem", "margin-desktop": "3rem", "margin": "1.25rem", "gutter": "1rem", "space-2xs": "0.25rem", "gutter-tablet": "1.5rem", "space-xs": "0.5rem" }, fontFamily: { "scripture-verse-mobile": ["Noto Serif"], "headline-display-mobile": ["Sora"], "headline-lg": ["Sora"], "body-md": ["Inter"], "body-sm": ["Inter"], "headline-sm": ["Sora"], "body-lg": ["Inter"], "label-lg": ["Inter"], "headline-display": ["Sora"], "label-md": ["Inter"], "scripture-verse": ["Noto Serif"], "headline-md": ["Sora"], "label-caps": ["Sora"] }, fontSize: { "scripture-verse-mobile": ["17px", { lineHeight: "28px", letterSpacing: "0.01em", fontWeight: "400" }], "headline-display-mobile": ["30px", { lineHeight: "38px", letterSpacing: "-0.02em", fontWeight: "600" }], "headline-lg": ["28px", { lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "600" }], "body-md": ["15px", { lineHeight: "24px", fontWeight: "400" }], "body-sm": ["13px", { lineHeight: "20px", fontWeight: "400" }], "headline-sm": ["18px", { lineHeight: "26px", fontWeight: "600" }], "body-lg": ["17px", { lineHeight: "28px", fontWeight: "400" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }], "headline-display": ["40px", { lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "600" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "500" }], "scripture-verse": ["20px", { lineHeight: "34px", letterSpacing: "0.01em", fontWeight: "400" }], "headline-md": ["22px", { lineHeight: "30px", letterSpacing: "-0.01em", fontWeight: "600" }], "label-caps": ["11px", { lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "700" }] } } } }</script><style>@layer base { html, body { width: 100vw; margin: 0; padding: 0; min-height: 100%; } body { overscroll-behavior-y: none; -webkit-tap-highlight-color: transparent; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-background font-body-md text-body-md text-on-surface flex flex-col min-h-screen antialiased selection:bg-primary-fixed"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between gap-space-sm max-w-lg mx-auto w-full"><div class="flex items-center gap-space-sm flex-1 min-w-0"><h1 class="font-headline-sm text-headline-sm text-on-surface truncate">Empty States</h1></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Search and Filter" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container active:scale-95 transition-all"><span class="material-symbols-outlined text-[22px]">tune</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full max-w-lg mx-auto px-margin pt-16 pb-24 bg-background relative flex flex-col"><div class="flex flex-col w-full pb-8 space-y-6">
+<!-- Search & Filter Area -->
+<div class="flex flex-col space-y-3">
+<!-- Active Query Input Box -->
+<div class="relative flex items-center bg-surface-container-lowest rounded-xl shadow-sm px-3.5 py-2.5 transition-all">
+<span class="material-symbols-outlined text-primary text-[20px] mr-2.5 select-none">search</span>
+<input aria-label="Search the Bhagavad Gita" class="w-full bg-transparent font-body-md text-body-md text-on-surface focus:outline-none placeholder:text-on-surface-variant truncate pr-8" id="search-input" type="text" value="Karmanye vadhikaraste in chapter 18"/>
+<button aria-label="Clear search input" class="absolute right-3 w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface active:scale-90 transition-all" id="clear-btn" onclick="document.getElementById('search-input').value=''; this.classList.add('opacity-0');" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<!-- Filter Pills Scroller -->
+<div class="flex items-center space-x-2 overflow-x-auto no-scrollbar py-0.5 -mx-margin px-margin">
+<button class="shrink-0 px-3.5 py-1.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md shadow-sm transition-transform active:scale-95">
+        Verses
+      </button>
+<button class="shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all active:scale-95">
+        All Chapters
+      </button>
+<button class="shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all active:scale-95">
+        Stories
+      </button>
+<button class="shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all active:scale-95">
+        Commentaries
+      </button>
+</div>
+</div>
+<!-- Primary Empty State Card: No Search Results with Poetic Wisdom -->
+<div class="relative bg-surface-container-lowest rounded-xl shadow-sm p-6 overflow-hidden flex flex-col items-center text-center">
+<!-- Ambient Sacred Geometric Lotus & Diya SVG (under 1.5KB) -->
+<div class="relative w-28 h-24 flex items-center justify-center mb-4">
+<svg class="w-full h-full text-primary" fill="none" viewbox="0 0 120 100" xmlns="http://www.w3.org/2000/svg">
+<!-- Calming concentric aura rings -->
+<circle cx="60" cy="50" r="44" stroke="currentColor" stroke-dasharray="3 3" stroke-opacity="0.08" stroke-width="1.5"></circle>
+<circle cx="60" cy="50" r="32" stroke="currentColor" stroke-opacity="0.12" stroke-width="1.5"></circle>
+<!-- Sacred Stylized Diya / Sacred Lotus Leaf base -->
+<path d="M30 64C38 74 82 74 90 64C78 72 42 72 30 64Z" fill="#0F5E63" fill-opacity="0.15"></path>
+<path d="M36 62C44 70 76 70 84 62C72 67 48 67 36 62Z" fill="#0F5E63"></path>
+<!-- Serene Lotus Petals -->
+<path d="M60 28C56 38 46 48 40 56C50 56 56 48 60 28Z" fill="#C2410C" fill-opacity="0.25"></path>
+<path d="M60 28C64 38 74 48 80 56C70 56 64 48 60 28Z" fill="#C2410C" fill-opacity="0.25"></path>
+<path d="M60 20C55 34 50 48 60 58C70 48 65 34 60 20Z" fill="#C2410C" fill-opacity="0.8"></path>
+<!-- Inner Luminous Flame / Golden Bindu -->
+<circle cx="60" cy="42" fill="#FFE873" r="3.5"></circle>
+<circle cx="60" cy="42" fill="#C2410C" fill-opacity="0.2" r="7"></circle>
+<!-- Water / Stillness Ripple Line -->
+<path d="M22 78C34 76 46 80 60 78C74 76 86 80 98 78" stroke="#0F5E63" stroke-linecap="round" stroke-opacity="0.3" stroke-width="1.5"></path>
+<path d="M35 84C45 83 52 85 60 84C68 83 75 85 85 84" stroke="#0F5E63" stroke-linecap="round" stroke-opacity="0.2" stroke-width="1"></path>
+</svg>
+<div class="absolute inset-0 bg-radial from-primary/5 via-transparent to-transparent pointer-events-none"></div>
+</div>
+<!-- Empathetic Typography & Spiritual Wisdom -->
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-caps text-label-caps uppercase tracking-wider mb-2">
+<span class="material-symbols-outlined text-[13px]">light_mode</span>
+      Gentle Realignment
+    </span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-2 font-semibold">
+      No Verses Found in Chapter 18
+    </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs mx-auto leading-relaxed">
+      The verse you seek resides in <strong class="text-on-surface font-semibold">Chapter 2, Verse 47</strong> (<em class="font-scripture-verse-mobile">Karma Yoga</em>). The Gita’s wisdom often meets us in unexpected chapters.
+    </p>
+<!-- Gentle Quick Action -->
+<div class="mt-4 flex items-center gap-2">
+<button class="px-4 py-2 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-all active:scale-95 flex items-center gap-1.5" onclick="const el = document.getElementById('search-input'); el.value='Karmanye vadhikaraste'; el.focus();">
+<span class="material-symbols-outlined text-[16px] text-tertiary">replay</span>
+        Search across all chapters
+      </button>
+</div>
+</div>
+<!-- Did You Mean? / Enlightened Suggestions Section -->
+<div class="flex flex-col space-y-3">
+<div class="flex items-center justify-between px-0.5">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">auto_awesome</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Resonant Verses</h3>
+</div>
+<span class="font-label-md text-label-md text-tertiary font-medium">2 Intended Matches</span>
+</div>
+<!-- Suggested Match Card 1 (Gita 2.47) -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm transition-all hover:shadow-md active:scale-[0.99] flex flex-col space-y-3">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-caps text-label-caps font-bold">
+            Chapter 2 · Verse 47
+          </span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-tertiary">verified</span>
+            98% Relevance
+          </span>
+</div>
+<button aria-label="Bookmark this verse" class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[19px]">bookmark_border</span>
+</button>
+</div>
+<!-- Sanskrit Sloka & Meaning Preview -->
+<div class="space-y-1.5 pl-1">
+<p class="font-scripture-verse-mobile text-scripture-verse-mobile text-on-surface font-normal italic leading-relaxed">
+          कर्मण्येवाधिकारस्ते मा फलेषु कदाचन ।<br/>
+          मा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि ॥
+        </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+          You have a right to perform your prescribed duties, but you are not entitled to the fruits of your actions.
+        </p>
+</div>
+<!-- Action Footer -->
+<div class="pt-1 flex items-center justify-between border-t border-transparent">
+<span class="font-label-md text-label-md text-on-surface-variant">Sankhya Yoga · Path of Duty</span>
+<button class="px-3.5 py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1 shadow-sm active:scale-95 transition-transform">
+<span>Read Verse 2.47</span>
+<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Suggested Match Card 2 (Chapter 18 Alternative) -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm transition-all hover:shadow-md active:scale-[0.99] flex flex-col space-y-3">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-caps text-label-caps font-bold">
+            Chapter 18 · Verse 66
+          </span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md">
+            Moksha Sannyasa Yoga
+          </span>
+</div>
+<button aria-label="Bookmark this verse" class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[19px]">bookmark_border</span>
+</button>
+</div>
+<!-- Sanskrit Sloka & Meaning Preview -->
+<div class="space-y-1.5 pl-1">
+<p class="font-scripture-verse-mobile text-scripture-verse-mobile text-on-surface font-normal italic leading-relaxed">
+          सर्वधर्मान्परित्यज्य मामेकं शरणं व्रज ।<br/>
+          अहं त्वां सर्वपापेभ्यो मोक्षयिष्यामि मा शुचः ॥
+        </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+          Abandon all varieties of dharmas and simply surrender unto Me alone. I shall liberate you from all sinful reactions.
+        </p>
+</div>
+<!-- Action Footer -->
+<div class="pt-1 flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">The Gita's Final Promise</span>
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1 hover:bg-surface-container-high active:scale-95 transition-all">
+<span>Read Verse 18.66</span>
+<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Popular Wisdom Topics / Gentle Chips -->
+<div class="flex flex-col space-y-2.5 pt-1">
+<div class="flex items-center gap-2 px-0.5">
+<span class="material-symbols-outlined text-tertiary text-[18px]">explore</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Seekers Often Contemplate</h3>
+</div>
+<div class="flex flex-wrap gap-2">
+<button class="px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md shadow-sm transition-all active:scale-95 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">spa</span>
+        Overcoming fear
+      </button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md shadow-sm transition-all active:scale-95 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">balance</span>
+        Action without attachment
+      </button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md shadow-sm transition-all active:scale-95 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">psychology</span>
+        Handling anger (2.62)
+      </button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md shadow-sm transition-all active:scale-95 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">self_improvement</span>
+        Meditation posture (6.11)
+      </button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md shadow-sm transition-all active:scale-95 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">grain</span>
+        Grief of Arjuna
+      </button>
+</div>
+</div>
+<!-- Secondary Empty State Preview: "Empty Saved Verses / Bookmarks Sanctuary" -->
+<div class="mt-4 flex flex-col space-y-3">
+<div class="flex items-center justify-between px-0.5">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Sanctuary View Mockup</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md">Bookmark Tab State</span>
+</div>
+<!-- Serene Sanctuary Card with Deep Tone Accent -->
+<div class="relative bg-surface-container-low rounded-xl p-5 shadow-sm overflow-hidden flex flex-col items-center text-center space-y-3.5">
+<!-- Subtle Decorative Top Watermark Pattern -->
+<div class="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-tertiary/5 pointer-events-none"></div>
+<!-- Icon Frame with Breathing Pulse Glow -->
+<div class="w-14 h-14 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center text-tertiary relative">
+<span class="material-symbols-outlined text-[28px]">bookmark_add</span>
+<div class="absolute -inset-1 rounded-full bg-tertiary/10 animate-ping opacity-75"></div>
+</div>
+<div class="space-y-1.5 max-w-xs">
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">
+          Your Contemplation Sanctuary is Quiet
+        </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          You haven’t bookmarked any sacred shlokas yet. Tap the bookmark icon on any verse during your study to enshrine it here for daily meditation.
+        </p>
+</div>
+<!-- Contextual Action Buttons -->
+<div class="flex flex-col sm:flex-row items-center gap-2.5 w-full pt-1">
+<button class="w-full sm:flex-1 h-11 px-4 rounded-xl bg-tertiary text-on-tertiary font-label-lg text-label-lg flex items-center justify-center gap-1.5 shadow-sm active:scale-98 transition-transform">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+<span>Explore Chapter 2</span>
+</button>
+<button class="w-full sm:flex-1 h-11 px-4 rounded-xl bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-lg text-label-lg flex items-center justify-center gap-1.5 shadow-sm active:scale-98 transition-all">
+<span class="material-symbols-outlined text-[18px] text-primary">chat_bubble</span>
+<span>Ask Gita AI</span>
+</button>
+</div>
+</div>
+</div>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-semibold"><div class="h-16 max-w-lg mx-auto flex items-center justify-around px-space-xs"><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="today" href="#"><span class="material-symbols-outlined text-[24px]">wb_sunny</span><span class="font-label-md text-label-md mt-0.5">Today</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="path" href="#"><span class="material-symbols-outlined text-[24px]">explore</span><span class="font-label-md text-label-md mt-0.5">Path</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="ask" href="#"><span class="material-symbols-outlined text-[24px]">chat_bubble</span><span class="font-label-md text-label-md mt-0.5">Ask</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="stories" href="#"><span class="material-symbols-outlined text-[24px]">auto_stories</span><span class="font-label-md text-label-md mt-0.5">Stories</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="circle" href="#"><span class="material-symbols-outlined text-[24px]">diversity_3</span><span class="font-label-md text-label-md mt-0.5">Circle</span></a></div></nav></body></html>

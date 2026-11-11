@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Serif:wght@400;600&amp;family=Sora:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-background":"#191c1f","secondary-container":"#bebafe","surface-bright":"#f8f9fd","surface-container-lowest":"#ffffff","surface-container-highest":"#e1e2e6","tertiary-container":"#32777c","on-secondary-container":"#4b4883","secondary-fixed-dim":"#c4c0ff","on-primary-fixed":"#390c00","error-container":"#ffdad6","surface-container-low":"#f2f3f7","surface-container-high":"#e7e8ec","outline":"#8d7168","secondary-fixed":"#e3dfff","secondary":"#5b5794","inverse-surface":"#2e3134","surface-dim":"#d9dade","primary":"#9b2f00","on-secondary-fixed-variant":"#43407b","inverse-on-surface":"#eff1f5","on-tertiary-container":"#c2faff","surface-variant":"#e1e2e6","on-surface":"#191c1f","on-primary-fixed-variant":"#832600","on-tertiary-fixed-variant":"#004f54","on-tertiary":"#ffffff","surface-tint":"#ac3400","on-error":"#ffffff","primary-fixed":"#ffdbd0","tertiary-fixed-dim":"#8fd2d7","on-primary-container":"#ffece7","primary-container":"#c2410c","on-secondary":"#ffffff","tertiary-fixed":"#abeef4","tertiary":"#0f5e63","on-primary":"#ffffff","outline-variant":"#e1bfb5","on-surface-variant":"#59413a","surface-container":"#edeef2","error":"#ba1a1a","on-tertiary-fixed":"#002022","background":"#f8f9fd","on-secondary-fixed":"#17114d","primary-fixed-dim":"#ffb59d","on-error-container":"#93000a","inverse-primary":"#ffb59d","surface":"#f8f9fd"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-sm":"0.75rem","space-lg":"1.5rem","margin-tablet":"2rem","space-2xl":"3rem","gutter":"1rem","space-xs":"0.5rem","margin":"1.25rem","space-2xs":"0.25rem","margin-desktop":"3rem","gutter-desktop":"2rem","space-md":"1rem","space-xl":"2rem","gutter-tablet":"1.5rem"},"fontFamily":{"label-md":["Inter"],"body-sm":["Inter"],"body-md":["Inter"],"headline-lg":["Sora"],"headline-md":["Sora"],"label-lg":["Inter"],"label-caps":["Sora"],"scripture-verse-mobile":["Noto Serif"],"scripture-verse":["Noto Serif"],"body-lg":["Inter"],"headline-display-mobile":["Sora"],"headline-sm":["Sora"],"headline-display":["Sora"]},"fontSize":{"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"body-sm":["13px",{"lineHeight":"20px","fontWeight":"400"}],"body-md":["15px",{"lineHeight":"24px","fontWeight":"400"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-md":["22px",{"lineHeight":"30px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"label-caps":["11px",{"lineHeight":"16px","letterSpacing":"0.08em","fontWeight":"700"}],"scripture-verse-mobile":["17px",{"lineHeight":"28px","letterSpacing":"0.01em","fontWeight":"400"}],"scripture-verse":["20px",{"lineHeight":"34px","letterSpacing":"0.01em","fontWeight":"400"}],"body-lg":["17px",{"lineHeight":"28px","fontWeight":"400"}],"headline-display-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-sm":["18px",{"lineHeight":"26px","fontWeight":"600"}],"headline-display":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-low"><div class="flex items-center gap-space-xs"><div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[20px]">qr_code_scanner</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight">Gita Path</span><span class="font-label-caps text-label-caps text-on-surface-variant tracking-wider uppercase">Studio</span></div></div><span class="px-2 py-0.5 rounded-full bg-tertiary-container text-on-tertiary-container font-label-caps text-label-caps">Prod v2.4</span></div><div class="p-space-md"><span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider block mb-space-xs px-space-xs">Sanctuary Core</span><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-xl shadow-sm"><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="content-library" href="#"><span class="material-symbols-outlined text-[20px]">auto_stories</span><span>Content Library</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="verse-curriculum-editor" href="#"><span class="material-symbols-outlined text-[20px]">edit_note</span><span>Verse &amp; Curriculum</span></a><a class="flex items-center justify-between px-space-sm py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="ai-guardrails-review" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">policy</span><span>AI Guardrails</span></div><span class="w-5 h-5 rounded-full bg-error-container text-on-error-container flex items-center justify-center font-label-caps text-label-caps font-bold">3</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="user-analytics-sangha" href="#"><span class="material-symbols-outlined text-[20px]">groups</span><span>Analytics &amp; Sangha</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="settings-api-keys" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span>Settings &amp; APIs</span></a></nav></div></div><div class="p-space-md m-space-xs rounded-xl bg-surface-container-low flex flex-col gap-space-xs"><div class="flex items-center justify-between text-on-surface-variant"><span class="font-label-caps text-label-caps uppercase">700 Slokas Canonical</span><span class="material-symbols-outlined text-[16px] text-tertiary">verified</span></div><div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden"><div class="bg-tertiary h-full w-[100%]"></div></div><span class="font-body-sm text-body-sm text-on-surface-variant">Sanskrit Lock: Verified Integrity</span></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full h-16 px-space-lg flex items-center justify-between gap-space-md"><div class="flex-1 max-w-xl"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-[18px] text-on-surface-variant">search</span><input class="w-full h-10 pl-9 pr-4 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-secondary placeholder:text-on-surface-variant/70 transition-all" placeholder="Search across 700 verses, Sanskrit commentary, audio tracks..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="flex items-center rounded-xl bg-surface-container p-0.5"><button class="px-2.5 py-1 rounded-lg bg-surface-container-lowest font-label-caps text-label-caps text-on-surface shadow-sm">Production</button><button class="px-2.5 py-1 rounded-lg font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors">Staging</button></div><button class="relative p-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface-container-lowest"></span></button><div class="h-6 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col text-left"><span class="font-label-lg text-label-lg text-on-surface leading-snug">Dr. Radhakrishnan</span><span class="font-label-caps text-label-caps text-on-surface-variant">Lead Sanskrit Scholar</span></div></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Command & Action Bar -->
+<div class="w-full bg-surface-container-lowest px-space-xl py-space-md shadow-sm">
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant">
+<span>Content Library</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span>Chapter 2: Sānkhya Yoga</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-semibold">Verse 2.47 (Karmanye Vadhikaraste)</span>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">Verse 2.47 Curriculum &amp; Audio Alignment Editor</h1>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-tertiary font-label-caps text-label-caps">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+            Canonical Lock Active (Vedic Board Certified #VB-2024-082)
+          </span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs flex-wrap">
+<button class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg transition-all">
+<span class="material-symbols-outlined text-[18px]">history</span>
+<span>Version v4.2</span>
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg transition-all" id="toggleMobilePreviewBtn">
+<span class="material-symbols-outlined text-[18px]">devices</span>
+<span>Preview Mobile Modal</span>
+</button>
+<button class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg shadow-sm active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[18px]">publish</span>
+<span>Publish to Live App</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Workspace Canvas: Asymmetric Dual Column split -->
+<div class="p-space-lg max-w-[1720px] w-full mx-auto">
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- ================= LEFT COLUMN: CANONICAL SCRIPTURAL CORE (5 Cols) ================= -->
+<div class="xl:col-span-5 flex flex-col gap-space-md">
+<!-- Canonical Devanagari Block (Locked) -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm relative overflow-hidden">
+<div class="absolute top-0 right-0 w-36 h-36 bg-gradient-to-bl from-primary-fixed/20 via-transparent to-transparent pointer-events-none rounded-bl-full"></div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Canonical Sacred Text</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-caps text-label-caps">
+<span class="material-symbols-outlined text-[14px] text-primary">verified</span>
+<span>Rigid Sanskrit Hash: #SHA256-700-047</span>
+</div>
+</div>
+<!-- Devanagari Display -->
+<div class="bg-surface-container-low rounded-xl p-space-lg text-center flex flex-col gap-2 relative">
+<div class="text-right">
+<span class="material-symbols-outlined text-outline text-[18px]">lock_clock</span>
+</div>
+<p class="font-scripture-verse text-scripture-verse text-on-surface select-all leading-loose tracking-wide">
+              कर्मण्येवाधिकारस्ते मा फलेषु कदाचन ।<br/>
+              मा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि ॥
+            </p>
+<div class="pt-2 flex items-center justify-between text-on-surface-variant font-label-caps text-label-caps">
+<span>Chandas: Anuṣṭubh (8-8-8-8)</span>
+<span>Anvaya Ordering: 1-A Standard</span>
+</div>
+</div>
+<div class="mt-space-sm p-3 rounded-xl bg-surface-container-low flex items-start gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">policy</span>
+<p>
+              Direct modification is permanently locked per Rigorous Vedic Concordance standards. 
+              <a class="text-primary font-semibold hover:underline" href="#">Request High Council unlock</a> for critical orthographic reviews.
+            </p>
+</div>
+</div>
+<!-- Transliteration & Phonetic Syllable Stress Mapper -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">IAST &amp; Phonetic Breakdown</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tap syllables to toggle high-pitch accent (udātta) and vocal glide markers.</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-caps text-label-caps font-bold">16 Syllables/Line</span>
+</div>
+<!-- Interactive Syllable Strip -->
+<div class="space-y-space-sm">
+<div class="p-space-sm rounded-xl bg-surface-container-low">
+<span class="font-label-caps text-label-caps text-on-surface-variant block mb-1">Pada A &amp; B</span>
+<div class="flex flex-wrap gap-1.5 items-center font-label-lg text-label-lg" id="syllablesGroupA">
+<span class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface cursor-pointer hover:bg-secondary-fixed transition-colors shadow-2xs" data-accent="normal">kar</span>
+<span class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface cursor-pointer hover:bg-secondary-fixed transition-colors shadow-2xs" data-accent="normal">maṇ</span>
+<span class="px-2 py-1 rounded bg-primary-fixed text-on-primary-fixed font-bold cursor-pointer shadow-2xs" title="Udātta Accent">yé</span>
+<span class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface cursor-pointer hover:bg-secondary-fixed transition-colors shadow-2xs" data-accent="normal">vā</span>
+<span class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface cursor-pointer hover:bg-secondary-fixed transition-colors shadow-2xs" data-accent="normal">dhi</span>
+<span class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface cursor-pointer hover:bg-secondary-fixed transition-colors shadow-2xs" data-accent="normal">kā</span>
+<span class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface cursor-pointer hover:bg-secondary-fixed transition-colors shadow-2xs" data-accent="normal">ras</span>
+<span class="px-2 py-1 rounded bg-surface-container-lowest text-secondary font-semibold cursor-pointer shadow-2xs">te</span>
+<span class="text-on-surface-variant font-bold px-1">·</span>
+<span class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface cursor-pointer hover:bg-secondary-fixed transition-colors shadow-2xs" data-accent="normal">mā</span>
+<span class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface cursor-pointer hover:bg-secondary-fixed transition-colors shadow-2xs" data-accent="normal">pha</span>
+<span class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface cursor-pointer hover:bg-secondary-fixed transition-colors shadow-2xs" data-accent="normal">le</span>
+<span class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface cursor-pointer hover:bg-secondary-fixed transition-colors shadow-2xs" data-accent="normal">ṣu</span>
+<span class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface cursor-pointer hover:bg-secondary-fixed transition-colors shadow-2xs" data-accent="normal">ka</span>
+<span class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface cursor-pointer hover:bg-secondary-fixed transition-colors shadow-2xs" data-accent="normal">dā</span>
+<span class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface cursor-pointer hover:bg-secondary-fixed transition-colors shadow-2xs" data-accent="normal">ca</span>
+<span class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface cursor-pointer hover:bg-secondary-fixed transition-colors shadow-2xs" data-accent="normal">na</span>
+<span class="text-primary font-bold">|</span>
+</div>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low">
+<span class="font-label-caps text-label-caps text-on-surface-variant block mb-1">Pada C &amp; D</span>
+<div class="flex flex-wrap gap-1.5 items-center font-label-lg text-label-lg">
+<span class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface cursor-pointer hover:bg-secondary-fixed transition-colors shadow-2xs">mā</span>
+<span class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface cursor-pointer hover:bg-secondary-fixed transition-colors shadow-2xs">kar</span>
+<span class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface cursor-pointer hover:bg-secondary-fixed transition-colors shadow-2xs">ma</span>
+<span class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface cursor-pointer hover:bg-secondary-fixed transition-colors shadow-2xs">pha</span>
+<span class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface cursor-pointer hover:bg-secondary-fixed transition-colors shadow-2xs">la</span>
+<span class="px-2 py-1 rounded bg-primary-fixed text-on-primary-fixed font-bold cursor-pointer shadow-2xs" title="Svarita pitch marker">hé</span>
+<span class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface cursor-pointer hover:bg-secondary-fixed transition-colors shadow-2xs">tur</span>
+<span class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface cursor-pointer hover:bg-secondary-fixed transition-colors shadow-2xs">bhūr</span>
+<span class="text-on-surface-variant font-bold px-1">·</span>
+<span class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface cursor-pointer hover:bg-secondary-fixed transition-colors shadow-2xs">mā</span>
+<span class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface cursor-pointer hover:bg-secondary-fixed transition-colors shadow-2xs">te</span>
+<span class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface cursor-pointer hover:bg-secondary-fixed transition-colors shadow-2xs">saṅ</span>
+<span class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface cursor-pointer hover:bg-secondary-fixed transition-colors shadow-2xs">go</span>
+<span class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface cursor-pointer hover:bg-secondary-fixed transition-colors shadow-2xs">'stv</span>
+<span class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface cursor-pointer hover:bg-secondary-fixed transition-colors shadow-2xs">a</span>
+<span class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface cursor-pointer hover:bg-secondary-fixed transition-colors shadow-2xs">kar</span>
+<span class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface cursor-pointer hover:bg-secondary-fixed transition-colors shadow-2xs">ma</span>
+<span class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface cursor-pointer hover:bg-secondary-fixed transition-colors shadow-2xs">ṇi</span>
+<span class="text-primary font-bold">||</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Chanting Audio Alignment Waveform & Karaoke Master -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-8 h-8 rounded-lg bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">graphic_eq</span>
+</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Master Chanting Audio Sync</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Pandit Ji Master Recitation · 432Hz Sacred Baseline</span>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">mic</span>
+<span>Record Scholar</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container-low text-on-surface-variant transition-colors" title="Audio settings">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Waveform & Karaoke Cue Timeline Canvas Component -->
+<div class="bg-surface-container rounded-xl p-space-md flex flex-col gap-space-xs">
+<!-- Pitch & Frequency Info Banner -->
+<div class="flex items-center justify-between text-on-surface-variant font-label-caps text-label-caps">
+<span class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+                RMS Amplitude: -14.2 LUFS
+              </span>
+<span class="font-mono text-tertiary font-semibold">Tuning Lock: 432.00 Hz</span>
+<span>Length: 00:18.42</span>
+</div>
+<!-- Waveform SVG Container with Cues -->
+<div class="relative w-full h-28 bg-surface-container-lowest rounded-lg p-2 overflow-hidden select-none">
+<!-- Playhead line -->
+<div class="absolute top-0 bottom-0 left-[38%] w-0.5 bg-primary z-20 shadow-sm flex flex-col items-center">
+<div class="w-3 h-3 bg-primary rounded-full -mt-1 shadow-sm"></div>
+<div class="mt-auto px-1 rounded bg-primary text-on-primary font-mono text-[10px]">00:06.99</div>
+</div>
+<!-- Draggable Timecode Markers Overlay -->
+<div class="absolute inset-x-2 top-1 h-5 flex pointer-events-none z-10 text-[10px] font-mono text-on-surface-variant">
+<div class="absolute left-0">00:00</div>
+<div class="absolute left-[20%]">00:03.6</div>
+<div class="absolute left-[40%]">00:07.2</div>
+<div class="absolute left-[60%]">00:11.0</div>
+<div class="absolute left-[80%]">00:14.8</div>
+<div class="absolute right-0">00:18.4</div>
+</div>
+<!-- Pitch Vector / Waveform Visualizer inline SVG -->
+<div class="w-full h-full flex items-center justify-center pt-3">
+<svg class="w-full h-16 text-secondary" fill="currentColor" preserveaspectratio="none" viewbox="0 0 800 64">
+<path d="M0,32 Q10,12 20,32 T40,32 T60,10 T80,48 T100,24 T120,36 T140,8 T160,54 T180,28 T200,32 T220,14 T240,46 T260,22 T280,38 T300,32 T320,8 T340,56 T360,26 T380,32 T400,16 T420,44 T440,32 T460,18 T480,48 T500,28 T520,32 T540,6 T560,58 T580,30 T600,32 T620,14 T640,48 T660,24 T680,36 T700,32 T720,12 T740,50 T760,26 T780,34 T800,32 L800,64 L0,64 Z" opacity="0.25"></path>
+<path d="M0,32 Q10,18 20,32 T40,32 T60,16 T80,42 T100,28 T120,34 T140,16 T160,46 T180,30 T200,32 T220,20 T240,40 T260,28 T280,34 T300,32 T320,14 T340,48 T360,28 T380,32 T400,22 T420,38 T440,32 T460,24 T480,42 T500,30 T520,32 T540,12 T560,50 T580,32 T600,32 T620,20 T640,42 T660,28 T680,34 T700,32 T720,18 T740,44 T760,28 T780,33 T800,32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"></path>
+</svg>
+</div>
+<!-- Karaoke Word Segments -->
+<div class="absolute bottom-1 left-2 right-2 flex gap-1 h-4 z-10 text-[10px]">
+<div class="w-[18%] bg-primary-fixed/80 text-on-primary-fixed rounded flex items-center justify-center font-mono truncate px-1" title="karmaṇi (00:00.0 - 00:03.2)">karmaṇi</div>
+<div class="w-[12%] bg-secondary-fixed/80 text-on-secondary-fixed rounded flex items-center justify-center font-mono truncate px-1" title="eva (00:03.2 - 00:05.4)">eva</div>
+<div class="w-[20%] bg-tertiary-fixed/80 text-on-tertiary-fixed rounded flex items-center justify-center font-mono truncate px-1" title="adhikāras (00:05.4 - 00:09.1)">adhikāras</div>
+<div class="w-[10%] bg-surface-container-high text-on-surface rounded flex items-center justify-center font-mono truncate px-1">te</div>
+<div class="w-[12%] bg-surface-container-high text-on-surface rounded flex items-center justify-center font-mono truncate px-1">mā</div>
+<div class="w-[28%] bg-surface-container-high text-on-surface rounded flex items-center justify-center font-mono truncate px-1">phaleṣu...</div>
+</div>
+</div>
+<!-- Playback Transport Controller -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-2">
+<button class="w-9 h-9 rounded-full bg-surface-container-lowest hover:bg-surface-container-high text-on-surface flex items-center justify-center shadow-xs transition-colors" title="Loop current pada">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+</button>
+<button class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center shadow-sm hover:scale-105 active:scale-95 transition-all" title="Play / Pause">
+<span class="material-symbols-outlined text-[22px]">play_arrow</span>
+</button>
+<button class="w-9 h-9 rounded-full bg-surface-container-lowest hover:bg-surface-container-high text-on-surface flex items-center justify-center shadow-xs transition-colors" title="Step forward 1s">
+<span class="material-symbols-outlined text-[18px]">forward_media</span>
+</button>
+<span class="font-mono font-label-md text-label-md text-on-surface ml-2">00:06.99 / 00:18.42</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Speed</span>
+<div class="flex rounded-lg bg-surface-container-lowest p-0.5 shadow-2xs">
+<button class="px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps">0.8x</button>
+<button class="px-2 py-0.5 rounded bg-surface-container font-label-caps text-label-caps font-bold text-on-surface">1.0x</button>
+<button class="px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps">1.2x</button>
+</div>
+<button class="px-2.5 py-1 rounded-lg bg-surface-container-lowest hover:bg-surface-container-high text-tertiary font-label-caps text-label-caps flex items-center gap-1 shadow-2xs">
+<span class="material-symbols-outlined text-[14px]">tune</span>
+<span>Snap Cue</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Academic Authority & Citations Card -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[24px]">school</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Gita Press Canonical Ref #247-B</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Validated against Adi Shankaracharya Bhashya (ch. 2, v. 47)</span>
+</div>
+</div>
+<button class="text-tertiary font-label-lg text-label-lg hover:underline flex items-center gap-1">
+<span>Verify Bhashya</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- ================= RIGHT COLUMN: MULTI-LANGUAGE COMMENTARY & AI DATA (7 Cols) ================= -->
+<div class="xl:col-span-7 flex flex-col gap-space-md">
+<!-- Language Switcher Strip -->
+<div class="bg-surface-container-lowest rounded-xl p-2 shadow-sm flex items-center justify-between flex-wrap gap-2">
+<div class="flex items-center gap-1 flex-wrap">
+<button class="px-4 py-2 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg font-semibold shadow-xs flex items-center gap-1.5">
+<span>English</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-fixed"></span>
+</button>
+<button class="px-4 py-2 rounded-xl text-on-surface hover:bg-surface-container-high font-label-lg text-label-lg transition-colors flex items-center gap-1.5">
+<span>हिन्दी (Hindi)</span>
+<span class="material-symbols-outlined text-[14px] text-tertiary">check</span>
+</button>
+<button class="px-4 py-2 rounded-xl text-on-surface hover:bg-surface-container-high font-label-lg text-label-lg transition-colors flex items-center gap-1.5">
+<span>मराठी (Marathi)</span>
+<span class="material-symbols-outlined text-[14px] text-tertiary">check</span>
+</button>
+<button class="px-4 py-2 rounded-xl text-on-surface hover:bg-surface-container-high font-label-lg text-label-lg transition-colors flex items-center gap-1.5">
+<span>தமிழ் (Tamil)</span>
+<span class="px-1 py-0.2 rounded bg-surface-container text-[10px] text-on-surface-variant">Draft</span>
+</button>
+<button class="px-4 py-2 rounded-xl text-on-surface hover:bg-surface-container-high font-label-lg text-label-lg transition-colors flex items-center gap-1.5">
+<span>বাংলা (Bengali)</span>
+<span class="px-1 py-0.2 rounded bg-surface-container text-[10px] text-on-surface-variant">Review</span>
+</button>
+</div>
+<button class="px-3 py-1.5 rounded-xl bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Add Language</span>
+</button>
+</div>
+<!-- Word-by-Word Sanskrit Breakdown (Structured Table) -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Structured Word-by-Word Meaning (Pada-Artha)</h2>
+</div>
+<button class="px-2.5 py-1 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[14px]">auto_fix_high</span>
+<span>Regenerate Sandhi Split</span>
+</button>
+</div>
+<div class="overflow-x-auto rounded-xl bg-surface-container-low">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container text-on-surface-variant font-label-caps text-label-caps uppercase">
+<tr>
+<th class="py-2.5 px-3">Sanskrit Word</th>
+<th class="py-2.5 px-3">Grammar &amp; Sandhi</th>
+<th class="py-2.5 px-3">English Translation</th>
+<th class="py-2.5 px-3">Hindi Meaning</th>
+<th class="py-2.5 px-2 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high/40">
+<tr class="hover:bg-surface-container-lowest/60 transition-colors">
+<td class="py-2.5 px-3 font-semibold text-on-surface font-scripture-verse text-[15px]">कर्मणि (karmaṇi)</td>
+<td class="py-2.5 px-3 font-mono text-xs text-on-surface-variant">n. 7/1 (locative sing.)</td>
+<td class="py-2.5 px-3">
+<input class="w-full bg-surface-container-lowest px-2 py-1 rounded text-on-surface font-body-sm focus:outline-none focus:ring-1 focus:ring-primary shadow-2xs" type="text" value="in the execution of duty"/>
+</td>
+<td class="py-2.5 px-3">
+<input class="w-full bg-surface-container-lowest px-2 py-1 rounded text-on-surface font-body-sm focus:outline-none focus:ring-1 focus:ring-primary shadow-2xs" type="text" value="कर्तव्य कर्म करने में"/>
+</td>
+<td class="py-2.5 px-2 text-right">
+<button class="text-on-surface-variant hover:text-on-surface p-1"><span class="material-symbols-outlined text-[16px]">drag_indicator</span></button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest/60 transition-colors">
+<td class="py-2.5 px-3 font-semibold text-on-surface font-scripture-verse text-[15px]">एव (eva)</td>
+<td class="py-2.5 px-3 font-mono text-xs text-on-surface-variant">avyaya (indeclinable)</td>
+<td class="py-2.5 px-3">
+<input class="w-full bg-surface-container-lowest px-2 py-1 rounded text-on-surface font-body-sm focus:outline-none focus:ring-1 focus:ring-primary shadow-2xs" type="text" value="only / certainly"/>
+</td>
+<td class="py-2.5 px-3">
+<input class="w-full bg-surface-container-lowest px-2 py-1 rounded text-on-surface font-body-sm focus:outline-none focus:ring-1 focus:ring-primary shadow-2xs" type="text" value="ही"/>
+</td>
+<td class="py-2.5 px-2 text-right">
+<button class="text-on-surface-variant hover:text-on-surface p-1"><span class="material-symbols-outlined text-[16px]">drag_indicator</span></button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest/60 transition-colors">
+<td class="py-2.5 px-3 font-semibold text-on-surface font-scripture-verse text-[15px]">अधिकारः (adhikāraḥ)</td>
+<td class="py-2.5 px-3 font-mono text-xs text-on-surface-variant">m. 1/1 (nominative)</td>
+<td class="py-2.5 px-3">
+<input class="w-full bg-surface-container-lowest px-2 py-1 rounded text-on-surface font-body-sm focus:outline-none focus:ring-1 focus:ring-primary shadow-2xs" type="text" value="right / sacred privilege"/>
+</td>
+<td class="py-2.5 px-3">
+<input class="w-full bg-surface-container-lowest px-2 py-1 rounded text-on-surface font-body-sm focus:outline-none focus:ring-1 focus:ring-primary shadow-2xs" type="text" value="अधिकार"/>
+</td>
+<td class="py-2.5 px-2 text-right">
+<button class="text-on-surface-variant hover:text-on-surface p-1"><span class="material-symbols-outlined text-[16px]">drag_indicator</span></button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest/60 transition-colors">
+<td class="py-2.5 px-3 font-semibold text-on-surface font-scripture-verse text-[15px]">ते (te)</td>
+<td class="py-2.5 px-3 font-mono text-xs text-on-surface-variant">pronoun 6/1 (genitive)</td>
+<td class="py-2.5 px-3">
+<input class="w-full bg-surface-container-lowest px-2 py-1 rounded text-on-surface font-body-sm focus:outline-none focus:ring-1 focus:ring-primary shadow-2xs" type="text" value="your / unto you"/>
+</td>
+<td class="py-2.5 px-3">
+<input class="w-full bg-surface-container-lowest px-2 py-1 rounded text-on-surface font-body-sm focus:outline-none focus:ring-1 focus:ring-primary shadow-2xs" type="text" value="तुम्हारा"/>
+</td>
+<td class="py-2.5 px-2 text-right">
+<button class="text-on-surface-variant hover:text-on-surface p-1"><span class="material-symbols-outlined text-[16px]">drag_indicator</span></button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest/60 transition-colors">
+<td class="py-2.5 px-3 font-semibold text-on-surface font-scripture-verse text-[15px]">मा (mā)</td>
+<td class="py-2.5 px-3 font-mono text-xs text-on-surface-variant">avyaya (prohibitive)</td>
+<td class="py-2.5 px-3">
+<input class="w-full bg-surface-container-lowest px-2 py-1 rounded text-on-surface font-body-sm focus:outline-none focus:ring-1 focus:ring-primary shadow-2xs" type="text" value="never / not"/>
+</td>
+<td class="py-2.5 px-3">
+<input class="w-full bg-surface-container-lowest px-2 py-1 rounded text-on-surface font-body-sm focus:outline-none focus:ring-1 focus:ring-primary shadow-2xs" type="text" value="कभी नहीं"/>
+</td>
+<td class="py-2.5 px-2 text-right">
+<button class="text-on-surface-variant hover:text-on-surface p-1"><span class="material-symbols-outlined text-[16px]">drag_indicator</span></button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest/60 transition-colors">
+<td class="py-2.5 px-3 font-semibold text-on-surface font-scripture-verse text-[15px]">फलेषु (phaleṣu)</td>
+<td class="py-2.5 px-3 font-mono text-xs text-on-surface-variant">n. 7/3 (locative plural)</td>
+<td class="py-2.5 px-3">
+<input class="w-full bg-surface-container-lowest px-2 py-1 rounded text-on-surface font-body-sm focus:outline-none focus:ring-1 focus:ring-primary shadow-2xs" type="text" value="in the fruits or rewards"/>
+</td>
+<td class="py-2.5 px-3">
+<input class="w-full bg-surface-container-lowest px-2 py-1 rounded text-on-surface font-body-sm focus:outline-none focus:ring-1 focus:ring-primary shadow-2xs" type="text" value="फलों में"/>
+</td>
+<td class="py-2.5 px-2 text-right">
+<button class="text-on-surface-variant hover:text-on-surface p-1"><span class="material-symbols-outlined text-[16px]">drag_indicator</span></button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest/60 transition-colors">
+<td class="py-2.5 px-3 font-semibold text-on-surface font-scripture-verse text-[15px]">कदाचन (kadācana)</td>
+<td class="py-2.5 px-3 font-mono text-xs text-on-surface-variant">avyaya (adverbial)</td>
+<td class="py-2.5 px-3">
+<input class="w-full bg-surface-container-lowest px-2 py-1 rounded text-on-surface font-body-sm focus:outline-none focus:ring-1 focus:ring-primary shadow-2xs" type="text" value="at any time / ever"/>
+</td>
+<td class="py-2.5 px-3">
+<input class="w-full bg-surface-container-lowest px-2 py-1 rounded text-on-surface font-body-sm focus:outline-none focus:ring-1 focus:ring-primary shadow-2xs" type="text" value="किसी भी काल में"/>
+</td>
+<td class="py-2.5 px-2 text-right">
+<button class="text-on-surface-variant hover:text-on-surface p-1"><span class="material-symbols-outlined text-[16px]">drag_indicator</span></button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-caps text-label-caps pt-1">
+<span>7 Core Lexemes Mapped</span>
+<button class="text-tertiary font-bold hover:underline flex items-center gap-1">+ Add Secondary Sandhi Variant</button>
+</div>
+</div>
+<!-- Core Philosophical Commentary Rich Text Editor -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Philosophical Essence &amp; Contemporary Commentary</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Grounding text for adult practitioners and daily contemplation cards</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-caps text-label-caps">Readability: Grade 8.2</span>
+</div>
+</div>
+<!-- Rich Text Formatting Bar -->
+<div class="flex items-center gap-1 p-1.5 rounded-xl bg-surface-container-low flex-wrap">
+<button class="p-1.5 rounded hover:bg-surface-container-lowest text-on-surface transition-colors" title="Bold"><span class="material-symbols-outlined text-[18px]">format_bold</span></button>
+<button class="p-1.5 rounded hover:bg-surface-container-lowest text-on-surface transition-colors" title="Italic"><span class="material-symbols-outlined text-[18px]">format_italic</span></button>
+<button class="p-1.5 rounded hover:bg-surface-container-lowest text-on-surface transition-colors" title="Quote Callout"><span class="material-symbols-outlined text-[18px]">format_quote</span></button>
+<div class="h-4 w-px bg-surface-container-high mx-1"></div>
+<button class="p-1.5 rounded hover:bg-surface-container-lowest text-on-surface transition-colors" title="Add Sanskrit Ref"><span class="material-symbols-outlined text-[18px]">menu_book</span></button>
+<button class="p-1.5 rounded hover:bg-surface-container-lowest text-on-surface transition-colors" title="Insert Bullet"><span class="material-symbols-outlined text-[18px]">format_list_bulleted</span></button>
+<button class="p-1.5 rounded hover:bg-surface-container-lowest text-tertiary transition-colors" title="AI Polish for Clarity"><span class="material-symbols-outlined text-[18px]">smart_toy</span></button>
+<div class="ml-auto flex items-center gap-2 pr-1 font-label-caps text-label-caps text-on-surface-variant">
+<span>English (US Canonical)</span>
+</div>
+</div>
+<!-- Contenteditable / Textarea Area -->
+<div class="rounded-xl bg-surface-container-low p-space-md focus-within:ring-1 focus-within:ring-secondary transition-all">
+<textarea class="w-full bg-transparent text-on-surface font-body-md text-body-md focus:outline-none resize-none leading-relaxed" placeholder="Enter contemporary philosophical exposition..." rows="5">You have an absolute and sacred right to perform your prescribed duty, but never to claim or obsess over the fruits of your actions. Never let the anticipation of outcomes become the motive for your endeavors, nor succumb to indolence or inaction out of fear of failure.
+
+In modern life, this verse is the supreme antidote to performance anxiety, chronic burnout, and transactional living. When you channel 100% of your energy into craftsmanship and duty rather than prestige, inner sovereignty (sthitaprajña) is naturally awakened.</textarea>
+</div>
+<!-- Kids Mode Simplification Hook (Moru the Peacock) -->
+<div class="mt-space-xs p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-7 h-7 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">child_care</span>
+</span>
+<span class="font-headline-sm text-headline-sm text-on-surface text-[16px]">Kids Mode: 'Moru the Peacock' Tale</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest flex items-start gap-3">
+<div class="w-12 h-12 rounded-lg bg-secondary-fixed shrink-0 flex items-center justify-center text-on-secondary-fixed font-headline-md font-bold">
+                🦚
+              </div>
+<div class="flex flex-col gap-1 w-full">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Moru's Sandcastle Metaphor (Age 6-12)</span>
+<textarea class="w-full bg-surface-container-low rounded p-2 text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary resize-none" rows="2">Focus on doing your kindest, joyful best today—just like building a majestic sandcastle with giggles and love, without being sad if an ocean wave touches it later!</textarea>
+</div>
+</div>
+</div>
+<!-- Pedagogical Tags & AI Retrieval Anchors -->
+<div class="pt-space-xs flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Semantic Knowledge Anchors &amp; AI Guardrail Tags</span>
+<div class="flex flex-wrap gap-1.5 items-center">
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-md text-label-md">
+                #KarmaYoga
+                <button class="hover:text-primary"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-md text-label-md">
+                #WorkLifeBalance
+                <button class="hover:text-primary"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-md text-label-md">
+                #DetachmentFromResults
+                <button class="hover:text-primary"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-md text-label-md">
+                #ActionWithoutAnxiety
+                <button class="hover:text-primary"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-md text-label-md">
+                #Focus
+                <button class="hover:text-primary"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<button class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container-low hover:bg-surface-container-high text-tertiary font-label-md text-label-md transition-colors">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Add Tag</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Mobile Viewport Interactive Preview Modal Drawer (Toggled by Button) -->
+<div class="fixed inset-0 bg-on-background/40 backdrop-blur-sm z-50 flex items-center justify-center p-space-md opacity-0 pointer-events-none transition-opacity duration-200" id="mobilePreviewModal">
+<div class="bg-surface-container-lowest rounded-3xl shadow-xl w-full max-w-[390px] h-[780px] flex flex-col overflow-hidden relative">
+<!-- Top Modal Bar -->
+<div class="h-14 px-4 bg-surface-container-low flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">smartphone</span>
+          Live Mobile Preview (390x780)
+        </span>
+<button class="w-8 h-8 rounded-full hover:bg-surface-container-high text-on-surface-variant flex items-center justify-center" id="closePreviewBtn">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Simulated Mobile App Canvas Container -->
+<div class="flex-1 overflow-y-auto bg-surface p-4 flex flex-col gap-4">
+<!-- Sacred Hero Card in Deep Indigo -->
+<div class="rounded-2xl bg-[#24205A] p-5 text-on-primary shadow-md flex flex-col gap-3 relative overflow-hidden">
+<div class="flex items-center justify-between text-secondary-fixed-dim font-label-caps text-label-caps">
+<span>CHAPTER 2 · SLOKA 47</span>
+<span class="material-symbols-outlined text-[18px] text-primary-fixed-dim">bookmark_add</span>
+</div>
+<div class="text-center py-2">
+<p class="font-scripture-verse-mobile text-scripture-verse-mobile text-surface-container-lowest leading-relaxed">
+              कर्मण्येवाधिकारस्ते मा फलेषु कदाचन ।<br/>
+              मा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि ॥
+            </p>
+</div>
+<!-- Micro Sanskrit Waveform -->
+<div class="w-full bg-[#17114d] rounded-lg p-2.5 flex items-center justify-between">
+<button class="w-7 h-7 rounded-full bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+</button>
+<div class="flex-1 px-3">
+<div class="h-1.5 w-full bg-surface-container-highest/20 rounded-full overflow-hidden">
+<div class="bg-tertiary-fixed h-full w-[35%]"></div>
+</div>
+</div>
+<span class="font-mono text-[10px] text-secondary-fixed-dim">0:06 / 0:18</span>
+</div>
+</div>
+<!-- Reflection Prompt Card -->
+<div class="rounded-xl bg-surface-container-lowest p-4 shadow-sm flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-primary uppercase font-bold">10-Minute Contemplation</span>
+<h4 class="font-headline-sm text-headline-sm text-[16px] text-on-surface">Right to Action, Never to the Fruit</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            You have an absolute and sacred right to perform your duty, but never to claim or obsess over the fruits...
+          </p>
+<div class="pt-2">
+<button class="w-full py-2.5 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md font-semibold text-center">
+              Read Word-by-Word Sandhi
+            </button>
+</div>
+</div>
+<!-- Moru Kids Pill inside app preview -->
+<div class="rounded-xl bg-tertiary-fixed/30 p-3 flex items-center gap-3">
+<span class="text-2xl">🦚</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Kids Mode Ready</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Building a Sandcastle with Moru</span>
+</div>
+</div>
+</div>
+<!-- App Bottom Bar Preview -->
+<div class="h-14 bg-surface-container-lowest border-t border-surface-container-high/40 px-6 flex items-center justify-between text-on-surface-variant">
+<div class="flex flex-col items-center text-primary">
+<span class="material-symbols-outlined text-[20px]">menu_book</span>
+<span class="text-[9px] font-semibold">Today</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-[20px]">explore</span>
+<span class="text-[9px]">Path</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+<span class="text-[9px]">Ask</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-[20px]">diversity_1</span>
+<span class="text-[9px]">Sangha</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Minimalist Interactive Scripts for Syllables and Modal -->
+<script>
+  (function initVerseCurriculumEditor() {
+    // 1. Mobile Modal Preview Toggle
+    const previewBtn = document.getElementById('toggleMobilePreviewBtn');
+    const modal = document.getElementById('mobilePreviewModal');
+    const closeBtn = document.getElementById('closePreviewBtn');
+
+    if (previewBtn && modal && closeBtn) {
+      previewBtn.addEventListener('click', () => {
+        modal.classList.remove('opacity-0', 'pointer-events-none');
+      });
+      closeBtn.addEventListener('click', () => {
+        modal.classList.add('opacity-0', 'pointer-events-none');
+      });
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.classList.add('opacity-0', 'pointer-events-none');
+        }
+      });
+    }
+
+    // 2. Interactive Syllable Accenting
+    const syllableTokens = document.querySelectorAll('#syllablesGroupA span[data-accent]');
+    syllableTokens.forEach(token => {
+      token.addEventListener('click', () => {
+        const current = token.getAttribute('data-accent');
+        if (current === 'normal') {
+          token.setAttribute('data-accent', 'accented');
+          token.classList.remove('bg-surface-container-lowest', 'text-on-surface');
+          token.classList.add('bg-primary-fixed', 'text-on-primary-fixed', 'font-bold');
+        } else {
+          token.setAttribute('data-accent', 'normal');
+          token.classList.remove('bg-primary-fixed', 'text-on-primary-fixed', 'font-bold');
+          token.classList.add('bg-surface-container-lowest', 'text-on-surface');
+        }
+      });
+    });
+  })();
+</script></main></div></body></html>
