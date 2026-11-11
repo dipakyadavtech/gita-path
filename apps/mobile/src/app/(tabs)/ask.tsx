@@ -2,6 +2,7 @@ import { router, useLocalSearchParams } from 'expo-router';
 import { useEffect, useRef, useState } from 'react';
 import { KeyboardAvoidingView, Platform, Pressable, ScrollView, Text, TextInput, View, type ScrollViewInstance } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { OfflineBanner, useOnline } from '@/components/States';
 import { Caps, Icon, Row } from '@/components/ui';
 import { verseById } from '@/lib/content';
 import { FREE_DAILY_QUESTIONS, answerLocally } from '@/lib/guide';
@@ -10,7 +11,7 @@ import type { AskResult } from '@/lib/types';
 import { colors, fonts, radius, type } from '@/theme';
 
 // E1 · Ask the Gita
-type Msg = { id: string; from: 'me' | 'gita'; text?: string; result?: AskResult };
+type Msg = { id: string; from: 'me' | 'gita'; text?: string; result?: AskResult; queued?: boolean };
 
 const MOOD_PROMPTS: Record<string, string> = {
   Anxious: "I feel anxious and can't settle my mind.",
@@ -27,6 +28,21 @@ export default function Ask() {
   const [input, setInput] = useState('');
   const [msgs, setMsgs] = useState<Msg[]>([]);
   const scroll = useRef<ScrollViewInstance>(null);
+  const online = useOnline();
+
+  // Questions asked offline are queued and answered when the connection returns (FR-ER-01).
+  useEffect(() => {
+    if (!online) return;
+    setMsgs((all) => {
+      if (!all.some((m) => m.queued)) return all;
+      const out: Msg[] = [];
+      for (const m of all) {
+        out.push({ ...m, queued: false });
+        if (m.queued && m.text) out.push({ id: `${m.id}a`, from: 'gita', result: answerLocally(m.text) });
+      }
+      return out;
+    });
+  }, [online]);
 
   useEffect(() => {
     if (params.mood && MOOD_PROMPTS[params.mood]) setInput(MOOD_PROMPTS[params.mood]);
@@ -37,6 +53,11 @@ export default function Ask() {
     const q = input.trim();
     if (!q) return;
     const result = answerLocally(q);
+    if (!online && result.kind !== 'safety') {
+      setMsgs((m) => [...m, { id: `${Date.now()}q`, from: 'me', text: q, queued: true }]);
+      setInput('');
+      return;
+    }
     if (result.kind === 'safety') {
       router.push({ pathname: '/ask-safety', params: { q } });
       setInput('');
@@ -56,6 +77,7 @@ export default function Ask() {
     <SafeAreaView style={{ flex: 1, backgroundColor: colors.canvas }} edges={['top']}>
       <KeyboardAvoidingView style={{ flex: 1, width: '100%', maxWidth: 520, alignSelf: 'center' }} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
         <ScrollView ref={scroll} contentContainerStyle={{ padding: 20, gap: 14 }}>
+          <OfflineBanner />
           <View>
             <Text style={type.h1}>Ask the Gita</Text>
             <Text style={type.bodyMuted}>Every answer is grounded in verses you can open.</Text>
@@ -74,6 +96,7 @@ export default function Ask() {
             m.from === 'me' ? (
               <View key={m.id} style={{ alignSelf: 'flex-end', maxWidth: '82%', backgroundColor: colors.indigo, padding: 12, borderRadius: 18, borderBottomRightRadius: 4 }}>
                 <Text style={[type.body, { color: colors.white }]}>{m.text}</Text>
+                {m.queued ? <Text style={[type.small, { color: colors.indigoText }]}>Will send when you&apos;re back online</Text> : null}
               </View>
             ) : m.result?.kind === 'answer' ? (
               <View key={m.id} style={{ maxWidth: '94%', backgroundColor: colors.tealTint, padding: 14, borderRadius: 18, borderBottomLeftRadius: 4, gap: 10 }}>

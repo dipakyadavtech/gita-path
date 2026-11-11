@@ -13,6 +13,9 @@ export default function StoryPlayer() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const story = storyById(id);
   const markWatched = useApp((s) => s.markWatched);
+  const plan = useApp((s) => s.plan);
+  const setDownload = useApp((s) => s.setDownload);
+  const downloaded = useApp((s) => !!s.downloads[id]);
   const [subs, setSubs] = useState('हिन्दी');
   const player = usePlayer((story?.minutes ?? 3) * 60, 4, () => story && markWatched(story.id));
   if (!story) return null;
@@ -25,7 +28,14 @@ export default function StoryPlayer() {
             <Icon name="chevron-down" color={colors.white} />
           </Pressable>
           <Text style={[type.small, { color: colors.indigoText }]}>Episode {story.episode} · {story.minutes} min</Text>
-          <View style={{ width: 44 }} />
+          <Pressable
+            onPress={() => (plan === 'plus' ? setDownload(story.id, { title: story.title, mb: 45 }) : router.push('/subscription'))}
+            accessibilityRole="button"
+            accessibilityLabel={downloaded ? 'Downloaded' : 'Download episode'}
+            style={{ width: 44, height: 44, borderRadius: 12, backgroundColor: colors.indigo, alignItems: 'center', justifyContent: 'center' }}
+          >
+            <Icon name={downloaded ? 'checkmark' : 'download-outline'} color={colors.white} />
+          </Pressable>
         </Row>
         <View style={{ height: 220, backgroundColor: '#2E2A6E', overflow: 'hidden' }}>
           <View style={{ position: 'absolute', left: -30, bottom: -50, width: 220, height: 120, borderRadius: 110, backgroundColor: colors.indigoSoft }} />

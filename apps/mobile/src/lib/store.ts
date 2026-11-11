@@ -4,6 +4,9 @@ import { createJSONStorage, persist } from 'zustand/middleware';
 import { daysBetween, todayKey } from './dates';
 import type { Plan, StepState, Streak, WhoFor } from './types';
 
+export type CircleMember = { id: string; name: string; color: string; done: number; status: 'member' | 'pending'; isMe?: boolean; isKid?: boolean };
+export type Circle = { id: string; name: string; code: string; ownerId: string; challenge: { title: string; chapter: number; target: number }; members: CircleMember[]; feed: { who: string; what: string; at: string }[] };
+
 export type Session = { userId: string; name: string; phone?: string; provider: 'dev' | 'clerk' | 'guest'; token?: string };
 
 type Prefs = {
@@ -30,6 +33,13 @@ type State = {
   ask: { date: string; count: number };
   watched: Record<string, string>;
   markWatched: (storyId: string) => void;
+  downloads: Record<string, { title: string; mb: number; savedAt: string }>;
+  wifiOnly: boolean;
+  autoNextChapter: boolean;
+  setDownload: (id: string, item: { title: string; mb: number } | null) => void;
+  setDownloadPrefs: (p: { wifiOnly?: boolean; autoNextChapter?: boolean }) => void;
+  circle: Circle | null;
+  setCircle: (c: Circle | null) => void;
   // actions
   setSession: (s: Session | null) => void;
   setPrefs: (p: Partial<Prefs>) => void;
@@ -65,6 +75,10 @@ const initial = {
   plan: 'free' as Plan,
   ask: { date: todayKey(), count: 0 },
   watched: {} as Record<string, string>,
+  downloads: { today: { title: "Today's verse + next 7 steps", mb: 24, savedAt: new Date().toISOString() } } as Record<string, { title: string; mb: number; savedAt: string }>,
+  wifiOnly: true,
+  autoNextChapter: false,
+  circle: null as Circle | null,
 };
 
 export const useApp = create<State>()(
@@ -111,6 +125,14 @@ export const useApp = create<State>()(
         return next.count;
       },
       markWatched: (storyId) => set({ watched: { ...get().watched, [storyId]: new Date().toISOString() } }),
+      setDownload: (id, item) => {
+        const d = { ...get().downloads };
+        if (item) d[id] = { ...item, savedAt: new Date().toISOString() };
+        else delete d[id];
+        set({ downloads: d });
+      },
+      setDownloadPrefs: (p) => set({ wifiOnly: p.wifiOnly ?? get().wifiOnly, autoNextChapter: p.autoNextChapter ?? get().autoNextChapter }),
+      setCircle: (circle) => set({ circle }),
       reset: () => set({ ...initial }),
     }),
     { name: 'gita-path', storage: createJSONStorage(() => AsyncStorage) },

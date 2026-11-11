@@ -1,6 +1,7 @@
 import { router } from 'expo-router';
 import { Pressable, Text, View } from 'react-native';
 import { Avatar } from '@/components/Avatar';
+import { OfflineBanner } from '@/components/States';
 import { Button, Caps, Card, Chip, Icon, ProgressBar, Row, Screen, SectionTitle, VerseText, Wrap } from '@/components/ui';
 import { MOODS, storyById } from '@/lib/content';
 import { actionOfTheDay, pathProgress, verseOfTheDay } from '@/lib/daily';
@@ -22,6 +23,7 @@ export default function Today() {
 
   return (
     <Screen>
+      <OfflineBanner />
       <Row style={{ justifyContent: 'space-between' }}>
         <View>
           <Text style={type.small}>{prettyDate()}</Text>
@@ -41,8 +43,8 @@ export default function Today() {
         <VerseText lines={verse.sanskrit.slice(0, 1)} color={colors.white} />
         <Text style={[type.body, { color: '#E2E0F8' }]}>{verse.meaning.split('. ')[0]}.</Text>
         <Row gap={10}>
-          <Button label="Listen · 1 min" icon="play" onPress={() => router.push({ pathname: '/verse/[id]', params: { id: verse.id, autoplay: '1' } })} style={{ flex: 1 }} />
-          <Button label="Open verse" kind="secondary" onPress={() => router.push({ pathname: '/verse/[id]', params: { id: verse.id } })} style={{ flex: 1, backgroundColor: 'transparent', borderColor: '#5B57A0' }} />
+          <Button label="Listen" icon="play" onPress={() => router.push({ pathname: '/verse/[id]', params: { id: verse.id, autoplay: '1' } })} style={{ flex: 1 }} />
+          <Button label="Open verse" kind="onDark" onPress={() => router.push({ pathname: '/verse/[id]', params: { id: verse.id } })} style={{ flex: 1 }} />
         </Row>
       </View>
 

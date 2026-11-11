@@ -62,7 +62,7 @@ export function T({ style, children, numberOfLines }: { style?: StyleProp<TextSt
   );
 }
 
-type ButtonKind = 'primary' | 'secondary' | 'ghost' | 'dark' | 'danger' | 'teal';
+type ButtonKind = 'primary' | 'secondary' | 'ghost' | 'dark' | 'danger' | 'teal' | 'onDark';
 export function Button({
   label,
   onPress,
@@ -91,6 +91,7 @@ export function Button({
     dark: { bg: colors.indigo, fg: colors.white },
     danger: { bg: colors.danger, fg: colors.white },
     teal: { bg: colors.teal, fg: colors.white },
+    onDark: { bg: 'transparent', fg: colors.white, border: '#5B57A0' },
   };
   const p = palette[kind];
   const press = () => {

@@ -57,6 +57,7 @@ export default function Profile() {
       </Row>
       <Caps>Your space</Caps>
       <MenuRow icon="bookmark-outline" label="Saved and notes" sub={`${Object.keys(bookmarks).length} verses`} onPress={() => router.push('/saved')} />
+      <MenuRow icon="download-outline" label="Downloads" sub="Audio and stories on this phone" onPress={() => router.push('/downloads')} />
       <MenuRow icon="search" label="Search" sub="Verses, stories, topics" onPress={() => router.push('/search')} />
       <MenuRow icon="star-outline" label="Gita Path Plus" sub="Unlimited questions and stories" onPress={() => router.push('/subscription')} />
     </Screen>
