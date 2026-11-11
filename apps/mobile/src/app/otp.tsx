@@ -1,7 +1,7 @@
 import { router, useLocalSearchParams } from 'expo-router';
 import { useEffect, useRef, useState } from 'react';
 import { Pressable, Text, TextInput, View, type TextInputInstance } from 'react-native';
-import { Button, Screen, TopBar } from '@/components/ui';
+import { Button, Screen, TextLink, TopBar } from '@/components/ui';
 import { DEV_OTP, useAuth } from '@/lib/auth';
 import { colors, fonts, type } from '@/theme';
 
@@ -59,7 +59,17 @@ export default function Otp() {
         accessibilityLabel="Code input"
       />
       {error ? <Text style={[type.small, { color: colors.danger }]} accessibilityRole="alert">{error}</Text> : null}
-      <Text style={type.bodyMuted}>{seconds > 0 ? `Resend code in 0:${String(seconds).padStart(2, '0')}` : 'You can resend the code now.'}</Text>
+      {seconds > 0 ? (
+        <Text style={type.bodyMuted}>{`Resend code in 0:${String(seconds).padStart(2, '0')}`}</Text>
+      ) : (
+        <TextLink
+          label="Resend code"
+          onPress={() => {
+            setError('');
+            auth.startPhone(phone).then(() => setSeconds(30), (e: Error) => setError(e.message));
+          }}
+        />
+      )}
       <Button label="Verify" onPress={() => verify()} disabled={code.length < 6} />
       {auth.mode === 'dev' ? (
         <Button label={`Fill dev code ${DEV_OTP}`} kind="ghost" onPress={() => { setCode(DEV_OTP); verify(DEV_OTP); }} />

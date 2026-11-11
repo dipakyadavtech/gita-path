@@ -5,6 +5,7 @@ import { Button, Caps, Card, Chip, Icon, Row, Screen, TopBar, Wrap } from '@/com
 import { verseById } from '@/lib/content';
 import { useApp } from '@/lib/store';
 import { colors, fonts, radius, type } from '@/theme';
+import { pushComplete, pushStep } from '@/lib/api';
 
 // D3 · Chant practice. Japa counting works today; pronunciation scoring comes from the
 // Python chant-scorer service in Release 2 (FR-CH-02), so feedback here is a practice guide.
@@ -48,6 +49,8 @@ export default function Chant() {
   const finish = () => {
     markStep(id, { listened: true, understood: true });
     const r = completeVerse(id);
+    pushStep(id, { listened: true, understood: true });
+    pushComplete(id);
     router.replace({ pathname: '/done', params: { id, streak: String(r.streak) } });
   };
 

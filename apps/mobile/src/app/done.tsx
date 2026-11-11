@@ -5,6 +5,7 @@ import { verseById } from '@/lib/content';
 import { actionOfTheDay } from '@/lib/daily';
 import { useApp } from '@/lib/store';
 import { colors, fonts, radius, type } from '@/theme';
+import { pushStep } from '@/lib/api';
 
 // D4 · Done for today (with evening check-in, FR-HM-06)
 const MILESTONES = [7, 21, 50, 108];
@@ -53,8 +54,8 @@ export default function Done() {
           </Text>
         ) : (
           <Row gap={8} style={{ marginTop: 12 }}>
-            <Button label="Yes, I did" kind="teal" onPress={() => markStep(id, { actionCheckIn: 'yes', action: true })} style={{ flex: 1 }} />
-            <Button label="Not today" kind="ghost" onPress={() => markStep(id, { actionCheckIn: 'no' })} style={{ flex: 1 }} />
+            <Button label="Yes, I did" kind="teal" onPress={() => { markStep(id, { actionCheckIn: 'yes', action: true }); pushStep(id, { actionCheckIn: 'yes', action: true }); }} style={{ flex: 1 }} />
+            <Button label="Not today" kind="ghost" onPress={() => { markStep(id, { actionCheckIn: 'no' }); pushStep(id, { actionCheckIn: 'no' }); }} style={{ flex: 1 }} />
           </Row>
         )}
       </Card>

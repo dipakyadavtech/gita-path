@@ -26,8 +26,13 @@ export default function SignIn() {
     }
   };
   const social = async (p: 'google' | 'apple') => {
-    await auth.socialSignIn(p);
-    router.replace('/permissions');
+    setError('');
+    try {
+      const s = await auth.socialSignIn(p);
+      if (s) router.replace('/permissions');
+    } catch (e) {
+      setError((e as Error).message);
+    }
   };
 
   return (

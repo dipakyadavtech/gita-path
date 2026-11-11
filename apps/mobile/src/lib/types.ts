@@ -31,6 +31,6 @@ export type WhoFor = 'me' | 'me-and-child' | 'family';
 export type Plan = 'free' | 'plus';
 
 export type AskResult =
-  | { kind: 'answer'; text: string; verses: string[]; action: string }
+  | { kind: 'answer'; text: string; verses: string[]; action: string; id?: string }
   | { kind: 'safety' }
   | { kind: 'limit' };

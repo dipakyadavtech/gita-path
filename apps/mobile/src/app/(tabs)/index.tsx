@@ -8,6 +8,7 @@ import { actionOfTheDay, pathProgress, verseOfTheDay } from '@/lib/daily';
 import { prettyDate } from '@/lib/dates';
 import { useApp } from '@/lib/store';
 import { colors, fonts, radius, shadow, type } from '@/theme';
+import { pushStep } from '@/lib/api';
 
 // D1 · Today
 export default function Today() {
@@ -52,7 +53,7 @@ export default function Today() {
         <Pressable
           accessibilityRole="checkbox"
           accessibilityState={{ checked: actionDone }}
-          onPress={() => markStep(verse.id, { action: !actionDone })}
+          onPress={() => { markStep(verse.id, { action: !actionDone }); pushStep(verse.id, { action: !actionDone }); }}
           style={{ flexDirection: 'row', gap: 12, alignItems: 'flex-start' }}
         >
           <View style={{ width: 24, height: 24, borderRadius: 12, borderWidth: 2, borderColor: actionDone ? colors.teal : '#9DB9BB', backgroundColor: actionDone ? colors.teal : colors.white, alignItems: 'center', justifyContent: 'center', marginTop: 2 }}>

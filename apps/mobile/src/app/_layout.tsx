@@ -7,6 +7,9 @@ import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { ActivityIndicator, View } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { useEffect } from 'react';
+import { pullProgress } from '@/lib/api';
+import { AuthProvider } from '@/lib/clerk';
 import { useHydrated } from '@/lib/useHydrated';
 import { colors } from '@/theme';
 
@@ -19,6 +22,11 @@ export default function RootLayout() {
   });
   const hydrated = useHydrated();
 
+  // When a server is configured, refresh progress from it once the saved session is loaded.
+  useEffect(() => {
+    if (hydrated) pullProgress().catch(() => {});
+  }, [hydrated]);
+
   if (!fontsLoaded || !hydrated) {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: colors.indigo }}>
@@ -27,6 +35,7 @@ export default function RootLayout() {
     );
   }
   return (
+    <AuthProvider>
     <SafeAreaProvider>
       <StatusBar style="dark" />
       <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: colors.canvas }, animation: 'slide_from_right' }}>
@@ -35,5 +44,6 @@ export default function RootLayout() {
         <Stack.Screen name="streak" options={{ presentation: 'fullScreenModal', animation: 'fade' }} />
       </Stack>
     </SafeAreaProvider>
+    </AuthProvider>
   );
 }

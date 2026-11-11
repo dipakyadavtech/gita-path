@@ -9,7 +9,9 @@ export function usePlayer(durationSec = 58, speed = 1, onEnd?: () => void) {
   const [playing, setPlaying] = useState(false);
   const [position, setPosition] = useState(0);
   const end = useRef(onEnd);
-  end.current = onEnd;
+  useEffect(() => {
+    end.current = onEnd;
+  }, [onEnd]);
 
   useEffect(() => {
     if (!playing) return;

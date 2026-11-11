@@ -1,0 +1,43 @@
+# Local stack: docker compose up --build
+# Put real keys in a .env file next to this file (see .env.example). Never commit it.
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: gitapath
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports: ["5432:5432"]
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      retries: 10
+
+  redis:
+    image: redis:7
+    ports: ["6379:6379"]
+
+  api:
+    build:
+      context: .
+      dockerfile: services/api/Dockerfile
+    depends_on:
+      postgres: { condition: service_healthy }
+    environment:
+      DATABASE_URL: jdbc:postgresql://postgres:5432/gitapath
+      DATABASE_USER: postgres
+      DATABASE_PASSWORD: postgres
+      CLERK_ISSUER: ${CLERK_ISSUER:-}
+      CMS_WEBHOOK_SECRET: ${CMS_WEBHOOK_SECRET:-dev-cms-secret}
+      REVENUECAT_WEBHOOK_SECRET: ${REVENUECAT_WEBHOOK_SECRET:-dev-rc-secret}
+      GUIDE_LLM_URL: ${GUIDE_LLM_URL:-}
+      GUIDE_LLM_KEY: ${GUIDE_LLM_KEY:-}
+      GUIDE_LLM_MODEL: ${GUIDE_LLM_MODEL:-}
+      ALLOWED_ORIGINS: ${ALLOWED_ORIGINS:-*}
+      ADMIN_USERS: ${ADMIN_USERS:-}
+      DEV_AUTH_ENABLED: ${DEV_AUTH_ENABLED:-true}
+    ports: ["8080:8080"]
+
+volumes:
+  pgdata:
