@@ -8,7 +8,7 @@ Workflow: GitHub issue → work on `dev` → push `origin dev` → close issue. 
 - [x] M3 Mobile Explore + AI Guide E1–E8 (#3)
 - [x] M4 Mobile Family Circle, account, states F1–F3, A1–A4, X1–X3 (#4)
 - [x] M5 Backend: Spring Boot modular monolith + PostgreSQL, 18 tests (#5)
-- [~] M5b Integration: docker-compose, mobile ↔ API sync, Clerk sign-in (#8)
+- [x] M5b Integration: docker-compose, mobile ↔ API sync, Clerk sign-in (#8)
 - [ ] M6 Strapi CMS + React admin portal W1–W3 (#6)
 - [ ] M7 Kids mode K1–K10, app + API (#7)
 
