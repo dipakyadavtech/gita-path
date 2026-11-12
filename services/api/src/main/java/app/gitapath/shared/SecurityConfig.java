@@ -42,7 +42,7 @@ class SecurityConfig {
                         .requestMatchers("/actuator/health/**", "/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html").permitAll()
                         .requestMatchers(HttpMethod.POST, "/v1/auth/dev-token").permitAll()
                         .requestMatchers("/internal/**", "/webhooks/**").permitAll() // shared-secret checked in controllers
-                        .requestMatchers(HttpMethod.GET, "/v1/verses/**", "/v1/chapters/**", "/v1/stories/**", "/v1/topics/**", "/v1/search").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/v1/verses/**", "/v1/chapters/**", "/v1/stories/**", "/v1/topics/**", "/v1/search", "/v1/kids/shlokas").permitAll()
                         .requestMatchers("/admin/**").hasRole("ADMIN")
                         .anyRequest().authenticated())
                 .oauth2ResourceServer(o -> o.jwt(j -> j.jwtAuthenticationConverter(converter(props))));

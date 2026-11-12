@@ -1,0 +1,493 @@
+{
+  "shlokas": [
+    {
+      "id": "ks-4.7",
+      "verseId": "4.7",
+      "title": "When goodness needs help",
+      "character": "moru",
+      "lines": [
+        {
+          "sanskrit": "यदा यदा हि धर्मस्य ग्लानिर्भवति भारत ।",
+          "words": [
+            {
+              "dev": "यदा",
+              "iast": "yadā"
+            },
+            {
+              "dev": "यदा",
+              "iast": "yadā"
+            },
+            {
+              "dev": "हि",
+              "iast": "hi"
+            },
+            {
+              "dev": "धर्मस्य",
+              "iast": "dharmasya"
+            },
+            {
+              "dev": "ग्लानिर्",
+              "iast": "glānir"
+            },
+            {
+              "dev": "भवति",
+              "iast": "bhavati"
+            },
+            {
+              "dev": "भारत",
+              "iast": "bhārata"
+            }
+          ]
+        },
+        {
+          "sanskrit": "अभ्युत्थानमधर्मस्य तदात्मानं सृजाम्यहम् ॥",
+          "words": [
+            {
+              "dev": "अभ्युत्थानम्",
+              "iast": "abhyutthānam"
+            },
+            {
+              "dev": "अधर्मस्य",
+              "iast": "adharmasya"
+            },
+            {
+              "dev": "तदा",
+              "iast": "tadā"
+            },
+            {
+              "dev": "आत्मानं",
+              "iast": "ātmānaṁ"
+            },
+            {
+              "dev": "सृजामि",
+              "iast": "sṛjāmy"
+            },
+            {
+              "dev": "अहम्",
+              "iast": "aham"
+            }
+          ]
+        }
+      ],
+      "simpleMeaning": "Whenever being good gets hard and unkindness grows, Krishna says: I come to help.",
+      "pocketWord": {
+        "word": "Dharma",
+        "meaning": "Doing what is kind and honest, and looking after others."
+      }
+    },
+    {
+      "id": "ks-6.5",
+      "verseId": "6.5",
+      "title": "Be your own best friend",
+      "character": "gopal",
+      "lines": [
+        {
+          "sanskrit": "उद्धरेदात्मनात्मानं नात्मानमवसादयेत् ।",
+          "words": [
+            {
+              "dev": "उद्धरेद्",
+              "iast": "uddhared"
+            },
+            {
+              "dev": "आत्मना",
+              "iast": "ātmanā"
+            },
+            {
+              "dev": "आत्मानं",
+              "iast": "ātmānaṁ"
+            },
+            {
+              "dev": "न",
+              "iast": "na"
+            },
+            {
+              "dev": "आत्मानम्",
+              "iast": "ātmānam"
+            },
+            {
+              "dev": "अवसादयेत्",
+              "iast": "avasādayet"
+            }
+          ]
+        },
+        {
+          "sanskrit": "आत्मैव ह्यात्मनो बन्धुरात्मैव रिपुरात्मनः ॥",
+          "words": [
+            {
+              "dev": "आत्मा",
+              "iast": "ātmā"
+            },
+            {
+              "dev": "एव",
+              "iast": "eva"
+            },
+            {
+              "dev": "हि",
+              "iast": "hy"
+            },
+            {
+              "dev": "आत्मनो",
+              "iast": "ātmano"
+            },
+            {
+              "dev": "बन्धुर्",
+              "iast": "bandhur"
+            },
+            {
+              "dev": "आत्मा",
+              "iast": "ātmā"
+            },
+            {
+              "dev": "एव",
+              "iast": "eva"
+            },
+            {
+              "dev": "रिपुर्",
+              "iast": "ripur"
+            },
+            {
+              "dev": "आत्मनः",
+              "iast": "ātmanaḥ"
+            }
+          ]
+        }
+      ],
+      "simpleMeaning": "Lift yourself up with kind words to yourself. You can be your own best friend.",
+      "pocketWord": {
+        "word": "Bandhu",
+        "meaning": "A friend who always stays by your side."
+      }
+    },
+    {
+      "id": "ks-2.47",
+      "verseId": "2.47",
+      "title": "Try your best",
+      "character": "chintu",
+      "lines": [
+        {
+          "sanskrit": "कर्मण्येवाधिकारस्ते मा फलेषु कदाचन ।",
+          "words": [
+            {
+              "dev": "कर्मणि",
+              "iast": "karmaṇy"
+            },
+            {
+              "dev": "एव",
+              "iast": "eva"
+            },
+            {
+              "dev": "अधिकारस्",
+              "iast": "adhikāras"
+            },
+            {
+              "dev": "ते",
+              "iast": "te"
+            },
+            {
+              "dev": "मा",
+              "iast": "mā"
+            },
+            {
+              "dev": "फलेषु",
+              "iast": "phaleṣu"
+            },
+            {
+              "dev": "कदाचन",
+              "iast": "kadācana"
+            }
+          ]
+        },
+        {
+          "sanskrit": "मा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि ॥",
+          "words": [
+            {
+              "dev": "मा",
+              "iast": "mā"
+            },
+            {
+              "dev": "कर्म-फल-हेतुर्",
+              "iast": "karma-phala-hetur"
+            },
+            {
+              "dev": "भूर्",
+              "iast": "bhūr"
+            },
+            {
+              "dev": "मा",
+              "iast": "mā"
+            },
+            {
+              "dev": "ते",
+              "iast": "te"
+            },
+            {
+              "dev": "सङ्गो",
+              "iast": "saṅgo"
+            },
+            {
+              "dev": "अस्तु",
+              "iast": "'stv"
+            },
+            {
+              "dev": "अकर्मणि",
+              "iast": "akarmaṇi"
+            }
+          ]
+        }
+      ],
+      "simpleMeaning": "Do your very best, and don't worry about winning. Trying is the part that is yours.",
+      "pocketWord": {
+        "word": "Karma",
+        "meaning": "The things you do, big and small."
+      }
+    }
+  ],
+  "episodes": {
+    "k1": {
+      "shlokaId": "ks-4.7",
+      "moral": "Telling the truth, even when it's hard, makes everyone trust you more.",
+      "talkAbout": "Ask: Why do you think Krishna shared the butter with his friends and the calves?",
+      "captions": [
+        {
+          "at": 0,
+          "hi": "गोकुल में सुबह हुई।",
+          "en": "Morning came to the village of Gokul."
+        },
+        {
+          "at": 0.2,
+          "hi": "माखन की मटकी ऊँची टँगी थी।",
+          "en": "The butter pot hung high up on a rope."
+        },
+        {
+          "at": 0.4,
+          "hi": "कृष्ण और दोस्तों ने मिलकर सीढ़ी बनाई।",
+          "en": "Krishna and his friends made a ladder together."
+        },
+        {
+          "at": 0.6,
+          "hi": "माखन सबने बाँटकर खाया — बछड़ों ने भी!",
+          "en": "Everyone shared the butter — even the calves!"
+        },
+        {
+          "at": 0.8,
+          "hi": "माँ यशोदा ने पूछा, तो कृष्ण ने सच बताया।",
+          "en": "When Mother Yashoda asked, Krishna told the truth."
+        }
+      ]
+    },
+    "k2": {
+      "shlokaId": "ks-4.7",
+      "moral": "When we work together, we can carry even a mountain.",
+      "talkAbout": "Ask: Who helps you when things feel too heavy?",
+      "captions": [
+        {
+          "at": 0,
+          "hi": "आसमान में काले बादल छा गए।",
+          "en": "Dark clouds filled the sky."
+        },
+        {
+          "at": 0.25,
+          "hi": "तेज़ बारिश से सब डर गए।",
+          "en": "Heavy rain made everyone afraid."
+        },
+        {
+          "at": 0.5,
+          "hi": "कृष्ण ने गोवर्धन पर्वत उठा लिया।",
+          "en": "Krishna lifted Govardhan Hill like an umbrella."
+        },
+        {
+          "at": 0.75,
+          "hi": "सबने अपनी लाठी लगाकर मदद की।",
+          "en": "Everyone held up their sticks to help."
+        }
+      ]
+    },
+    "k3": {
+      "shlokaId": "ks-6.5",
+      "moral": "Being brave means staying calm and kind, even when you feel scared.",
+      "talkAbout": "Ask: What helps you feel brave?",
+      "captions": [
+        {
+          "at": 0,
+          "hi": "यमुना का पानी काला हो गया था।",
+          "en": "The Yamuna river had turned dark."
+        },
+        {
+          "at": 0.3,
+          "hi": "कृष्ण शांत मन से नदी में उतरे।",
+          "en": "Krishna stepped into the river with a calm heart."
+        },
+        {
+          "at": 0.6,
+          "hi": "उन्होंने कालिया को दयालु बनने को कहा।",
+          "en": "He asked Kaliya to be gentle and leave in peace."
+        },
+        {
+          "at": 0.85,
+          "hi": "नदी फिर से साफ़ और नीली हो गई।",
+          "en": "The river became clean and blue again."
+        }
+      ]
+    }
+  },
+  "words": [
+    {
+      "id": "dharma",
+      "word": "Dharma",
+      "sanskrit": "धर्म",
+      "meaning": "Doing what is good and looking after others",
+      "emoji": "🛡️"
+    },
+    {
+      "id": "satya",
+      "word": "Satya",
+      "sanskrit": "सत्य",
+      "meaning": "Telling the truth with a kind smile",
+      "emoji": "☀️"
+    },
+    {
+      "id": "mitrata",
+      "word": "Mitrata",
+      "sanskrit": "मित्रता",
+      "meaning": "Being a loyal and caring friend",
+      "emoji": "🤝"
+    },
+    {
+      "id": "makhan",
+      "word": "Makhan",
+      "sanskrit": "माखन",
+      "meaning": "Sweet, fresh white butter",
+      "emoji": "🧈"
+    },
+    {
+      "id": "seva",
+      "word": "Seva",
+      "sanskrit": "सेवा",
+      "meaning": "Helping without being asked",
+      "emoji": "🌼"
+    },
+    {
+      "id": "karma",
+      "word": "Karma",
+      "sanskrit": "कर्म",
+      "meaning": "The things you do, big and small",
+      "emoji": "🪔"
+    }
+  ],
+  "stickers": [
+    {
+      "id": "butter-pot",
+      "name": "Butter Pot",
+      "emoji": "🏺",
+      "how": "Watch Bal Krishna and the butter pot",
+      "rule": {
+        "story": "k1"
+      }
+    },
+    {
+      "id": "umbrella-hill",
+      "name": "Umbrella Hill",
+      "emoji": "⛰️",
+      "how": "Watch Govardhan, the umbrella hill",
+      "rule": {
+        "story": "k2"
+      }
+    },
+    {
+      "id": "blue-river",
+      "name": "Blue River",
+      "emoji": "🌊",
+      "how": "Watch Kaliya and the river",
+      "rule": {
+        "story": "k3"
+      }
+    },
+    {
+      "id": "golden-flute",
+      "name": "Golden Flute",
+      "emoji": "🪈",
+      "how": "Sing \"When goodness needs help\"",
+      "rule": {
+        "shloka": "ks-4.7"
+      }
+    },
+    {
+      "id": "lotus",
+      "name": "Lotus Bloom",
+      "emoji": "🪷",
+      "how": "Sing \"Be your own best friend\"",
+      "rule": {
+        "shloka": "ks-6.5"
+      }
+    },
+    {
+      "id": "little-bow",
+      "name": "Little Bow",
+      "emoji": "🏹",
+      "how": "Sing \"Try your best\"",
+      "rule": {
+        "shloka": "ks-2.47"
+      }
+    },
+    {
+      "id": "dancing-moru",
+      "name": "Dancing Moru",
+      "emoji": "🦚",
+      "how": "Win one word game",
+      "rule": {
+        "games": 1
+      }
+    },
+    {
+      "id": "surabhi",
+      "name": "Surabhi Cow",
+      "emoji": "🐄",
+      "how": "Win three word games",
+      "rule": {
+        "games": 3
+      }
+    },
+    {
+      "id": "diya",
+      "name": "Little Diya",
+      "emoji": "🪔",
+      "how": "Collect 50 stars",
+      "rule": {
+        "stars": 50
+      }
+    },
+    {
+      "id": "chariot",
+      "name": "Divine Chariot",
+      "emoji": "🛞",
+      "how": "Collect 120 stars",
+      "rule": {
+        "stars": 120
+      }
+    },
+    {
+      "id": "kadamba",
+      "name": "Kadamba Tree",
+      "emoji": "🌳",
+      "how": "Finish all three magic steps on 3 days",
+      "rule": {
+        "questDays": 3
+      }
+    },
+    {
+      "id": "mystery",
+      "name": "Mystery Gift",
+      "emoji": "🎁",
+      "how": "Collect every other sticker",
+      "rule": {
+        "allOthers": true
+      }
+    }
+  ],
+  "rewards": {
+    "story": 20,
+    "shloka": 15,
+    "game": 10,
+    "questBonus": 25
+  }
+}

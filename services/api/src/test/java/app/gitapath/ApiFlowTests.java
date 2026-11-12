@@ -1,6 +1,7 @@
 package app.gitapath;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.patch;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -118,5 +119,42 @@ class ApiFlowTests {
                 .andExpect(jsonPath("$[?(@.id == '" + id + "')].reviewed_by").value("dev-9876500011"));
         mvc.perform(get("/admin/v1/verses/2.47").header("Authorization", admin))
                 .andExpect(status().isOk()).andExpect(jsonPath("$.verse.id").value("2.47")).andExpect(jsonPath("$.checksum").isNotEmpty());
+    }
+
+    @Test
+    void kidsProfilesProgressAndSettingsBelongToTheParent() throws Exception {
+        mvc.perform(get("/v1/kids/shlokas")).andExpect(status().isOk())
+                .andExpect(jsonPath("$.length()").value(3)).andExpect(jsonPath("$[?(@.id == 'ks-4.7')].pocketWord.word").value("Dharma"));
+
+        String parent = token("9876500020", false);
+        String kid = "5b0f0f3e-3c1a-4c8e-9a51-1f2d3c4b5a60";
+        mvc.perform(post("/v1/kids/profiles").header("Authorization", parent).contentType(MediaType.APPLICATION_JSON)
+                        .content("{\"id\":\"" + kid + "\",\"name\":\"Aarav\",\"age\":8,\"avatar\":\"moru\"}"))
+                .andExpect(status().isCreated());
+        mvc.perform(post("/v1/kids/profiles").header("Authorization", parent).contentType(MediaType.APPLICATION_JSON)
+                        .content("{\"id\":\"" + kid + "\",\"name\":\"Aarav\",\"age\":2}"))
+                .andExpect(status().isBadRequest());
+        mvc.perform(post("/v1/kids/profiles/" + kid + "/progress").header("Authorization", parent).contentType(MediaType.APPLICATION_JSON)
+                        .content("{\"kind\":\"story\",\"itemId\":\"k1\",\"stars\":20}")).andExpect(status().isOk());
+        mvc.perform(post("/v1/kids/profiles/" + kid + "/progress").header("Authorization", parent).contentType(MediaType.APPLICATION_JSON)
+                        .content("{\"kind\":\"shloka\",\"itemId\":\"ks-4.7\",\"stars\":15}"))
+                .andExpect(jsonPath("$.stars").value(35)).andExpect(jsonPath("$.items.length()").value(2));
+
+        String stranger = token("9876500021", false);
+        mvc.perform(get("/v1/kids/profiles/" + kid + "/progress").header("Authorization", stranger)).andExpect(status().isNotFound());
+        mvc.perform(post("/v1/kids/profiles").header("Authorization", stranger).contentType(MediaType.APPLICATION_JSON)
+                        .content("{\"id\":\"" + kid + "\",\"name\":\"Taken\",\"age\":6}"))
+                .andExpect(status().isForbidden());
+
+        mvc.perform(get("/v1/kids/settings").header("Authorization", parent)).andExpect(jsonPath("$.dailyLimitMin").value(15));
+        mvc.perform(patch("/v1/kids/settings").header("Authorization", parent).contentType(MediaType.APPLICATION_JSON)
+                        .content("{\"dailyLimitMin\":20,\"bedtimeOn\":true,\"bedtimeStart\":\"20:00\",\"bedtimeEnd\":\"07:00\",\"chantGate\":false,\"narration\":\"hi\",\"strictness\":\"gentle\"}"))
+                .andExpect(status().isOk());
+        mvc.perform(get("/v1/kids/settings").header("Authorization", parent))
+                .andExpect(jsonPath("$.dailyLimitMin").value(20)).andExpect(jsonPath("$.chantGate").value(false));
+
+        mvc.perform(post("/internal/content/kids-shlokas").header("X-Webhook-Secret", "dev-cms-secret").contentType(MediaType.APPLICATION_JSON)
+                        .content("{\"id\":\"ks-4.7\",\"verseId\":\"4.7\",\"title\":\"x\",\"data\":{\"lines\":[{\"sanskrit\":\"wrong\"},{\"sanskrit\":\"wrong\"}]}}"))
+                .andExpect(status().isConflict());
     }
 }

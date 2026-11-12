@@ -72,6 +72,27 @@ Once the URL is set:
 
 When `CLERK_ISSUER` is set, the API accepts Clerk tokens and turns dev tokens off. In production, also set `DEV_AUTH_ENABLED=false`.
 
+## Kids mode
+
+To open it: Profile → **Kids mode**.
+
+- **Parent PIN:** the first visit asks a grown-up to set a 4-digit PIN. The PIN stays on the phone.
+- **Children:** add up to 4 profiles, aged 3–12.
+- **What children do:**
+  - watch short Krishna stories with Hindi/English captions,
+  - sing shlokas word by word with Moru,
+  - play a word-matching game,
+  - collect stickers and a certificate.
+- **Parent zone** (behind the PIN):
+  - daily screen time and extra minutes,
+  - bedtime lock,
+  - "sing before stories",
+  - story language,
+  - what each child learned this week,
+  - leaving Kids mode.
+- **Syncing:** with `EXPO_PUBLIC_API_URL` set, profiles, stars and settings sync to `/v1/kids/*`. After signing in again on a new phone, they come back.
+- **Forgot PIN?** Sign out and back in; this clears the PIN.
+
 ## 4. Content studio and admin portal
 
 ```bash
@@ -96,7 +117,7 @@ With Docker, `docker compose up --build` also starts Strapi on port 1337.
 ## Tests
 
 ```bash
-cd services/api && ./scripts/test-api.sh                      # 19 API tests + module boundary check
+cd services/api && ./scripts/test-api.sh                      # 20 API tests + module boundary check
 cd apps/mobile && npx tsc --noEmit && npx expo lint            # typecheck + lint
 cd apps/admin && npm run build                                 # typecheck + build
 ```

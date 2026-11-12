@@ -7,6 +7,7 @@ import { router } from 'expo-router';
 import { apiEnabled, devToken, pullProgress } from './api';
 import { useClerkFlows } from './clerk';
 import { authMode } from './config';
+import { useKids } from './kids/store';
 import { useApp, type Session } from './store';
 
 export { authMode } from './config';
@@ -81,6 +82,7 @@ export function useAuth() {
     async signOut() {
       await flows.signOut().catch(() => {});
       reset();
+      useKids.getState().reset(); // also clears the Kids PIN ("Forgot PIN?")
       router.replace('/splash');
     },
   };

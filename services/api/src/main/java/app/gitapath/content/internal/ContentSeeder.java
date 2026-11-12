@@ -11,6 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
+import org.springframework.core.annotation.Order;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,6 +19,7 @@ import tools.jackson.core.type.TypeReference;
 
 /** Loads the starter content (packages/content/data) into an empty database. */
 @Component
+@Order(1) // before other modules' seeders that depend on verses
 class ContentSeeder implements ApplicationRunner {
     private static final Logger log = LoggerFactory.getLogger(ContentSeeder.class);
     private final ContentStore store;

@@ -37,7 +37,7 @@ These are enforced in `src/lib/guard.js`:
 | Story | yes | Mahabharata episodes; `kids_safe` / `kids` decide where they show |
 | Translation | not yet | Per-language meaning; the API endpoint comes with multilingual content |
 | Topic track | not yet | Themed verse lists |
-| Kids shloka | with #7 | Kids mode |
+| Kids shloka | yes | Kids mode; each Sanskrit line must match the master verse exactly or the API refuses it |
 
 ## Settings
 

@@ -42,10 +42,26 @@ function storyBody(d) {
   };
 }
 
+function kidsShlokaBody(d) {
+  return {
+    id: d.shloka_id,
+    verseId: d.verse_id,
+    title: d.title,
+    data: {
+      lines: list(d.lines),
+      simpleMeaning: d.simple_meaning,
+      pocketWord: d.pocket_word || null,
+      character: d.character || 'moru',
+      ageBand: d.age_band || null,
+    },
+  };
+}
+
 /** Content types that sync to the API, with how to build the request. */
 const TARGETS = {
   'api::verse.verse': { path: '/internal/content/verses', body: verseBody, label: (d) => `Verse ${d.verse_id}` },
   'api::story.story': { path: '/internal/content/stories', body: storyBody, label: (d) => `Story ${d.story_id}` },
+  'api::kids-shloka.kids-shloka': { path: '/internal/content/kids-shlokas', body: kidsShlokaBody, label: (d) => `Kids shloka ${d.shloka_id}` },
 };
 
 /**
@@ -68,10 +84,13 @@ async function push(uid, doc) {
   if (res.ok) return res.json().catch(() => ({}));
   const body = await res.json().catch(() => ({}));
   if (res.status === 409) {
+    if (uid === 'api::kids-shloka.kids-shloka') {
+      throw new Error(`${target.label(doc)}: ${body.message || 'each line must match the master verse Sanskrit exactly.'}`);
+    }
     throw new Error(`${target.label(doc)}: the Sanskrit differs from the master text. A scholar must tick "sanskrit change approved" before publishing.`);
   }
   if (res.status === 403) throw new Error('The API rejected the CMS webhook secret. CMS_WEBHOOK_SECRET must match on both sides.');
   throw new Error(`The API refused ${target.label(doc)}: ${body.message || res.status}`);
 }
 
-module.exports = { push, TARGETS, verseBody, storyBody };
+module.exports = { push, TARGETS, verseBody, storyBody, kidsShlokaBody };

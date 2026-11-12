@@ -5,13 +5,18 @@
     "singularName": "kids-shloka",
     "pluralName": "kids-shlokas",
     "displayName": "Kids shloka",
-    "description": "A short shloka for Kids mode, with a simple meaning and a character story."
+    "description": "A short shloka for Kids mode. The Sanskrit lines must match the master verse exactly (the API checks)."
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
+    "shloka_id": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
     "verse_id": {
       "type": "string",
       "required": true
@@ -27,6 +32,9 @@
     "simple_meaning": {
       "type": "text",
       "required": true
+    },
+    "pocket_word": {
+      "type": "json"
     },
     "character": {
       "type": "enumeration",

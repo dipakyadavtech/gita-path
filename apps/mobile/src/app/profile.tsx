@@ -56,6 +56,7 @@ export default function Profile() {
         <Stat value={`${Object.keys(watched).length}`} label="stories watched" />
       </Row>
       <Caps>Your space</Caps>
+      <MenuRow icon="happy-outline" label="Kids mode" sub="Stories, shlokas and games for children, with a parent PIN" onPress={() => router.push('/kids')} />
       <MenuRow icon="bookmark-outline" label="Saved and notes" sub={`${Object.keys(bookmarks).length} verses`} onPress={() => router.push('/saved')} />
       <MenuRow icon="download-outline" label="Downloads" sub="Audio and stories on this phone" onPress={() => router.push('/downloads')} />
       <MenuRow icon="search" label="Search" sub="Verses, stories, topics" onPress={() => router.push('/search')} />

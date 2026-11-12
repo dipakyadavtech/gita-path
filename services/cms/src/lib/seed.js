@@ -40,6 +40,16 @@ async function seed(strapi) {
         data: { topic_id: t.id, title: t.title, verses: t.verses, moods: t.moods, ...approved },
       });
     }
+    const kids = read('kids.json');
+    for (const k of kids.shlokas) {
+      await strapi.documents('api::kids-shloka.kids-shloka').create({
+        status: 'published',
+        data: {
+          shloka_id: k.id, verse_id: k.verseId, title: k.title, lines: k.lines, simple_meaning: k.simpleMeaning,
+          pocket_word: k.pocketWord, character: k.character, ...approved,
+        },
+      });
+    }
     strapi.log.info('[gita-path] Imported seed content from packages/content.');
   } finally {
     state.bypass = false;

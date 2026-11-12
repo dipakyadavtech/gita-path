@@ -1,6 +1,6 @@
 # Gita Path API (Spring Boot modular monolith)
 
-Modules (Spring Modulith): `identity`, `content`, `learning`, `circle`, `billing`, `guide`, `admin`, `shared`.
+Modules (Spring Modulith): `identity`, `content`, `learning`, `circle`, `billing`, `guide`, `kids`, `admin`, `shared`.
 
 ## Run locally
 Needs Java 21+ and PostgreSQL 16 on localhost:5432.
@@ -27,5 +27,5 @@ Add `"admin": true` to get an admin token for `/admin/v1/*`. Dev tokens are disa
 
 ## Tests
 ```bash
-./scripts/test-api.sh      # recreates gitapath_test DB, runs 19 tests incl. module boundary check
+./scripts/test-api.sh      # recreates gitapath_test DB, runs 20 tests incl. module boundary check
 ```

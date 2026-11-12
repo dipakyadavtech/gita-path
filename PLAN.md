@@ -10,7 +10,7 @@ Workflow: GitHub issue → work on `dev` → push `origin dev` → close issue. 
 - [x] M5 Backend: Spring Boot modular monolith + PostgreSQL, 18 tests (#5)
 - [x] M5b Integration: docker-compose, mobile ↔ API sync, Clerk sign-in (#8)
 - [x] M6 Strapi CMS + React admin portal W1–W3 (#6)
-- [ ] M7 Kids mode K1–K10, app + API (#7)
+- [x] M7 Kids mode K1–K10, app + API (#7)
 
 ## Notes
 - Auth: Clerk when keys are set; dev login (OTP 123456) otherwise.
