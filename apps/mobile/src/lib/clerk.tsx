@@ -4,8 +4,8 @@
 //   2. SSO connections → enable Google and Apple.
 //   3. Native applications → add the redirect URL  gitapath://  (the app scheme in app.json).
 // The API verifies Clerk tokens when CLERK_ISSUER is set on the server.
-import { ClerkProvider, getClerkInstance, useAuth as useClerkAuth, useSignIn, useSignUp, useSSO, isClerkAPIResponseError } from '@clerk/clerk-expo';
-import { tokenCache } from '@clerk/clerk-expo/token-cache';
+import { ClerkProvider, getClerkInstance, useAuth as useClerkAuth, useSignIn, useSignUp, useSSO, isClerkAPIResponseError } from '@clerk/expo';
+import { tokenCache } from '@clerk/expo/token-cache';
 import * as Linking from 'expo-linking';
 import * as WebBrowser from 'expo-web-browser';
 import { useEffect, type ReactNode } from 'react';
@@ -34,10 +34,23 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 }
 
 const toE164 = (phone: string) => `+91${phone.replace(/\D/g, '').slice(-10)}`;
+
+// Which flow the code we sent belongs to: an existing account or a new one.
 let pending: 'signIn' | 'signUp' | null = null;
 
-const message = (e: unknown, fallback: string) =>
-  isClerkAPIResponseError(e) ? e.errors[0]?.longMessage ?? e.errors[0]?.message ?? fallback : fallback;
+// Clerk Core 3 returns { error } instead of throwing. API errors carry the detailed code in errors[0].
+function errCode(e: unknown): string | undefined {
+  if (isClerkAPIResponseError(e)) return e.errors[0]?.code;
+  return (e as { code?: string } | null)?.code;
+}
+function errMessage(e: unknown, fallback: string): string {
+  if (isClerkAPIResponseError(e)) return e.errors[0]?.longMessage ?? e.errors[0]?.message ?? fallback;
+  const c = e as { longMessage?: string; message?: string } | null;
+  return c?.longMessage ?? c?.message ?? fallback;
+}
+function check(result: { error: unknown }, fallback: string) {
+  if (result.error) throw new Error(errMessage(result.error, fallback));
+}
 
 function sessionFromClerk(provider: Session['provider'], phone?: string): Session {
   const user = getClerkInstance().user;
@@ -51,45 +64,36 @@ function sessionFromClerk(provider: Session['provider'], phone?: string): Sessio
 
 /** Clerk versions of the sign-in actions used by useAuth(). */
 export function useClerkFlows() {
-  const { signIn, setActive: setSignInActive } = useSignIn();
-  const { signUp, setActive: setSignUpActive } = useSignUp();
+  const { signIn } = useSignIn();
+  const { signUp } = useSignUp();
   const { startSSOFlow } = useSSO();
 
   return {
     async startPhone(phone: string) {
-      if (!signIn || !signUp) throw new Error('Sign-in is still loading. Try again in a moment.');
       const identifier = toE164(phone);
-      try {
-        const attempt = await signIn.create({ identifier });
-        const factor = attempt.supportedFirstFactors?.find((f) => f.strategy === 'phone_code');
-        if (!factor || !('phoneNumberId' in factor)) throw new Error('Phone sign-in is not enabled in Clerk.');
-        await signIn.prepareFirstFactor({ strategy: 'phone_code', phoneNumberId: factor.phoneNumberId });
-        pending = 'signIn';
-      } catch (e) {
+      const created = await signIn.create({ identifier });
+      if (created.error) {
         // New number → create an account instead.
-        if (isClerkAPIResponseError(e) && e.errors[0]?.code === 'form_identifier_not_found') {
-          await signUp.create({ phoneNumber: identifier });
-          await signUp.preparePhoneNumberVerification({ strategy: 'phone_code' });
-          pending = 'signUp';
-        } else {
-          throw new Error(message(e, e instanceof Error ? e.message : 'Could not send the code.'));
+        if (errCode(created.error) !== 'form_identifier_not_found') {
+          throw new Error(errMessage(created.error, 'Could not send the code.'));
         }
+        check(await signUp.create({ phoneNumber: identifier }), 'Could not create your account.');
+        check(await signUp.verifications.sendPhoneCode(), 'Could not send the code.');
+        pending = 'signUp';
+        return true;
       }
+      check(await signIn.phoneCode.sendCode(), 'Phone sign-in is not enabled in Clerk.');
+      pending = 'signIn';
       return true;
     },
     async verifyOtp(phone: string, code: string): Promise<Session> {
-      try {
-        if (pending === 'signUp' && signUp) {
-          const r = await signUp.attemptPhoneNumberVerification({ code });
-          if (r.status !== 'complete' || !r.createdSessionId) throw new Error('Please finish sign-up in the app.');
-          await setSignUpActive!({ session: r.createdSessionId });
-        } else if (signIn) {
-          const r = await signIn.attemptFirstFactor({ strategy: 'phone_code', code });
-          if (r.status !== 'complete' || !r.createdSessionId) throw new Error('That code did not work.');
-          await setSignInActive!({ session: r.createdSessionId });
-        }
-      } catch (e) {
-        throw new Error(message(e, e instanceof Error ? e.message : 'That code is not right.'));
+      if (pending === 'signUp') {
+        check(await signUp.verifications.verifyPhoneCode({ code }), 'That code is not right.');
+        // finalize() fails with a clear message if Clerk still needs more details (e.g. a required name).
+        check(await signUp.finalize(), 'Please finish sign-up: more details are required in Clerk.');
+      } else {
+        check(await signIn.phoneCode.verifyCode({ code }), 'That code is not right.');
+        check(await signIn.finalize(), 'Could not start your session.');
       }
       pending = null;
       return sessionFromClerk('clerk', phone);

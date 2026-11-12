@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "expo-router/entry",
   "dependencies": {
-    "@clerk/clerk-expo": "^2.20.1",
+    "@clerk/expo": "^4.15.1",
     "@expo-google-fonts/baloo-2": "^0.4.2",
     "@expo-google-fonts/inter": "^0.4.2",
     "@expo-google-fonts/noto-serif-devanagari": "^0.4.1",
