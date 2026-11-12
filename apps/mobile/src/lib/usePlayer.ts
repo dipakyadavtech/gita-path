@@ -16,18 +16,19 @@ export function usePlayer(durationSec = 58, speed = 1, onEnd?: () => void) {
   useEffect(() => {
     if (!playing) return;
     const t = setInterval(() => {
-      setPosition((p) => {
-        const next = p + 0.25 * speed;
-        if (next >= durationSec) {
-          setPlaying(false);
-          end.current?.();
-          return durationSec;
-        }
-        return next;
-      });
+      // Keep the updater pure: React may run it during render, so no side effects here.
+      setPosition((p) => Math.min(durationSec, p + 0.25 * speed));
     }, 250);
     return () => clearInterval(t);
   }, [playing, speed, durationSec]);
+
+  // Reaching the end stops playback and fires onEnd outside of render.
+  useEffect(() => {
+    if (playing && position >= durationSec) {
+      setPlaying(false);
+      end.current?.();
+    }
+  }, [playing, position, durationSec]);
 
   return {
     playing,
