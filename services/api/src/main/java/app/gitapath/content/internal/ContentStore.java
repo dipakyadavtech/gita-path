@@ -38,16 +38,16 @@ class ContentStore {
 
     void upsertVerse(Verse v) {
         db.sql("""
-                insert into verses (id, chapter, number, sanskrit, iast, meaning, life_note, words, themes, actions, checksum, updated_at)
-                values (:id, :chapter, :number, cast(:sanskrit as jsonb), :iast, :meaning, :lifeNote, cast(:words as jsonb), cast(:themes as jsonb), cast(:actions as jsonb), :checksum, now())
+                insert into verses (id, chapter, number, sanskrit, iast, meaning, life_note, words, themes, actions, audio_url, checksum, updated_at)
+                values (:id, :chapter, :number, cast(:sanskrit as jsonb), :iast, :meaning, :lifeNote, cast(:words as jsonb), cast(:themes as jsonb), cast(:actions as jsonb), :audioUrl, :checksum, now())
                 on conflict (id) do update set chapter = excluded.chapter, number = excluded.number, sanskrit = excluded.sanskrit,
                   iast = excluded.iast, meaning = excluded.meaning, life_note = excluded.life_note, words = excluded.words,
-                  themes = excluded.themes, actions = excluded.actions, checksum = excluded.checksum, updated_at = now()
+                  themes = excluded.themes, actions = excluded.actions, audio_url = excluded.audio_url, checksum = excluded.checksum, updated_at = now()
                 """)
                 .param("id", v.id()).param("chapter", v.chapter()).param("number", v.number())
                 .param("sanskrit", json.write(v.sanskrit())).param("iast", v.iast()).param("meaning", v.meaning())
                 .param("lifeNote", v.lifeNote()).param("words", json.write(v.words())).param("themes", json.write(v.themes()))
-                .param("actions", json.write(v.actions())).param("checksum", checksum(v.sanskrit()))
+                .param("actions", json.write(v.actions())).param("audioUrl", v.audioUrl()).param("checksum", checksum(v.sanskrit()))
                 .update();
     }
 

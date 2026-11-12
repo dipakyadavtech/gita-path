@@ -12,4 +12,6 @@ public record Verse(
         String lifeNote,
         List<List<String>> words,
         List<String> themes,
-        List<String> actions) {}
+        List<String> actions,
+        /** Recitation recording URL from the CMS; null until a recording is published. */
+        String audioUrl) {}

@@ -8,6 +8,7 @@ import { useApp } from '@/lib/store';
 import { fmt, usePlayer } from '@/lib/usePlayer';
 import { colors, fonts, radius, type } from '@/theme';
 import { pushStep } from '@/lib/api';
+import { useVerseAudio } from '@/lib/audio';
 
 // D2 · Verse detail
 const SPEEDS = [0.75, 1, 1.25];
@@ -19,7 +20,8 @@ export default function VerseScreen() {
   const bookmarked = useApp((s) => !!s.bookmarks[id]);
   const toggleBookmark = useApp((s) => s.toggleBookmark);
   const [speed, setSpeed] = useState(0.75);
-  const player = usePlayer(58, speed, () => { markStep(id, { listened: true }); pushStep(id, { listened: true }); });
+  const audio = useVerseAudio(verse);
+  const player = usePlayer(58, speed, () => { markStep(id, { listened: true }); pushStep(id, { listened: true }); }, audio);
 
   useEffect(() => {
     if (autoplay && !player.playing) player.toggle();

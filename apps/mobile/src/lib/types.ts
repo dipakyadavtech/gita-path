@@ -9,6 +9,8 @@ export type Verse = {
   words: [string, string, string][];
   themes: string[];
   actions: string[];
+  /** Recitation recording. Absent until a studio recording is published in the CMS. */
+  audioUrl?: string | null;
 };
 export type Chapter = { number: number; name: string; english: string; verseCount: number };
 export type Story = {

@@ -20,6 +20,7 @@ function verseBody(d) {
       words: list(d.words),
       themes: list(d.themes),
       actions: list(d.actions),
+      audioUrl: d.audio_url || null,
     },
     sanskritChangeApproved: d.sanskrit_change_approved === true,
   };
