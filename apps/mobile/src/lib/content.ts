@@ -17,10 +17,10 @@ export const storyById = (id: string) => stories.find((s) => s.id === id);
 export const pathVerses = (chapter = 2) => verses.filter((v) => v.chapter === chapter).sort((a, b) => a.number - b.number);
 
 /**
- * Learning order. The path starts with Chapter 2, where Krishna's teaching begins, continues with 3,
- * and offers Chapter 1 (the setting on the battlefield) afterwards. Only chapters with content are used.
+ * Learning order. The path starts with Chapter 2, where Krishna's teaching begins, continues through
+ * the book (3 to 18), and offers Chapter 1 (the setting on the battlefield) last. Only chapters with content are used.
  */
-export const PATH_ORDER = [2, 3, 1].filter((n) => pathVerses(n).length > 0);
+export const PATH_ORDER = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 1].filter((n) => pathVerses(n).length > 0);
 
 /** Chapters with content, in book order (for the chapter switcher). */
 export const contentChapters = () => chapters.filter((c) => pathVerses(c.number).length > 0);

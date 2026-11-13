@@ -3,5 +3,18 @@
   {"number": 2, "name": "Sankhya Yoga", "english": "The path of knowledge", "verseCount": 72},
   {"number": 3, "name": "Karma Yoga", "english": "The path of selfless action", "verseCount": 43},
   {"number": 4, "name": "Jnana Karma Sanyasa Yoga", "english": "Knowledge and renunciation of action", "verseCount": 42},
-  {"number": 6, "name": "Dhyana Yoga", "english": "The path of meditation", "verseCount": 47}
+  {"number": 5, "name": "Karma Sanyasa Yoga", "english": "Renunciation of action", "verseCount": 29},
+  {"number": 6, "name": "Dhyana Yoga", "english": "The path of meditation", "verseCount": 47},
+  {"number": 7, "name": "Jnana Vijnana Yoga", "english": "Knowledge and wisdom", "verseCount": 30},
+  {"number": 8, "name": "Akshara Brahma Yoga", "english": "The imperishable Brahman", "verseCount": 28},
+  {"number": 9, "name": "Raja Vidya Raja Guhya Yoga", "english": "The royal knowledge and royal secret", "verseCount": 34},
+  {"number": 10, "name": "Vibhuti Yoga", "english": "The divine glories", "verseCount": 42},
+  {"number": 11, "name": "Vishvarupa Darshana Yoga", "english": "The vision of the cosmic form", "verseCount": 55},
+  {"number": 12, "name": "Bhakti Yoga", "english": "The yoga of devotion", "verseCount": 20},
+  {"number": 13, "name": "Kshetra Kshetrajna Vibhaga Yoga", "english": "The field and its knower", "verseCount": 35},
+  {"number": 14, "name": "Gunatraya Vibhaga Yoga", "english": "The three qualities", "verseCount": 27},
+  {"number": 15, "name": "Purushottama Yoga", "english": "The supreme person", "verseCount": 20},
+  {"number": 16, "name": "Daivasura Sampad Vibhaga Yoga", "english": "The divine and demonic natures", "verseCount": 24},
+  {"number": 17, "name": "Shraddhatraya Vibhaga Yoga", "english": "The three kinds of faith", "verseCount": 28},
+  {"number": 18, "name": "Moksha Sanyasa Yoga", "english": "Liberation through renunciation", "verseCount": 78}
 ]

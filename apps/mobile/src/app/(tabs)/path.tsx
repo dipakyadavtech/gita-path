@@ -45,9 +45,9 @@ export default function PathTab() {
               accessibilityRole="tab"
               accessibilityState={{ selected: on }}
               accessibilityLabel={`Chapter ${c.number}, ${c.english}`}
-              style={{ paddingHorizontal: 14, paddingVertical: 8, borderRadius: 999, borderWidth: 1, borderColor: on ? colors.saffron : colors.line, backgroundColor: on ? colors.saffron : colors.white }}
+              style={{ minWidth: 40, height: 40, paddingHorizontal: 8, borderRadius: 20, borderWidth: 1, borderColor: on ? colors.saffron : colors.line, backgroundColor: on ? colors.saffron : colors.white, alignItems: 'center', justifyContent: 'center' }}
             >
-              <Text style={{ fontFamily: fonts.bodySemi, fontSize: 13, color: on ? colors.white : colors.ink }}>Chapter {c.number}</Text>
+              <Text style={{ fontFamily: fonts.bodySemi, fontSize: 14, color: on ? colors.white : colors.ink }}>{c.number}</Text>
             </Pressable>
           );
         })}

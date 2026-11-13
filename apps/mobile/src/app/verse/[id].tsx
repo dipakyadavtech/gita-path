@@ -84,8 +84,9 @@ export default function VerseScreen() {
       <View style={{ gap: 8 }}>
         <Caps>Word by word</Caps>
         <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>
-          {verse.words.map(([dev, iast, gloss]) => (
-            <View key={dev + iast} style={{ width: '31.5%', backgroundColor: colors.white, borderWidth: 1, borderColor: colors.line, borderRadius: 12, padding: 10 }}>
+          {/* Cards size to their word (long compounds get room) and grow to fill each row evenly. */}
+          {verse.words.map(([dev, iast, gloss], i) => (
+            <View key={`${i}-${dev}`} style={{ flexGrow: 1, minWidth: '30%', maxWidth: '100%', backgroundColor: colors.white, borderWidth: 1, borderColor: colors.line, borderRadius: 12, padding: 10 }}>
               <Text style={{ fontFamily: fonts.verseBold, fontSize: 15, color: colors.ink }}>{dev}</Text>
               <Text style={[type.small, { fontStyle: 'italic' }]}>{iast}</Text>
               <Text style={type.small}>{gloss}</Text>

@@ -17,7 +17,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import tools.jackson.core.type.TypeReference;
 
-/** Loads the starter content (packages/content/data) into an empty database. */
+/** Loads the starter content (packages/content/data): chapters on every start, the rest into an empty database. */
 @Component
 @Order(1) // before other modules' seeders that depend on verses
 class ContentSeeder implements ApplicationRunner {
@@ -33,10 +33,11 @@ class ContentSeeder implements ApplicationRunner {
     @Override
     @Transactional
     public void run(ApplicationArguments args) throws IOException {
-        if (store.verseCount() > 0) return;
+        // Chapters are fixed book metadata (not edited in the CMS), so keep them in step with the seed on every start.
         for (Map<String, Object> c : read("chapters.json", new TypeReference<List<Map<String, Object>>>() {})) {
             store.upsertChapter((Integer) c.get("number"), (String) c.get("name"), (String) c.get("english"), (Integer) c.get("verseCount"));
         }
+        if (store.verseCount() > 0) return;
         List<Verse> verses = read("verses.json", new TypeReference<List<Verse>>() {});
         verses.forEach(store::upsertVerse);
         read("stories.json", new TypeReference<List<Story>>() {}).forEach(store::upsertStory);
