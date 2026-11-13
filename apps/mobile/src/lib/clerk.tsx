@@ -2,7 +2,8 @@
 // Setup in the Clerk dashboard:
 //   1. User & authentication → enable "Phone number" with SMS verification code.
 //   2. SSO connections → enable Google and Apple.
-//   3. Native applications → add the redirect URL  gitapath://  (the app scheme in app.json).
+//   3. Native applications → allowlist the SSO redirect URLs: gitapath://sso-callback (app builds) and,
+//      for Expo Go, exp://<your-LAN-IP>:8081/--/sso-callback. Without this the browser never returns to the app.
 // The API verifies Clerk tokens when CLERK_ISSUER is set on the server.
 import { ClerkProvider, getClerkInstance, useAuth as useClerkAuth, useSignIn, useSignUp, useSSO, isClerkAPIResponseError } from '@clerk/expo';
 import { tokenCache } from '@clerk/expo/token-cache';
@@ -101,7 +102,9 @@ export function useClerkFlows() {
     async socialSignIn(provider: 'google' | 'apple'): Promise<Session | null> {
       const { createdSessionId, setActive, signUp, authSessionResult } = await startSSOFlow({
         strategy: provider === 'google' ? 'oauth_google' : 'oauth_apple',
-        redirectUrl: Linking.createURL('/'),
+        // Must be on Clerk's redirect allowlist (Dashboard → Native applications), or the browser never returns:
+        //   Expo Go: exp://<your-LAN-IP>:8081/--/sso-callback    App builds: gitapath://sso-callback
+        redirectUrl: Linking.createURL('sso-callback'),
       });
       if (!createdSessionId || !setActive) {
         if (authSessionResult?.type !== 'success') return null; // user closed the browser
