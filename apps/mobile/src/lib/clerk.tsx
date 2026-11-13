@@ -99,11 +99,16 @@ export function useClerkFlows() {
       return sessionFromClerk('clerk', phone);
     },
     async socialSignIn(provider: 'google' | 'apple'): Promise<Session | null> {
-      const { createdSessionId, setActive } = await startSSOFlow({
+      const { createdSessionId, setActive, signUp, authSessionResult } = await startSSOFlow({
         strategy: provider === 'google' ? 'oauth_google' : 'oauth_apple',
         redirectUrl: Linking.createURL('/'),
       });
-      if (!createdSessionId || !setActive) return null; // user closed the browser
+      if (!createdSessionId || !setActive) {
+        if (authSessionResult?.type !== 'success') return null; // user closed the browser
+        // Signed in with Google/Apple, but the Clerk instance requires more (e.g. a phone number or password).
+        const missing = signUp?.missingFields?.join(', ');
+        throw new Error(missing ? `Clerk needs more details to finish sign-up: ${missing}. Make these optional in the Clerk dashboard.` : 'Could not finish signing in.');
+      }
       await setActive({ session: createdSessionId });
       return sessionFromClerk('clerk');
     },
