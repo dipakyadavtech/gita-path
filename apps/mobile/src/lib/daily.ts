@@ -1,4 +1,4 @@
-import { pathVerses, topics, verseById } from './content';
+import { chapterByNumber, PATH_ORDER, pathVerses, topics, verseById } from './content';
 import type { StepState, Verse } from './types';
 
 const goalTheme: Record<string, string> = {
@@ -8,9 +8,14 @@ const goalTheme: Record<string, string> = {
   'Discipline and habits': 'motivation',
 };
 
-/** The verse of the day: the first verse on the path the user has not completed. */
+/** The chapter the user is learning now: the first chapter in learning order with an unfinished verse. */
+export function currentChapter(steps: Record<string, StepState>): number {
+  return PATH_ORDER.find((n) => pathVerses(n).some((v) => !steps[v.id]?.completedAt)) ?? PATH_ORDER[PATH_ORDER.length - 1];
+}
+
+/** The verse of the day: the first verse in the current chapter the user has not completed. */
 export function verseOfTheDay(steps: Record<string, StepState>): Verse {
-  const path = pathVerses(2);
+  const path = pathVerses(currentChapter(steps));
   return path.find((v) => !steps[v.id]?.completedAt) ?? path[path.length - 1];
 }
 
@@ -27,9 +32,12 @@ export function goalThemes(goals: string[]) {
   return goals.map((g) => goalTheme[g]).filter(Boolean);
 }
 
+/** Progress through the current chapter. */
 export function pathProgress(steps: Record<string, StepState>) {
-  const done = Object.values(steps).filter((s) => s.completedAt).length;
-  return { done, total: 72 };
+  const n = currentChapter(steps);
+  const verses = pathVerses(n);
+  const done = verses.filter((v) => steps[v.id]?.completedAt).length;
+  return { chapter: chapterByNumber(n)!, done, total: verses.length };
 }
 
 export function relatedVerses(theme: string) {

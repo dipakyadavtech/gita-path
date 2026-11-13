@@ -79,7 +79,7 @@ export default function Today() {
         <Row style={{ justifyContent: 'space-between' }}>
           <View>
             <Caps>Continue your path</Caps>
-            <Text style={[type.h3, { marginTop: 4 }]}>Chapter 2 · Sankhya Yoga</Text>
+            <Text style={[type.h3, { marginTop: 4 }]}>Chapter {progress.chapter.number} · {progress.chapter.name}</Text>
           </View>
           <Text style={type.bodyMuted}>{progress.done} / {progress.total}</Text>
         </Row>
