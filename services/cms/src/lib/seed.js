@@ -20,7 +20,7 @@ async function seed(strapi) {
         status: 'published',
         data: {
           verse_id: v.id, chapter: v.chapter, number: v.number, sanskrit: v.sanskrit, iast: v.iast,
-          meaning: v.meaning, life_note: v.lifeNote, words: v.words, themes: v.themes, actions: v.actions, audio_url: v.audioUrl || null, ...approved,
+          meaning: v.meaning, life_note: v.lifeNote, words: v.words, themes: v.themes, actions: v.actions, audio_url: v.audioUrl || null, video_url: v.videoUrl || null, ...approved,
         },
       });
     }

@@ -21,7 +21,7 @@ public class ContentQuery {
         this.json = json;
     }
 
-    private static final String VERSE_COLS = "id, chapter, number, sanskrit::text s, iast, meaning, life_note, words::text w, themes::text t, actions::text a, audio_url";
+    private static final String VERSE_COLS = "id, chapter, number, sanskrit::text s, iast, meaning, life_note, words::text w, themes::text t, actions::text a, audio_url, video_url";
 
     public Optional<Verse> verse(String id) {
         return db.sql("select " + VERSE_COLS + " from verses where id = ?").param(id).query((rs, n) -> map(rs)).optional();
@@ -62,6 +62,6 @@ public class ContentQuery {
         return new Verse(rs.getString("id"), rs.getInt("chapter"), rs.getInt("number"), json.strings(rs.getString("s")), rs.getString("iast"),
                 rs.getString("meaning"), rs.getString("life_note"),
                 json.read(rs.getString("w"), new TypeReference<List<List<String>>>() {}),
-                json.strings(rs.getString("t")), json.strings(rs.getString("a")), rs.getString("audio_url"));
+                json.strings(rs.getString("t")), json.strings(rs.getString("a")), rs.getString("audio_url"), rs.getString("video_url"));
     }
 }

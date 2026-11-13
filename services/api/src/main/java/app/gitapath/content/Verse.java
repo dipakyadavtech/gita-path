@@ -14,4 +14,6 @@ public record Verse(
         List<String> themes,
         List<String> actions,
         /** Recitation recording URL from the CMS; null until a recording is published. */
-        String audioUrl) {}
+        String audioUrl,
+        /** Recitation video URL from the CMS; null until a video is published. */
+        String videoUrl) {}

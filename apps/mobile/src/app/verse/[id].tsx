@@ -8,7 +8,8 @@ import { useApp } from '@/lib/store';
 import { fmt, usePlayer } from '@/lib/usePlayer';
 import { colors, fonts, radius, type } from '@/theme';
 import { pushStep } from '@/lib/api';
-import { useVerseAudio } from '@/lib/audio';
+import { useVerseMedia } from '@/lib/audio';
+import { VideoView } from 'expo-video';
 
 // D2 · Verse detail
 const SPEEDS = [0.75, 1, 1.25];
@@ -20,8 +21,8 @@ export default function VerseScreen() {
   const bookmarked = useApp((s) => !!s.bookmarks[id]);
   const toggleBookmark = useApp((s) => s.toggleBookmark);
   const [speed, setSpeed] = useState(0.75);
-  const audio = useVerseAudio(verse);
-  const player = usePlayer(58, speed, () => { markStep(id, { listened: true }); pushStep(id, { listened: true }); }, audio);
+  const media = useVerseMedia(verse);
+  const player = usePlayer(58, speed, () => { markStep(id, { listened: true }); pushStep(id, { listened: true }); }, media.audio, media.video);
 
   useEffect(() => {
     if (autoplay && !player.playing) player.toggle();
@@ -55,6 +56,15 @@ export default function VerseScreen() {
         <Text style={[type.bodyMuted, { textAlign: 'center', fontStyle: 'italic', marginTop: 8 }]}>{verse.iast}</Text>
       </Card>
 
+      {player.video ? (
+        <VideoView
+          player={player.video}
+          nativeControls={false}
+          contentFit="contain"
+          accessibilityLabel={`Recitation video of verse ${verse.id}`}
+          style={{ width: '100%', aspectRatio: 16 / 9, borderRadius: radius.lg, overflow: 'hidden', backgroundColor: '#000' }}
+        />
+      ) : null}
       <Row gap={12} style={{ backgroundColor: colors.indigo, borderRadius: radius.lg, padding: 12 }}>
         <Pressable onPress={player.toggle} accessibilityRole="button" accessibilityLabel={player.playing ? 'Pause recitation' : 'Play recitation'} style={{ width: 44, height: 44, borderRadius: 22, backgroundColor: colors.saffron, alignItems: 'center', justifyContent: 'center' }}>
           <Icon name={player.playing ? 'pause' : 'play'} color={colors.white} />

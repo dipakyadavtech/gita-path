@@ -3,12 +3,16 @@ import { useState } from 'react';
 import { Pressable, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Caps, Chip, Icon, Row, Wrap } from '@/components/ui';
-import { storyById } from '@/lib/content';
+import { storyById, verseById } from '@/lib/content';
+import { useVerseMedia } from '@/lib/audio';
+import { VideoView } from 'expo-video';
 import { useApp } from '@/lib/store';
 import { fmt, usePlayer } from '@/lib/usePlayer';
 import { colors, fonts, radius, type } from '@/theme';
 
-// E5 · Story player. Episodes are placeholders until the animation studio delivers HLS files.
+// E5 · Story player. Until the animation studio delivers episodes, it plays the recitation video of
+// the episode's verse (verse 1.1, the start of the Gita, for episodes without one). With no video it
+// falls back to the drawn placeholder and simulated timing.
 export default function StoryPlayer() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const story = storyById(id);
@@ -17,7 +21,8 @@ export default function StoryPlayer() {
   const setDownload = useApp((s) => s.setDownload);
   const downloaded = useApp((s) => !!s.downloads[id]);
   const [subs, setSubs] = useState('हिन्दी');
-  const player = usePlayer((story?.minutes ?? 3) * 60, 4, () => story && markWatched(story.id));
+  const media = useVerseMedia(verseById(story?.verseId ?? '1.1'));
+  const player = usePlayer((story?.minutes ?? 3) * 60, media.video ? 1 : 4, () => story && markWatched(story.id), null, media.video);
   if (!story) return null;
 
   return (
@@ -37,6 +42,9 @@ export default function StoryPlayer() {
             <Icon name={downloaded ? 'checkmark' : 'download-outline'} color={colors.white} />
           </Pressable>
         </Row>
+        {player.video ? (
+          <VideoView player={player.video} nativeControls={false} contentFit="contain" accessibilityLabel={`Episode ${story.episode} video`} style={{ width: '100%', aspectRatio: 16 / 9, backgroundColor: '#000' }} />
+        ) : (
         <View style={{ height: 220, backgroundColor: '#2E2A6E', overflow: 'hidden' }}>
           <View style={{ position: 'absolute', left: -30, bottom: -50, width: 220, height: 120, borderRadius: 110, backgroundColor: colors.indigoSoft }} />
           <View style={{ position: 'absolute', right: 60, top: 30, width: 46, height: 46, borderRadius: 23, backgroundColor: colors.goldSoft }} />
@@ -44,6 +52,7 @@ export default function StoryPlayer() {
             <Text style={{ textAlign: 'center', color: colors.white, fontFamily: fonts.verseBold }}>{subs === 'हिन्दी' ? 'मैं युद्ध नहीं करूँगा, गोविन्द।' : '“I will not fight, Govinda.”'}</Text>
           </View>
         </View>
+        )}
         <View style={{ padding: 18, gap: 12 }}>
           <View style={{ height: 6, borderRadius: 3, backgroundColor: colors.indigoSoft }}>
             <View style={{ width: `${(player.position / player.duration) * 100}%`, height: 6, borderRadius: 3, backgroundColor: colors.goldSoft }} />

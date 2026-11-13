@@ -29,7 +29,8 @@
       "expo-router",
       "expo-font",
       "expo-secure-store",
-      "expo-audio"
+      "expo-audio",
+      "expo-video"
     ],
     "scheme": "gitapath",
     "experiments": {

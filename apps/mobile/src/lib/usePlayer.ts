@@ -1,23 +1,38 @@
+import { useEvent, useEventListener } from 'expo';
 import { setAudioModeAsync, useAudioPlayer, useAudioPlayerStatus, type AudioSource } from 'expo-audio';
-import { useEffect, useRef, useState } from 'react';
+import { useVideoPlayer, type VideoPlayer } from 'expo-video';
+import { useFocusEffect } from 'expo-router';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 // Recitations should be heard even when the iPhone's silent switch is on.
 setAudioModeAsync({ playsInSilentMode: true }).catch(() => {});
 
 /**
- * Recitation player.
- * With a `source` it plays real audio through expo-audio. Without one (no recording yet)
- * it simulates playback timing so the screen still works (FR-VS-02 UI).
+ * Recitation / episode player.
+ * With a `video` URL it plays that video (picture and sound) through expo-video; render it with
+ * `<VideoView player={player.video} />`. Otherwise, with an audio `source`, it plays audio through
+ * expo-audio. With neither (no recording yet) it simulates playback timing so the screen still works.
  */
-export function usePlayer(durationSec = 58, speed = 1, onEnd?: () => void, source: AudioSource = null) {
+export function usePlayer(durationSec = 58, speed = 1, onEnd?: () => void, source: AudioSource = null, video: string | null = null) {
   const end = useRef(onEnd);
   useEffect(() => {
     end.current = onEnd;
   }, [onEnd]);
 
-  const real = useRealPlayer(source, speed, end);
-  const fake = useSimulatedPlayer(durationSec, speed, end, !source);
-  return source ? real : fake;
+  const vid = useVideo(video, speed, end);
+  const real = useRealPlayer(video ? null : source, speed, end);
+  const fake = useSimulatedPlayer(durationSec, speed, end, !video && !source);
+  const active = video ? vid : { ...(source ? real : fake), video: null as VideoPlayer | null };
+
+  // Pause when the screen loses focus (another screen pushed on top), so two players never overlap.
+  const pauseRef = useRef<() => void>(() => {});
+  useEffect(() => {
+    pauseRef.current = () => {
+      if (active.playing) active.toggle();
+    };
+  });
+  useFocusEffect(useCallback(() => () => pauseRef.current(), []));
+  return active;
 }
 
 type EndRef = { current: (() => void) | undefined };
@@ -48,6 +63,40 @@ function useRealPlayer(source: AudioSource, speed: number, end: EndRef) {
     },
     seek: (s: number) => player.seekTo(Math.max(0, Math.min(duration, s))),
   };
+}
+
+function useVideo(url: string | null, speed: number, end: EndRef) {
+  const player = useVideoPlayer(url, (p) => {
+    p.timeUpdateEventInterval = 0.25;
+  });
+  const { isPlaying } = useEvent(player, 'playingChange', { isPlaying: player.playing });
+  const { currentTime } = useEvent(player, 'timeUpdate', { currentTime: 0, currentLiveTimestamp: null, currentOffsetFromLive: null, bufferedPosition: 0 });
+  // Re-render when the video loads so `duration` is read once it is known.
+  useEvent(player, 'statusChange', { status: player.status });
+  useEventListener(player, 'playToEnd', () => end.current?.());
+
+  useEffect(() => {
+    setRate(player, speed);
+  }, [player, speed]);
+
+  const duration = player.duration || 0;
+  return {
+    playing: isPlaying,
+    position: Math.min(currentTime, duration || currentTime),
+    duration: duration || 1,
+    toggle: () => {
+      if (player.playing) return player.pause();
+      if (duration > 0 && player.currentTime >= duration - 0.1) return player.replay();
+      player.play();
+    },
+    seek: (s: number) => player.seekBy(Math.max(0, Math.min(duration, s)) - player.currentTime),
+    video: url ? player : null,
+  };
+}
+
+// The native player object is mutable by design (expo-video sets options by assignment).
+function setRate(player: VideoPlayer, speed: number) {
+  player.playbackRate = speed;
 }
 
 function useSimulatedPlayer(durationSec: number, speed: number, end: EndRef, active: boolean) {
